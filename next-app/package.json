@@ -11,8 +11,6 @@
         "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\""
     },
     "dependencies": {
-        "@azure/msal-browser": "^2.26.0",
-        "@azure/msal-react": "^1.4.2",
         "@headlessui/react": "^1.7.4",
         "@heroicons/react": "^2.0.13",
         "@tanstack/react-query": "^4.16.1",

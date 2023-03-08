@@ -1,23 +1,16 @@
 import '../styles/globals.css';
 
-import { PublicClientApplication } from '@azure/msal-browser';
-import { MsalProvider } from '@azure/msal-react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { StoreProvider } from 'easy-peasy';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { appWithTranslation } from 'next-i18next';
-import React, { FunctionComponent, ReactElement, useEffect, useState } from 'react';
+import React, { FunctionComponent, ReactElement } from 'react';
 
 import BasicLayout from '../components/base/layout/basicLayout';
-import MsalEventHandler from '../components/base/msalEventHandler';
-import { getClientConfig } from '../helper/configHelper';
-import { buildMsalConfig } from '../helper/msalHelper';
 import { Store } from '../store/store';
 
-// Export the msal instance.
-export let msalInstance: PublicClientApplication;
 // Create query client to use.
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -47,37 +40,7 @@ const CustomHead: FunctionComponent = (): ReactElement => {
  * @returns {ReactElement} The application component.
  */
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps): ReactElement => {
-    /** Msal instance state. */
-    const [msalInstanceState, setMsalInstanceState] = useState<PublicClientApplication>();
-
-    /** Initialize the application. */
-    useEffect(() => {
-        const configuration = getClientConfig();
-        if ((configuration.azureAdOptions && configuration.azureAdOptions.clientId) || (configuration.azureAdB2COptions && configuration.azureAdB2COptions.clientId)) {
-            // Build the msal config using the fetched configuration values.
-            const msalConfig = buildMsalConfig(configuration, false);
-            // Create the msal instance.
-            msalInstance = new PublicClientApplication(msalConfig);
-            // Set the msal instance to use in the provider.
-            setMsalInstanceState(msalInstance);
-        }
-    }, []);
-
-    return msalInstanceState ? (
-        <QueryClientProvider client={queryClient}>
-            <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
-            <StoreProvider store={Store}>
-                <MsalProvider instance={msalInstanceState}>
-                    <MsalEventHandler>
-                        <CustomHead />
-                        <BasicLayout>
-                            <Component {...pageProps} />
-                        </BasicLayout>
-                    </MsalEventHandler>
-                </MsalProvider>
-            </StoreProvider>
-        </QueryClientProvider>
-    ) : (
+    return (
         <QueryClientProvider client={queryClient}>
             <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
             <StoreProvider store={Store}>
