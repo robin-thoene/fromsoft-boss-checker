@@ -9,5 +9,8 @@
     "submitSearchAriaLabel": "Run search.",
     "clearSearchAriaLabel": "Reset search.",
     "collapseSideNavAriaLabel": "Collapse side navigation.",
-    "openSideNavAriaLabel": "Expand side navigation."
+    "openSideNavAriaLabel": "Expand side navigation.",
+    "eldenRing_reset_button": "reset",
+    "eldenRing_reset_confirmDialog_title": "Reset current progress",
+    "eldenRing_reset_confirmDialog_text": "The complete progress will be thrown away!"
 }

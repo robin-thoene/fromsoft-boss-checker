@@ -3,7 +3,6 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import { useStoreActions } from '../../../../store/store';
 import DarkModeToggle from '../../darkModeToggle';
 import SearchBar from '../../inputs/searchBar';
-import LanguageSelector from '../../languageSelector';
 import { INavigationTopProps } from './properties';
 
 /**
@@ -22,7 +21,6 @@ const NavigationTop: FunctionComponent<INavigationTopProps> = (props): ReactElem
                 <div>{props.enableGlobalSearch && <SearchBar onSearch={(newValue) => updateGlobalSearchValue(newValue)} canBeCleared />}</div>
                 <div className="flex items-center justify-end">
                     <DarkModeToggle />
-                    <LanguageSelector />
                 </div>
             </div>
         </div>
