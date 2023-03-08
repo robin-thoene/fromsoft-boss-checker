@@ -13,6 +13,8 @@ import { getRegions } from '../helper/eldenRingDataHelper';
 const eldenRingRegions = getRegions();
 // The key in the local storage to store the users progress.
 const localStorageKey = 'eldenRingFelledBossIds';
+// The counter of all bosses.
+const bossCounter = eldenRingRegions.reduce((acc, region) => acc + region.bosses.length, 0);
 
 /**
  * The page component to render at "/".
@@ -101,6 +103,9 @@ const Home: NextPage = () => {
                 }}>
                 <p>{t('eldenRing_reset_confirmDialog_text')}</p>
             </Dialog>
+            <div className="fixed bottom-10 right-10 z-50 flex h-24 w-24 items-center justify-center rounded-full border border-base-content bg-base-300">
+                {felledBossIds.length} / {bossCounter}
+            </div>
         </div>
     );
 };
