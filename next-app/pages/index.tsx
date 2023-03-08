@@ -64,27 +64,46 @@ const Home: NextPage = () => {
                             {region.id}. {region.name}
                         </h2>
                         {region.bosses.map((boss) => (
-                            <Stack key={`boss-${boss.id}-${boss.name}`} horizontal horizontalAlign="SpaceBetween">
-                                <div className={felledBossIds.includes(boss.id) ? 'line-through' : ''}>{boss.name}</div>
-                                <Checkbox
-                                    isChecked={felledBossIds.includes(boss.id)}
-                                    disabled={!isInitializedClientSide}
-                                    onChange={(newValue) => {
-                                        const tmpFelledBossIds = [...felledBossIds];
-                                        if (newValue) {
-                                            // If the boss is checked, add it to the list.
-                                            tmpFelledBossIds.push(boss.id);
-                                        } else {
-                                            // If the boss is unchecked, remove it from the list.
-                                            const index = tmpFelledBossIds.indexOf(boss.id);
-                                            if (index > -1) {
-                                                tmpFelledBossIds.splice(index, 1);
-                                            }
+                            <div
+                                className="cursor-pointer"
+                                key={`boss-${boss.id}-${boss.name}`}
+                                onClick={() => {
+                                    const tmpFelledBossIds = [...felledBossIds];
+                                    const alreadyExists = felledBossIds.includes(boss.id);
+                                    if (!alreadyExists) {
+                                        // If the boss is checked, add it to the list.
+                                        tmpFelledBossIds.push(boss.id);
+                                    } else {
+                                        // If the boss is unchecked, remove it from the list.
+                                        const index = tmpFelledBossIds.indexOf(boss.id);
+                                        if (index > -1) {
+                                            tmpFelledBossIds.splice(index, 1);
                                         }
-                                        setFelledBossIds([...tmpFelledBossIds]);
-                                    }}
-                                />
-                            </Stack>
+                                    }
+                                    setFelledBossIds([...tmpFelledBossIds]);
+                                }}>
+                                <Stack horizontal horizontalAlign="SpaceBetween">
+                                    <div className={felledBossIds.includes(boss.id) ? 'line-through' : ''}>{boss.name}</div>
+                                    <Checkbox
+                                        isChecked={felledBossIds.includes(boss.id)}
+                                        disabled={!isInitializedClientSide}
+                                        onChange={(newValue) => {
+                                            const tmpFelledBossIds = [...felledBossIds];
+                                            if (newValue) {
+                                                // If the boss is checked, add it to the list.
+                                                tmpFelledBossIds.push(boss.id);
+                                            } else {
+                                                // If the boss is unchecked, remove it from the list.
+                                                const index = tmpFelledBossIds.indexOf(boss.id);
+                                                if (index > -1) {
+                                                    tmpFelledBossIds.splice(index, 1);
+                                                }
+                                            }
+                                            setFelledBossIds([...tmpFelledBossIds]);
+                                        }}
+                                    />
+                                </Stack>
+                            </div>
                         ))}
                     </Stack>
                 ))}
