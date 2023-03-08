@@ -1,3 +1,4 @@
+import { FlagIcon } from '@heroicons/react/24/solid';
 import { GetStaticProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -12,7 +13,9 @@ import { getRegions } from '../helper/eldenRingDataHelper';
 // Get all Elden Ring regions with the boss lists.
 const eldenRingRegions = getRegions();
 // The key in the local storage to store the users progress.
-const localStorageKey = 'eldenRingFelledBossIds';
+const localStorageFelledBossesKey = 'eldenRingFelledBossIds';
+// The key in the local storage to store the marked bosses.
+const localStorageMarkedBossesKey = 'markedBossIds';
 // The counter of all bosses.
 const bossCounter = eldenRingRegions.reduce((acc, region) => acc + region.bosses.length, 0);
 
@@ -31,26 +34,85 @@ const Home: NextPage = () => {
     const [felledBossIds, setFelledBossIds] = useState<number[]>([]);
     /** Whether the dialog to confirm clearing the progress is open or not. */
     const [isClearDialogOpen, setIsClearDialogOpen] = useState<boolean>(false);
+    /** The list of the bosses the user has marked. */
+    const [markedBossIds, setMarkedBossIds] = useState<number[]>([]);
 
     /** Initialize the page on client side. */
     useEffect(() => {
         // Load the users stored progress from the local storage.
-        const storedFelledBossIdsString = localStorage.getItem(localStorageKey);
+        const storedFelledBossIdsString = localStorage.getItem(localStorageFelledBossesKey);
         if (storedFelledBossIdsString) {
             const storedFelledBossIds = JSON.parse(storedFelledBossIdsString);
             setFelledBossIds(storedFelledBossIds);
         }
+        // Load the marked bosses from the local storage.
+        const storedMarkedBossIdsString = localStorage.getItem(localStorageMarkedBossesKey);
+        if (storedMarkedBossIdsString) {
+            const storedMarkedBossIds = JSON.parse(storedMarkedBossIdsString);
+            setMarkedBossIds(storedMarkedBossIds);
+        }
         setIsInitializedClientSide(true);
     }, []);
 
-    /** Store changes in the local storage. */
+    /** Store felled bosses changes in the local storage. */
     useEffect(() => {
         if (!isInitializedClientSide) {
             return;
         }
         const felledBossIdsString = JSON.stringify(felledBossIds);
-        localStorage.setItem(localStorageKey, felledBossIdsString);
+        localStorage.setItem(localStorageFelledBossesKey, felledBossIdsString);
     }, [felledBossIds, isInitializedClientSide]);
+
+    /** Store marked bosses changes in the local storage. */
+    useEffect(() => {
+        if (!isInitializedClientSide) {
+            return;
+        }
+        const markedBossIdsString = JSON.stringify(markedBossIds);
+        localStorage.setItem(localStorageMarkedBossesKey, markedBossIdsString);
+    }, [isInitializedClientSide, markedBossIds]);
+
+    /**
+     * Callback to mark a boss as felled or not.
+     *
+     * @param {number} bossId The id of the boss to mark as felled / not felled.
+     */
+    const toggleFelledState = (bossId: number) => {
+        const tmpFelledBossIds = [...felledBossIds];
+        const alreadyExists = felledBossIds.includes(bossId);
+        if (!alreadyExists) {
+            // If the boss is checked, add it to the list.
+            tmpFelledBossIds.push(bossId);
+        } else {
+            // If the boss is unchecked, remove it from the list.
+            const index = tmpFelledBossIds.indexOf(bossId);
+            if (index > -1) {
+                tmpFelledBossIds.splice(index, 1);
+            }
+        }
+        setFelledBossIds([...tmpFelledBossIds]);
+    };
+
+    /**
+     * Callback to mark a boss.
+     *
+     * @param {number} bossId The id of the boss to mark.
+     */
+    const toggleMarkedState = (bossId: number) => {
+        const tmpMarkedBossIds = [...markedBossIds];
+        const alreadyExists = markedBossIds.includes(bossId);
+        if (!alreadyExists) {
+            // If the boss is checked, add it to the list.
+            tmpMarkedBossIds.push(bossId);
+        } else {
+            // If the boss is unchecked, remove it from the list.
+            const index = tmpMarkedBossIds.indexOf(bossId);
+            if (index > -1) {
+                tmpMarkedBossIds.splice(index, 1);
+            }
+        }
+        setMarkedBossIds([...tmpMarkedBossIds]);
+    };
 
     return (
         <div className="flex flex-1 flex-col overflow-auto p-10">
@@ -67,41 +129,17 @@ const Home: NextPage = () => {
                             <div
                                 className="cursor-pointer"
                                 key={`boss-${boss.id}-${boss.name}`}
-                                onClick={() => {
-                                    const tmpFelledBossIds = [...felledBossIds];
-                                    const alreadyExists = felledBossIds.includes(boss.id);
-                                    if (!alreadyExists) {
-                                        // If the boss is checked, add it to the list.
-                                        tmpFelledBossIds.push(boss.id);
-                                    } else {
-                                        // If the boss is unchecked, remove it from the list.
-                                        const index = tmpFelledBossIds.indexOf(boss.id);
-                                        if (index > -1) {
-                                            tmpFelledBossIds.splice(index, 1);
-                                        }
-                                    }
-                                    setFelledBossIds([...tmpFelledBossIds]);
+                                onClick={() => toggleFelledState(boss.id)}
+                                onContextMenu={(e) => {
+                                    e.preventDefault();
+                                    toggleMarkedState(boss.id);
                                 }}>
                                 <Stack horizontal horizontalAlign="SpaceBetween">
-                                    <div className={felledBossIds.includes(boss.id) ? 'line-through' : ''}>{boss.name}</div>
-                                    <Checkbox
-                                        isChecked={felledBossIds.includes(boss.id)}
-                                        disabled={!isInitializedClientSide}
-                                        onChange={(newValue) => {
-                                            const tmpFelledBossIds = [...felledBossIds];
-                                            if (newValue) {
-                                                // If the boss is checked, add it to the list.
-                                                tmpFelledBossIds.push(boss.id);
-                                            } else {
-                                                // If the boss is unchecked, remove it from the list.
-                                                const index = tmpFelledBossIds.indexOf(boss.id);
-                                                if (index > -1) {
-                                                    tmpFelledBossIds.splice(index, 1);
-                                                }
-                                            }
-                                            setFelledBossIds([...tmpFelledBossIds]);
-                                        }}
-                                    />
+                                    <div className={`relative flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
+                                        {markedBossIds.includes(boss.id) && <FlagIcon className="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-red-600" />}
+                                        <div className="pl-7">{boss.name}</div>
+                                    </div>
+                                    <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
                                 </Stack>
                             </div>
                         ))}
