@@ -1,0 +1,13 @@
+{
+    "en": "English",
+    "de": "Deutsch",
+    "languageButtonEnAriaLabel": "Switch to English",
+    "languageButtonDeAriaLabel": "Umschalten auf Deutsch",
+    "darkModeToggleAriaLabel": "Toggle between light and dark mode",
+    "close": "Close",
+    "confirm": "Confirm",
+    "submitSearchAriaLabel": "Run search.",
+    "clearSearchAriaLabel": "Reset search.",
+    "collapseSideNavAriaLabel": "Collapse side navigation.",
+    "openSideNavAriaLabel": "Expand side navigation."
+}
