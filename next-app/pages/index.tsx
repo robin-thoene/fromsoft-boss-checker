@@ -1,14 +1,16 @@
-import { FlagIcon } from '@heroicons/react/24/solid';
+import { DocumentTextIcon, FlagIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import { GetStaticProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React, { useEffect, useState } from 'react';
 
+import IconButton from '../components/base/button/iconButton';
 import PrimaryButton from '../components/base/button/primaryButton';
 import Checkbox from '../components/base/checkbox';
 import Dialog from '../components/base/dialog';
 import Stack from '../components/base/layout/stack';
 import { getRegions } from '../helper/eldenRingDataHelper';
+import { IEldenRingBoss } from '../types';
 
 // Get all Elden Ring regions with the boss lists.
 const eldenRingRegions = getRegions();
@@ -122,27 +124,58 @@ const Home: NextPage = () => {
             <Stack>
                 {eldenRingRegions.map((region) => (
                     <Stack key={`region-${region.id}-${region.name}`}>
-                        <h2 className="border-b border-base-content">
-                            {region.id}. {region.name}
-                        </h2>
-                        {region.bosses.map((boss) => (
-                            <div
-                                className="cursor-pointer"
-                                key={`boss-${boss.id}-${boss.name}`}
-                                onClick={() => toggleFelledState(boss.id)}
-                                onContextMenu={(e) => {
-                                    e.preventDefault();
-                                    toggleMarkedState(boss.id);
-                                }}>
-                                <Stack horizontal horizontalAlign="SpaceBetween">
-                                    <div className={`relative flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
-                                        {markedBossIds.includes(boss.id) && <FlagIcon className="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-red-600" />}
-                                        <div className="pl-7">{boss.name}</div>
+                        <h2 className="border-b border-base-content">{region.name}</h2>
+                        {region.bosses.map((boss) => {
+                            // Cast the boss to the Elden Ring boss interface.
+                            const eldenRingBoss = boss as IEldenRingBoss;
+                            // Return the rendered boss as row.
+                            return (
+                                <div
+                                    className="flex h-12 w-full cursor-pointer items-center"
+                                    key={`boss-${eldenRingBoss.id}-${eldenRingBoss.name}`}
+                                    onClick={() => toggleFelledState(eldenRingBoss.id)}
+                                    onContextMenu={(e) => {
+                                        e.preventDefault();
+                                        toggleMarkedState(eldenRingBoss.id);
+                                    }}>
+                                    <div className="w-full">
+                                        <Stack horizontal horizontalAlign="SpaceBetween">
+                                            <div className={`relative flex items-center ${felledBossIds.includes(eldenRingBoss.id) ? 'line-through' : ''}`}>
+                                                {markedBossIds.includes(eldenRingBoss.id) && <FlagIcon className="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-red-600" />}
+                                                <div className="pl-7">{eldenRingBoss.name}</div>
+                                            </div>
+                                            <div className="flex w-40 items-center justify-between">
+                                                <div className="mr-9">
+                                                    <Checkbox
+                                                        isChecked={felledBossIds.includes(eldenRingBoss.id)}
+                                                        disabled={!isInitializedClientSide}
+                                                        onChange={() => toggleFelledState(eldenRingBoss.id)}
+                                                    />
+                                                </div>
+                                                {eldenRingBoss.wikiReference && eldenRingBoss.wikiReference !== '' && (
+                                                    <IconButton
+                                                        icon={<DocumentTextIcon className="h-5 w-5" />}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            window.open(eldenRingBoss.wikiReference, '_blank');
+                                                        }}
+                                                    />
+                                                )}
+                                                {eldenRingBoss.wikiMapReference && eldenRingBoss.wikiMapReference !== '' && (
+                                                    <IconButton
+                                                        icon={<MapPinIcon className="h-5 w-5" />}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            window.open(eldenRingBoss.wikiMapReference, '_blank');
+                                                        }}
+                                                    />
+                                                )}
+                                            </div>
+                                        </Stack>
                                     </div>
-                                    <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
-                                </Stack>
-                            </div>
-                        ))}
+                                </div>
+                            );
+                        })}
                     </Stack>
                 ))}
                 <div className="mt-16 flex w-full justify-center">
