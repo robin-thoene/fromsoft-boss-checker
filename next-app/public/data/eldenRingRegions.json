@@ -544,14 +544,14 @@
             {
                 "id": 86,
                 "name": "Ancestor Spirit",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Ancestor+Spirit",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1183&lat=-185.070312&lng=130.770026&zoom=8&code=mapB"
             },
             {
                 "id": 87,
                 "name": "Dragonkin Soldier",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Dragonkin+Soldier#siofra-river",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1308&code=mapB"
             }
         ],
         "id": 6,
