@@ -598,20 +598,20 @@
             {
                 "id": 92,
                 "name": "Crucible Knight Siluria",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Crucible+Knight+Siluria",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5257&code=mapB"
             },
             {
                 "id": 93,
                 "name": "Fia's Champions",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Fia's+champions",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5362&code=mapB"
             },
             {
                 "id": 94,
                 "name": "Lichdragon Fortissax",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Lichdragon+Fortissax",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6425&lat=-93&lng=118&zoom=8&code=mapB"
             }
         ],
         "id": 9,
