@@ -3,87 +3,129 @@
         "bosses": [
             {
                 "id": 1,
-                "name": "Beast of Farum Azula"
+                "name": "Beast of Farum Azula",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 2,
-                "name": "Bell Bearing Hunter"
+                "name": "Bell Bearing Hunter",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 3,
-                "name": "Black Knife Assassin"
+                "name": "Black Knife Assassin",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 4,
-                "name": "Bloodhound Knight Darriwil"
+                "name": "Bloodhound Knight Darriwil",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 5,
-                "name": "Crucible Knight"
+                "name": "Crucible Knight",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 6,
-                "name": "Deathbird"
+                "name": "Deathbird",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 7,
-                "name": "Demi-Human Chief"
+                "name": "Demi-Human Chief",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 8,
-                "name": "Erdtree Burial Watchdog"
+                "name": "Erdtree Burial Watchdog",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 9,
-                "name": "Flying Dragon Agheel"
+                "name": "Flying Dragon Agheel",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 10,
-                "name": "Godrick the Grafted"
+                "name": "Godrick the Grafted",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 11,
-                "name": "Grave Warden Duelist"
+                "name": "Grave Warden Duelist",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 12,
-                "name": "Guardian Golem"
+                "name": "Guardian Golem",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 13,
-                "name": "Mad Pumpkin Head"
+                "name": "Mad Pumpkin Head",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 14,
-                "name": "Margit, the Fell Omen"
+                "name": "Margit, the Fell Omen",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 15,
-                "name": "Night's Cavalry"
+                "name": "Night's Cavalry",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 16,
-                "name": "Patches"
+                "name": "Patches",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 17,
-                "name": "Soldier of Godrick"
+                "name": "Soldier of Godrick",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 18,
-                "name": "Stonedigger Troll"
+                "name": "Stonedigger Troll",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 19,
-                "name": "Tibia Mariner"
+                "name": "Tibia Mariner",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 20,
-                "name": "Tree Sentinel"
+                "name": "Tree Sentinel",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 21,
-                "name": "Ulcerated Tree Spirit"
+                "name": "Ulcerated Tree Spirit",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 1,
@@ -93,43 +135,63 @@
         "bosses": [
             {
                 "id": 22,
-                "name": "Ancient Hero of Zamor"
+                "name": "Ancient Hero of Zamor",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 23,
-                "name": "Cemetery Shade"
+                "name": "Cemetery Shade",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 24,
-                "name": "Deathbird"
+                "name": "Deathbird",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 25,
-                "name": "Erdtree Avatar"
+                "name": "Erdtree Avatar",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 26,
-                "name": "Erdtree Burial Watchdog"
+                "name": "Erdtree Burial Watchdog",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 27,
-                "name": "Leonine Misbegotten"
+                "name": "Leonine Misbegotten",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 28,
-                "name": "Miranda the Blighted Bloom"
+                "name": "Miranda the Blighted Bloom",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 29,
-                "name": "Night's Cavalry"
+                "name": "Night's Cavalry",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 30,
-                "name": "Runebear"
+                "name": "Runebear",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 31,
-                "name": "Scaly Misbegotten"
+                "name": "Scaly Misbegotten",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 2,
@@ -139,119 +201,177 @@
         "bosses": [
             {
                 "id": 32,
-                "name": "Adan, Thief of Fire"
+                "name": "Adan, Thief of Fire",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 33,
-                "name": "Alabaster Lord"
+                "name": "Alabaster Lord",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 34,
-                "name": "Alecto, Black Knife Ringleader"
+                "name": "Alecto, Black Knife Ringleader",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 35,
-                "name": "Bell Bearing Hunter"
+                "name": "Bell Bearing Hunter",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 36,
-                "name": "Black Knife Assassin"
+                "name": "Black Knife Assassin",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 37,
-                "name": "Bloodhound Knight"
+                "name": "Bloodhound Knight",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 38,
-                "name": "Bols, Carian Knight"
+                "name": "Bols, Carian Knight",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 39,
-                "name": "Cemetery Shade"
+                "name": "Cemetery Shade",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 40,
-                "name": "Cleanrot Knight"
+                "name": "Cleanrot Knight",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 41,
-                "name": "Crystalian Spear & Crystalian Staff"
+                "name": "Crystalian Spear & Crystalian Staff",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 42,
-                "name": "Crystalian Ringblade"
+                "name": "Crystalian Ringblade",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 43,
-                "name": "Deathbird"
+                "name": "Deathbird",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 44,
-                "name": "Death Rite Bird"
+                "name": "Death Rite Bird",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 45,
-                "name": "Erdtree Avatar (Northeast)"
+                "name": "Erdtree Avatar (Northeast)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 46,
-                "name": "Erdtree Avatar (Southwest)"
+                "name": "Erdtree Avatar (Southwest)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 47,
-                "name": "Erdtree Burial Watchdog"
+                "name": "Erdtree Burial Watchdog",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 48,
-                "name": "Glintstone Dragon Adula"
+                "name": "Glintstone Dragon Adula",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 49,
-                "name": "Glintstone Dragon Smarag"
+                "name": "Glintstone Dragon Smarag",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 50,
-                "name": "Grafted Scion (Four Belfries)"
+                "name": "Grafted Scion (Four Belfries)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 51,
-                "name": "Magma Wyrm Makar"
+                "name": "Magma Wyrm Makar",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 52,
-                "name": "Night's Cavalry (North)"
+                "name": "Night's Cavalry (North)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 53,
-                "name": "Night's Cavalry (South)"
+                "name": "Night's Cavalry (South)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 54,
-                "name": "Omenkiller"
+                "name": "Omenkiller",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 55,
-                "name": "Red Wolf of Radagon"
+                "name": "Red Wolf of Radagon",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 56,
-                "name": "Rennala, Queen of the Full Moon"
+                "name": "Rennala, Queen of the Full Moon",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 57,
-                "name": "Royal Knight Loretta"
+                "name": "Royal Knight Loretta",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 58,
-                "name": "Royal Revenant"
+                "name": "Royal Revenant",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 59,
-                "name": "Spirit-Caller Snail"
+                "name": "Spirit-Caller Snail",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 60,
-                "name": "Tibia Mariner"
+                "name": "Tibia Mariner",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 3,
@@ -261,71 +381,105 @@
         "bosses": [
             {
                 "id": 61,
-                "name": "Battlemage Hugues"
+                "name": "Battlemage Hugues",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 62,
-                "name": "Cemetery Shade"
+                "name": "Cemetery Shade",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 63,
-                "name": "Cleanrot Knight"
+                "name": "Cleanrot Knight",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 64,
-                "name": "Commander O'Neil"
+                "name": "Commander O'Neil",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 65,
-                "name": "Crucible Knight / Misbegotten Warrior"
+                "name": "Crucible Knight / Misbegotten Warrior",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 66,
-                "name": "Death Rite Bird"
+                "name": "Death Rite Bird",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 67,
-                "name": "Decaying Ekzykes"
+                "name": "Decaying Ekzykes",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 68,
-                "name": "Erdtree Avatar"
+                "name": "Erdtree Avatar",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 69,
-                "name": "Erdtree Burial Watchdog"
+                "name": "Erdtree Burial Watchdog",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 70,
-                "name": "Fallingstar Beast"
+                "name": "Fallingstar Beast",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 71,
-                "name": "Frenzied Duelist"
+                "name": "Frenzied Duelist",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 72,
-                "name": "Mad Pumpkin Heads"
+                "name": "Mad Pumpkin Heads",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 73,
-                "name": "Magma Wyrm"
+                "name": "Magma Wyrm",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 74,
-                "name": "Night's Cavalry"
+                "name": "Night's Cavalry",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 75,
-                "name": "Nox Swordstress & Nox Priest"
+                "name": "Nox Swordstress & Nox Priest",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 76,
-                "name": "Putrid Crystallian Trio"
+                "name": "Putrid Crystallian Trio",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 77,
-                "name": "Starscourge Radahn"
+                "name": "Starscourge Radahn",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 4,
@@ -335,35 +489,51 @@
         "bosses": [
             {
                 "id": 78,
-                "name": "Beast of Farum Azula"
+                "name": "Beast of Farum Azula",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 79,
-                "name": "Bell Bearing Hunter"
+                "name": "Bell Bearing Hunter",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 80,
-                "name": "Black Blade Kindred (Bestial Sanctum)"
+                "name": "Black Blade Kindred (Bestial Sanctum)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 81,
-                "name": "Flying Dragon Greyll"
+                "name": "Flying Dragon Greyll",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 82,
-                "name": "Godskin Apostle"
+                "name": "Godskin Apostle",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 83,
-                "name": "Night's Cavalry"
+                "name": "Night's Cavalry",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 84,
-                "name": "Putrid Avatar"
+                "name": "Putrid Avatar",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 85,
-                "name": "Putrid Tree Spirit"
+                "name": "Putrid Tree Spirit",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 5,
@@ -373,11 +543,15 @@
         "bosses": [
             {
                 "id": 86,
-                "name": "Ancestor Spirit"
+                "name": "Ancestor Spirit",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 87,
-                "name": "Dragonkin Soldier"
+                "name": "Dragonkin Soldier",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 6,
@@ -387,7 +561,9 @@
         "bosses": [
             {
                 "id": 88,
-                "name": "Dragonkin Soldier of Nokstella"
+                "name": "Dragonkin Soldier of Nokstella",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 7,
@@ -397,15 +573,21 @@
         "bosses": [
             {
                 "id": 89,
-                "name": "Mimic Tear"
+                "name": "Mimic Tear",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 90,
-                "name": "Regal Ancestor Spirit"
+                "name": "Regal Ancestor Spirit",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 91,
-                "name": "Valiant Gargoyles"
+                "name": "Valiant Gargoyles",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 8,
@@ -415,15 +597,21 @@
         "bosses": [
             {
                 "id": 92,
-                "name": "Crucible Knight Siluria"
+                "name": "Crucible Knight Siluria",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 93,
-                "name": "Fia's Champions"
+                "name": "Fia's Champions",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 94,
-                "name": "Lichdragon Fortissax"
+                "name": "Lichdragon Fortissax",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 9,
@@ -433,11 +621,15 @@
         "bosses": [
             {
                 "id": 95,
-                "name": "Astel, Naturalborn of the Void"
+                "name": "Astel, Naturalborn of the Void",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 96,
-                "name": "DragonKin Soldier"
+                "name": "DragonKin Soldier",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 10,
@@ -447,75 +639,111 @@
         "bosses": [
             {
                 "id": 97,
-                "name": "Ancient Dragon Lansseax"
+                "name": "Ancient Dragon Lansseax",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 98,
-                "name": "Ancient Hero of Zamor"
+                "name": "Ancient Hero of Zamor",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 99,
-                "name": "Black Knife Assassin (Sage's Cave)"
+                "name": "Black Knife Assassin (Sage's Cave)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 100,
-                "name": "Black Knife Assassin (Sainted Hero's Grave)"
+                "name": "Black Knife Assassin (Sainted Hero's Grave)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 101,
-                "name": "Crystalian Spear & Crystalian Ringblade"
+                "name": "Crystalian Spear & Crystalian Ringblade",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 102,
-                "name": "Demi-Human Queen Gilika"
+                "name": "Demi-Human Queen Gilika",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 103,
-                "name": "Elemer of the Briar"
+                "name": "Elemer of the Briar",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 104,
-                "name": "Fallingstar Beast"
+                "name": "Fallingstar Beast",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 105,
-                "name": "Godefroy The Grafted"
+                "name": "Godefroy The Grafted",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 106,
-                "name": "Godskin Apostle"
+                "name": "Godskin Apostle",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 107,
-                "name": "Necromancer Garris"
+                "name": "Necromancer Garris",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 108,
-                "name": "Night's Cavalry"
+                "name": "Night's Cavalry",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 109,
-                "name": "Omenkiller / Miranda"
+                "name": "Omenkiller / Miranda",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 110,
-                "name": "Perfumer Tricia / Misbegotten Warrior"
+                "name": "Perfumer Tricia / Misbegotten Warrior",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 111,
-                "name": "Sanguine Noble"
+                "name": "Sanguine Noble",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 112,
-                "name": "Stonedigger Troll"
+                "name": "Stonedigger Troll",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 113,
-                "name": "Tree Sentinel Duo"
+                "name": "Tree Sentinel Duo",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 114,
-                "name": "Wormface"
+                "name": "Wormface",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 11,
@@ -525,51 +753,75 @@
         "bosses": [
             {
                 "id": 115,
-                "name": "Abductor Virgins"
+                "name": "Abductor Virgins",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 116,
-                "name": "Demi-Human Queen Margot"
+                "name": "Demi-Human Queen Margot",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 117,
-                "name": "Demi-Human Queen Maggie"
+                "name": "Demi-Human Queen Maggie",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 118,
-                "name": "Erdtree Burial Watchdog"
+                "name": "Erdtree Burial Watchdog",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 119,
-                "name": "Full-Grown Fallingstar Beast"
+                "name": "Full-Grown Fallingstar Beast",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 120,
-                "name": "God-Devouring Serpent / Rykard"
+                "name": "God-Devouring Serpent / Rykard",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 121,
-                "name": "Godskin Noble"
+                "name": "Godskin Noble",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 122,
-                "name": "Kindred of Rot"
+                "name": "Kindred of Rot",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 123,
-                "name": "Magma Wyrm"
+                "name": "Magma Wyrm",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 124,
-                "name": "Red Wolf of the Champion"
+                "name": "Red Wolf of the Champion",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 125,
-                "name": "Tibia Mariner"
+                "name": "Tibia Mariner",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 126,
-                "name": "Ulcerated Tree Spirit"
+                "name": "Ulcerated Tree Spirit",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 12,
@@ -579,47 +831,69 @@
         "bosses": [
             {
                 "id": 127,
-                "name": "Bell Bearing Hunter"
+                "name": "Bell Bearing Hunter",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 128,
-                "name": "Crucible Knight Ordovis / Crucible Knight"
+                "name": "Crucible Knight Ordovis / Crucible Knight",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 129,
-                "name": "Deathbird"
+                "name": "Deathbird",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 130,
-                "name": "Draconic Tree Sentinel"
+                "name": "Draconic Tree Sentinel",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 131,
-                "name": "Esgar, Priest of Blood"
+                "name": "Esgar, Priest of Blood",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 132,
-                "name": "Fell Twins"
+                "name": "Fell Twins",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 133,
-                "name": "Godfrey, First Elden Lord (golden shade)"
+                "name": "Godfrey, First Elden Lord (golden shade)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 134,
-                "name": "Grave Warden Duelist"
+                "name": "Grave Warden Duelist",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 135,
-                "name": "Morgott, the Omen King"
+                "name": "Morgott, the Omen King",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 136,
-                "name": "Mohg, The Omen"
+                "name": "Mohg, The Omen",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 137,
-                "name": "Onyx Lord"
+                "name": "Onyx Lord",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 13,
@@ -629,15 +903,21 @@
         "bosses": [
             {
                 "id": 138,
-                "name": "Black Blade Kindred"
+                "name": "Black Blade Kindred",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 139,
-                "name": "Mimic Tear"
+                "name": "Mimic Tear",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 140,
-                "name": "Night's Cavalry"
+                "name": "Night's Cavalry",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 14,
@@ -647,39 +927,57 @@
         "bosses": [
             {
                 "id": 141,
-                "name": "Ancient Hero of Zamor"
+                "name": "Ancient Hero of Zamor",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 142,
-                "name": "Borealis the Freezing Fog"
+                "name": "Borealis the Freezing Fog",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 143,
-                "name": "Commander Niall"
+                "name": "Commander Niall",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 144,
-                "name": "Death Rite Bird"
+                "name": "Death Rite Bird",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 145,
-                "name": "Erdtree Avatar"
+                "name": "Erdtree Avatar",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 146,
-                "name": "Fire Giant"
+                "name": "Fire Giant",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 147,
-                "name": "Godskins (Summoner Snail)"
+                "name": "Godskins (Summoner Snail)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 148,
-                "name": "Ulcerated Tree Spirit"
+                "name": "Ulcerated Tree Spirit",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 149,
-                "name": "Vyke, Knight of the Roundtable"
+                "name": "Vyke, Knight of the Roundtable",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 15,
@@ -689,39 +987,57 @@
         "bosses": [
             {
                 "id": 150,
-                "name": "Astel, Stars of Darkness"
+                "name": "Astel, Stars of Darkness",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 151,
-                "name": "Death Rite Bird"
+                "name": "Death Rite Bird",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 152,
-                "name": "Great Wrym Theodorix"
+                "name": "Great Wrym Theodorix",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 153,
-                "name": "Loretta, Knight of the Haligtree"
+                "name": "Loretta, Knight of the Haligtree",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 154,
-                "name": "Malenia, Blade of Miquella"
+                "name": "Malenia, Blade of Miquella",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 155,
-                "name": "Misbegotten Crusader"
+                "name": "Misbegotten Crusader",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 156,
-                "name": "Night's Cavalry (duo)"
+                "name": "Night's Cavalry (duo)",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 157,
-                "name": "Putrid Avatar"
+                "name": "Putrid Avatar",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 158,
-                "name": "Putrid Grave Warden Duelist"
+                "name": "Putrid Grave Warden Duelist",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 16,
@@ -731,7 +1047,9 @@
         "bosses": [
             {
                 "id": 159,
-                "name": "Mohg, Lord of Blood"
+                "name": "Mohg, Lord of Blood",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 17,
@@ -741,15 +1059,21 @@
         "bosses": [
             {
                 "id": 160,
-                "name": "Godskin Duo"
+                "name": "Godskin Duo",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 161,
-                "name": "Beast Clergyman / Maliketh Black Blade"
+                "name": "Beast Clergyman / Maliketh Black Blade",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 162,
-                "name": "Dragonlord Placidusax"
+                "name": "Dragonlord Placidusax",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 18,
@@ -759,15 +1083,21 @@
         "bosses": [
             {
                 "id": 163,
-                "name": "Godfrey, First Elden Lord / Hoarah Loux"
+                "name": "Godfrey, First Elden Lord / Hoarah Loux",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 164,
-                "name": "Radagon of the Golden Order / Elden Beast"
+                "name": "Radagon of the Golden Order / Elden Beast",
+                "wikiReference": "",
+                "wikiMapReference": ""
             },
             {
                 "id": 165,
-                "name": "Sir Gideon Ofnir, the All-Knowing"
+                "name": "Sir Gideon Ofnir, the All-Knowing",
+                "wikiReference": "",
+                "wikiMapReference": ""
             }
         ],
         "id": 19,
