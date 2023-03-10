@@ -622,14 +622,14 @@
             {
                 "id": 95,
                 "name": "Astel, Naturalborn of the Void",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Astel+Naturalborn+of+the+Void",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3006&lat=-165.67187&lng=47.64713&zoom=8&code=mapB"
             },
             {
                 "id": 96,
-                "name": "DragonKin Soldier",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "name": "Dragonkin Soldier",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Dragonkin+Soldier#lake-of-rot",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2994&code=mapB"
             }
         ],
         "id": 10,
