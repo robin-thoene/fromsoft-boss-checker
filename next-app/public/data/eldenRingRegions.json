@@ -574,20 +574,20 @@
             {
                 "id": 89,
                 "name": "Mimic Tear",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Mimic+Tear",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1565&lat=-188.132812&lng=128.731198&zoom=8&code=mapB"
             },
             {
                 "id": 90,
                 "name": "Regal Ancestor Spirit",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Regal+Ancestor+Spirit",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1580&lat=-180.078125&lng=128.488495&zoom=8&code=mapB"
             },
             {
                 "id": 91,
                 "name": "Valiant Gargoyles",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Valiant+Gargoyle#siofra-river",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2976&code=mapB"
             }
         ],
         "id": 8,
