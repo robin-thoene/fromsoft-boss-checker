@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement, useEffect } from 'react';
 
 import { useStoreActions, useStoreState } from '../../../../store/store';
+import NavigationSide from '../../navigation/navigationSide';
 import NavigationTop from '../../navigation/navigationTop';
 import Toast from '../../toast';
 import { IBasicLayoutProps } from './properties';
@@ -38,7 +39,10 @@ const BasicLayout: FunctionComponent<IBasicLayoutProps> = (props): ReactElement 
     return (
         <div className="flex max-h-screen flex-1 flex-col">
             <NavigationTop enableGlobalSearch={props.enableGlobalSearch} />
-            <div className="flex flex-1 overflow-hidden">{props.children}</div>
+            <div className="flex flex-1 overflow-hidden">
+                <NavigationSide />
+                {props.children}
+            </div>
             {globalNotification && <Toast type={globalNotification.type} message={globalNotification.message} dismiss={() => updateGlobalNotificationMessage(undefined)} />}
         </div>
     );
