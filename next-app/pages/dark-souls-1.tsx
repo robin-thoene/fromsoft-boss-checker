@@ -4,6 +4,10 @@ import React from 'react';
 
 import BossChecklistPage from '../components/bossChecklistPage';
 import { FromSoftwareGame } from '../enumerations';
+import { getBosses } from '../helper/darkSoulsDataHelper';
+
+// Get the list of all Dark Souls bosses.
+const darkSoulsBosses = getBosses();
 
 /**
  * The page component to render at "/dark-souls-1".
@@ -16,7 +20,7 @@ const DarkSouls: NextPage = () => {
             fromSoftwareGame={FromSoftwareGame.DarkSouls}
             localStorageFelledBossesKey="darkSoulsFelledBossIds"
             localStorageMarkedBossesKey="darkSoulsMarkedBossIds"
-            regions={[]}
+            bosses={darkSoulsBosses}
         />
     );
 };
