@@ -928,56 +928,56 @@
             {
                 "id": 141,
                 "name": "Ancient Hero of Zamor",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Ancient+Hero+of+Zamor#giant-conquering-heros-grave",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=3872&lat=-85.50625&lng=147.799587&zoom=8&code=mapA"
             },
             {
                 "id": 142,
                 "name": "Borealis the Freezing Fog",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Borealis+the+Freezing+Fog",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2054&lat=-65.76875&lng=171.117321&zoom=8&code=mapA"
             },
             {
                 "id": 143,
                 "name": "Commander Niall",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Commander+Niall",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=3807&lat=-58.929687&lng=158.27116&zoom=8&code=mapA"
             },
             {
                 "id": 144,
                 "name": "Death Rite Bird",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Death+Rite+Bird#mountaintops-of-the-giants",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=3263&lat=-64.36875&lng=151.906893&zoom=8&code=mapA"
             },
             {
                 "id": 145,
                 "name": "Erdtree Avatar",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Erdtree+Avatar#mountaintops-east",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=3416&lat=-67.635"
             },
             {
                 "id": 146,
                 "name": "Fire Giant",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Fire+Giant",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3552&lat=-91.82&lng=164.49&zoom=8&code=mapA"
             },
             {
                 "id": 147,
                 "name": "Godskins (Summoner Snail)",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Spirit-Caller+Snail#spiritcaller-cave",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3565&lat=-67.48125&lng=169.0979&zoom=8&code=mapA"
             },
             {
                 "id": 148,
                 "name": "Ulcerated Tree Spirit",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Ulcerated+Tree+Spirit#giants-mountaintop-catacombs",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6259&lat=-84.234375&lng=150.805845&zoom=8&code=mapA"
             },
             {
                 "id": 149,
                 "name": "Vyke, Knight of the Roundtable",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Roundtable+Knight+Vyke",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=14101&code=mapA"
             }
         ],
         "id": 15,
