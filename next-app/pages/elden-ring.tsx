@@ -179,11 +179,11 @@ const EldenRing: NextPage = () => {
                     </Stack>
                 ))}
                 <div className="mt-16 flex w-full justify-center">
-                    <PrimaryButton text={t('eldenRing_reset_button')} fullWidth onClick={() => setIsClearDialogOpen(true)} />
+                    <PrimaryButton text={t('gameProgress_reset_button')} fullWidth onClick={() => setIsClearDialogOpen(true)} />
                 </div>
             </Stack>
             <Dialog
-                title={t('eldenRing_reset_confirmDialog_title')}
+                title={t('gameProgress_reset_confirmDialog_title')}
                 isDangerous
                 isOpen={isClearDialogOpen}
                 onClose={() => setIsClearDialogOpen(false)}
@@ -191,7 +191,7 @@ const EldenRing: NextPage = () => {
                     setFelledBossIds([]);
                     setIsClearDialogOpen(false);
                 }}>
-                <p>{t('eldenRing_reset_confirmDialog_text')}</p>
+                <p>{t('gameProgress_reset_confirmDialog_text')}</p>
             </Dialog>
             <div className="fixed bottom-10 right-10 z-50 flex h-24 w-24 items-center justify-center rounded-full border border-base-content bg-base-300">
                 {felledBossIds.length} / {bossCounter}

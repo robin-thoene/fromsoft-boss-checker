@@ -10,9 +10,9 @@
     "clearSearchAriaLabel": "Reset search.",
     "collapseSideNavAriaLabel": "Collapse side navigation.",
     "openSideNavAriaLabel": "Expand side navigation.",
-    "eldenRing_reset_button": "reset",
-    "eldenRing_reset_confirmDialog_title": "Reset current progress",
-    "eldenRing_reset_confirmDialog_text": "The complete progress will be thrown away!",
+    "gameProgress_reset_button": "reset",
+    "gameProgress_reset_confirmDialog_title": "Reset current progress",
+    "gameProgress_reset_confirmDialog_text": "The complete progress will be thrown away!",
     "darkSoulsOneRingRouteLabel": "Dark Souls",
     "eldenRingRouteLabel": "Elden Ring"
 }
