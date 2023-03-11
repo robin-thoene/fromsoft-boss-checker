@@ -7,4 +7,4 @@ enum SortDirection {
     Descending = 2,
 }
 
-export { SortDirection };
+export type { SortDirection };
