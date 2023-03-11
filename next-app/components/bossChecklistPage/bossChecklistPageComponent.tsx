@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 import React, { FunctionComponent, ReactElement, useEffect, useMemo, useState } from 'react';
 
 import { FromSoftwareGame } from '../../enumerations';
-import { IEldenRingBoss } from '../../types';
+import { IBoss, IEldenRingBoss } from '../../types';
 import IconButton from '../base/button/iconButton';
 import PrimaryButton from '../base/button/primaryButton';
 import Checkbox from '../base/checkbox';
@@ -44,7 +44,15 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
     }, [props.fromSoftwareGame]);
 
     /** The counter of all bosses. */
-    const bossCounter = useMemo(() => props.regions.reduce((acc, region) => acc + region.bosses.length, 0), [props.regions]);
+    const bossCounter = useMemo(() => {
+        if (props.bosses) {
+            return props.bosses.length;
+        }
+        if (props.regions) {
+            return props.regions.reduce((acc, region) => acc + region.bosses.length, 0);
+        }
+        return 0;
+    }, [props.bosses, props.regions]);
 
     /** Whether the page is initialized on the client or not. */
     const [isInitializedClientSide, setIsInitializedClientSide] = useState<boolean>(false);
@@ -57,6 +65,10 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
 
     /** Initialize the page on client side. */
     useEffect(() => {
+        // Validate a correct usage of the properties.
+        if (props.regions && props.bosses) {
+            throw new Error('The properties "regions" and "bosses" are mutually exclusive. Please use only one of them.');
+        }
         // Load the users stored progress from the local storage.
         const storedFelledBossIdsString = localStorage.getItem(props.localStorageFelledBossesKey);
         if (storedFelledBossIdsString) {
@@ -70,7 +82,7 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
             setMarkedBossIds(storedMarkedBossIds);
         }
         setIsInitializedClientSide(true);
-    }, [props.localStorageFelledBossesKey, props.localStorageMarkedBossesKey]);
+    }, [props.bosses, props.localStorageFelledBossesKey, props.localStorageMarkedBossesKey, props.regions]);
 
     /** Store felled bosses changes in the local storage. */
     useEffect(() => {
@@ -132,65 +144,70 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
         setMarkedBossIds([...tmpMarkedBossIds]);
     };
 
+    /**
+     * Custom render component for a single boss.
+     *
+     * @param {IBoss} boss The boss to render.
+     * @returns {ReactElement} The rendered boss.
+     */
+    const BossRow = (boss: IBoss): ReactElement => (
+        <div
+            className="flex h-12 w-full cursor-pointer items-center"
+            onClick={() => toggleFelledState(boss.id)}
+            onContextMenu={(e) => {
+                e.preventDefault();
+                toggleMarkedState(boss.id);
+            }}>
+            <div className="w-full">
+                <Stack horizontal horizontalAlign="SpaceBetween">
+                    <div className={`relative flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
+                        {markedBossIds.includes(boss.id) && <FlagIcon className="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-red-600" />}
+                        <div className="pl-7">{boss.name}</div>
+                    </div>
+                    <div className="flex w-40 items-center justify-between">
+                        <div className="mr-9">
+                            <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
+                        </div>
+                        {boss.wikiReference && boss.wikiReference !== '' && (
+                            <IconButton
+                                icon={<DocumentTextIcon className="h-5 w-5" />}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    window.open(boss.wikiReference, '_blank');
+                                }}
+                            />
+                        )}
+                        {props.fromSoftwareGame === FromSoftwareGame.EldenRing && (boss as IEldenRingBoss).wikiMapReference && (
+                            <IconButton
+                                icon={<MapPinIcon className="h-5 w-5" />}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    window.open((boss as IEldenRingBoss).wikiMapReference, '_blank');
+                                }}
+                            />
+                        )}
+                    </div>
+                </Stack>
+            </div>
+        </div>
+    );
+
     return (
         <div className="flex flex-1 flex-col overflow-auto p-10">
             <Stack horizontalAlign="Center">
                 <h1>{title}</h1>
             </Stack>
             <Stack>
-                {props.regions.map((region) => (
+                {props.regions?.map((region) => (
                     <Stack key={`region-${region.id}-${region.name}`}>
                         <h2 className="border-b border-base-content">{region.name}</h2>
-                        {region.bosses.map((boss) => {
-                            // Return the rendered boss as row.
-                            return (
-                                <div
-                                    className="flex h-12 w-full cursor-pointer items-center"
-                                    key={`boss-${boss.id}-${boss.name}`}
-                                    onClick={() => toggleFelledState(boss.id)}
-                                    onContextMenu={(e) => {
-                                        e.preventDefault();
-                                        toggleMarkedState(boss.id);
-                                    }}>
-                                    <div className="w-full">
-                                        <Stack horizontal horizontalAlign="SpaceBetween">
-                                            <div className={`relative flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
-                                                {markedBossIds.includes(boss.id) && <FlagIcon className="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-red-600" />}
-                                                <div className="pl-7">{boss.name}</div>
-                                            </div>
-                                            <div className="flex w-40 items-center justify-between">
-                                                <div className="mr-9">
-                                                    <Checkbox
-                                                        isChecked={felledBossIds.includes(boss.id)}
-                                                        disabled={!isInitializedClientSide}
-                                                        onChange={() => toggleFelledState(boss.id)}
-                                                    />
-                                                </div>
-                                                {boss.wikiReference && boss.wikiReference !== '' && (
-                                                    <IconButton
-                                                        icon={<DocumentTextIcon className="h-5 w-5" />}
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            window.open(boss.wikiReference, '_blank');
-                                                        }}
-                                                    />
-                                                )}
-                                                {props.fromSoftwareGame === FromSoftwareGame.EldenRing && (boss as IEldenRingBoss).wikiMapReference && (
-                                                    <IconButton
-                                                        icon={<MapPinIcon className="h-5 w-5" />}
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            window.open((boss as IEldenRingBoss).wikiMapReference, '_blank');
-                                                        }}
-                                                    />
-                                                )}
-                                            </div>
-                                        </Stack>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                        {region.bosses.map((boss) => (
+                            <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />
+                        ))}
                     </Stack>
+                ))}
+                {props.bosses?.map((boss) => (
+                    <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />
                 ))}
                 <div className="mt-16 flex w-full justify-center">
                     <PrimaryButton text={t('gameProgress_reset_button')} fullWidth onClick={() => setIsClearDialogOpen(true)} />
