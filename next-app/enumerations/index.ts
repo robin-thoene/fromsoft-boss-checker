@@ -1,3 +1,4 @@
+import { FromSoftwareGame } from './fromSoftwareGame';
 import { SortDirection } from './sortDirection';
 
-export { SortDirection };
+export type { FromSoftwareGame, SortDirection };
