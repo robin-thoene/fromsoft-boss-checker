@@ -12,5 +12,8 @@
     "openSideNavAriaLabel": "Expand side navigation.",
     "eldenRing_reset_button": "reset",
     "eldenRing_reset_confirmDialog_title": "Reset current progress",
-    "eldenRing_reset_confirmDialog_text": "The complete progress will be thrown away!"
+    "eldenRing_reset_confirmDialog_text": "The complete progress will be thrown away!",
+    "homeRouteLabel": "Start",
+    "darkSoulsOneRingRouteLabel": "Dark Souls",
+    "eldenRingRouteLabel": "Elden Ring"
 }
