@@ -988,56 +988,56 @@
             {
                 "id": 150,
                 "name": "Astel, Stars of Darkness",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Astel,+Stars+of+Darkness",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4492&lat=-77.93&lng=132.19&zoom=8&code=mapA"
             },
             {
                 "id": 151,
                 "name": "Death Rite Bird",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Death+Rite+Bird#apostate-derelict",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6210&lat=-60&lng=136&zoom=8&code=mapA"
             },
             {
                 "id": 152,
                 "name": "Great Wrym Theodorix",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Great+Wyrm+Theodorix",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4656&lat=-68.335937&lng=149.168542&zoom=8&code=mapA"
             },
             {
                 "id": 153,
                 "name": "Loretta, Knight of the Haligtree",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Loretta,+Knight+of+the+Haligtree",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4624&lat=-44.523437&lng=150.263866&zoom=8&code=mapA"
             },
             {
                 "id": 154,
                 "name": "Malenia, Blade of Miquella",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Malenia+Blade+of+Miquella",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6051&lat=-37.60625&lng=148.71069&zoom=8&code=mapA"
             },
             {
                 "id": 155,
                 "name": "Misbegotten Crusader",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Misbegotten+Crusader",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4824&lat=-69.26997&lng=148.35371&zoom=8&code=mapA"
             },
             {
                 "id": 156,
                 "name": "Night's Cavalry (duo)",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Night's+Cavalry#consecrated-snowfield",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4411&lat=-76.39&lng=139&zoom=8&code=mapA"
             },
             {
                 "id": 157,
                 "name": "Putrid Avatar",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Avatar#consecrated-snowfield",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4641&code=mapA"
             },
             {
                 "id": 158,
                 "name": "Putrid Grave Warden Duelist",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Grave+Warden+Duelist",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3505&lat=-79.16&lng=149.34&zoom=8&code=mapA"
             }
         ],
         "id": 16,
