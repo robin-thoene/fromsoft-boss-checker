@@ -22,11 +22,11 @@ const localStorageMarkedBossesKey = 'markedBossIds';
 const bossCounter = eldenRingRegions.reduce((acc, region) => acc + region.bosses.length, 0);
 
 /**
- * The page component to render at "/".
+ * The page component to render at "/elden-ring".
  *
- * @returns {NextPage} The home page component.
+ * @returns {NextPage} The Elden Ring page component.
  */
-const Home: NextPage = () => {
+const EldenRing: NextPage = () => {
     /** Access to translations. */
     const { t } = useTranslation();
 
@@ -212,4 +212,4 @@ export const getStaticProps: GetStaticProps = async ({ locale }: { [key: string]
     };
 };
 
-export default Home;
+export default EldenRing;
