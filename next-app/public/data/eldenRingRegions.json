@@ -1060,20 +1060,20 @@
             {
                 "id": 160,
                 "name": "Godskin Duo",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Godskin+Duo",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3967&lat=-123.31&lng=216.53&zoom=8&code=mapA"
             },
             {
                 "id": 161,
                 "name": "Beast Clergyman / Maliketh Black Blade",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Beast+Clergyman",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4660&lat=-125.085937&lng=221.027742&zoom=8&code=mapA"
             },
             {
                 "id": 162,
                 "name": "Dragonlord Placidusax",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Dragonlord+Placidusax",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5711&lat=-125.98&lng=216.68&zoom=8&code=mapA"
             }
         ],
         "id": 18,
