@@ -15,11 +15,6 @@ const useRoutes = (): IRoute[] => {
 
     return [
         {
-            path: '/',
-            label: t('homeRouteLabel'),
-            icon: <HomeIcon className="h-5 w-5" />,
-        },
-        {
             path: '/dark-souls-1',
             label: t('darkSoulsOneRingRouteLabel'),
             icon: <HomeIcon className="h-5 w-5" />,

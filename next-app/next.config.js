@@ -8,4 +8,13 @@ module.exports = {
     images: {
         domains: [],
     },
+    async redirects() {
+        return [
+            {
+                source: '/',
+                destination: '/dark-souls-1',
+                permanent: true,
+            },
+        ];
+    },
 };
