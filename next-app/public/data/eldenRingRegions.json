@@ -904,20 +904,20 @@
             {
                 "id": 138,
                 "name": "Black Blade Kindred",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Black+Blade+Kindred#forbidden-lands",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1455&lat=-95&lng=142&zoom=8"
             },
             {
                 "id": 139,
                 "name": "Mimic Tear",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Mimic+Tear",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2968&lat=-84.796875&lng=142.571838&zoom=8&code=mapA"
             },
             {
                 "id": 140,
                 "name": "Night's Cavalry",
-                "wikiReference": "",
-                "wikiMapReference": ""
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Night's+Cavalry#forbidden-lands",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6256&lat=-99&lng=136&zoom=8&code=mapA"
             }
         ],
         "id": 14,
