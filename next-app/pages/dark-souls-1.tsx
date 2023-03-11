@@ -2,13 +2,23 @@ import { GetStaticProps, NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
 
+import BossChecklistPage from '../components/bossChecklistPage';
+import { FromSoftwareGame } from '../enumerations';
+
 /**
  * The page component to render at "/dark-souls-1".
  *
  * @returns {NextPage} The Dark Souls page component.
  */
 const DarkSouls: NextPage = () => {
-    return <></>;
+    return (
+        <BossChecklistPage
+            fromSoftwareGame={FromSoftwareGame.DarkSouls}
+            localStorageFelledBossesKey="darkSoulsFelledBossIds"
+            localStorageMarkedBossesKey="darkSoulsMarkedBossIds"
+            regions={[]}
+        />
+    );
 };
 
 /**
