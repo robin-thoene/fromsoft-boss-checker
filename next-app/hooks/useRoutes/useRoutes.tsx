@@ -1,6 +1,4 @@
-import { HomeIcon } from '@heroicons/react/24/solid';
 import { useTranslation } from 'next-i18next';
-import React from 'react';
 
 import { IRoute } from './types';
 
@@ -17,12 +15,10 @@ const useRoutes = (): IRoute[] => {
         {
             path: '/dark-souls-1',
             label: t('darkSoulsOneRingRouteLabel'),
-            icon: <HomeIcon className="h-5 w-5" />,
         },
         {
             path: '/elden-ring',
             label: t('eldenRingRouteLabel'),
-            icon: <HomeIcon className="h-5 w-5" />,
         },
     ];
 };
