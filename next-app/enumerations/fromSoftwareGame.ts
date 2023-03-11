@@ -12,4 +12,4 @@ enum FromSoftwareGame {
     EldenRing = 7,
 }
 
-export type { FromSoftwareGame };
+export { FromSoftwareGame };
