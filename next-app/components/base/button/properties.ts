@@ -3,7 +3,7 @@
  */
 interface IButtonProps {
     /** The action to execute on click. */
-    onClick?: () => void;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     /** Whether the button is disabled or not. */
     disabled?: boolean;
     /** Whether the button displays a busy state or not. */

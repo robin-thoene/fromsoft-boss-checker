@@ -1,5 +1,6 @@
-import { IRegion } from './eldenRing/region';
+import { IEldenRingBoss } from './eldenRing/boss';
 import { IGlobalNotification } from './globalNotification';
+import { IRegion } from './region';
 import { TailwindSize } from './tailwindSize';
 
-export type { IGlobalNotification, IRegion, TailwindSize };
+export type { IEldenRingBoss, IGlobalNotification, IRegion, TailwindSize };

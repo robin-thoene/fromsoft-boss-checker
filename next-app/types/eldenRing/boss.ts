@@ -1,11 +1,11 @@
+import { IBoss } from '../boss';
+
 /**
  * Represents a boss in Elden Ring.
  */
-interface IBoss {
-    /** The unique identifier of the boss.ƒ */
-    id: number;
-    /** The name of the boss. */
-    name: string;
+interface IEldenRingBoss extends IBoss {
+    /** The link to the map location of the boss inside the external wiki. */
+    wikiMapReference: string;
 }
 
-export type { IBoss };
+export type { IEldenRingBoss };
