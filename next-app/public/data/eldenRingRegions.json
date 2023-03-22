@@ -134,6 +134,24 @@
     {
         "bosses": [
             {
+                "id": 86,
+                "name": "Ancestor Spirit",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Ancestor+Spirit",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1183&lat=-185.070312&lng=130.770026&zoom=8&code=mapB"
+            },
+            {
+                "id": 87,
+                "name": "Dragonkin Soldier",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Dragonkin+Soldier#siofra-river",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1308&code=mapB"
+            }
+        ],
+        "id": 2,
+        "name": "SIOFRA RIVER"
+    },
+    {
+        "bosses": [
+            {
                 "id": 22,
                 "name": "Ancient Hero of Zamor",
                 "wikiReference": "https://eldenring.wiki.fextralife.com/Ancient+Hero+of+Zamor#weeping-evergaol",
@@ -194,7 +212,7 @@
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2318&lat=-214.054&lng=108.91&zoom=8&code=mapA"
             }
         ],
-        "id": 2,
+        "id": 3,
         "name": "WEEPING PENINSULA"
     },
     {
@@ -210,12 +228,6 @@
                 "name": "Alabaster Lord",
                 "wikiReference": "https://eldenring.wiki.fextralife.com/Alabaster+Lord",
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=1876&lat=-106.475&lng=65.30746&zoom=8"
-            },
-            {
-                "id": 34,
-                "name": "Alecto, Black Knife Ringleader",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Alecto,+Black+Knife+Ringleader",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5934&code=mapA"
             },
             {
                 "id": 35,
@@ -296,12 +308,6 @@
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=2949&lat=-161.176562&lng=84.627475&zoom=8&code=mapA"
             },
             {
-                "id": 48,
-                "name": "Glintstone Dragon Adula",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Glintstone+Dragon+Adula",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=1866&lat=-106.421875&lng=52.987049&zoom=8&code=mapA"
-            },
-            {
                 "id": 49,
                 "name": "Glintstone Dragon Smarag",
                 "wikiReference": "https://eldenring.wiki.fextralife.com/Glintstone+Dragon+Smarag",
@@ -374,188 +380,8 @@
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1359&code=mapA"
             }
         ],
-        "id": 3,
-        "name": "LIURNIA OF THE LAKES"
-    },
-    {
-        "bosses": [
-            {
-                "id": 61,
-                "name": "Battlemage Hugues",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Battlemage+Hugues",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6661&code=mapA"
-            },
-            {
-                "id": 62,
-                "name": "Cemetery Shade",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Cemetery+Shade#caelid-catacombs",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6442&lat=-191&lng=140&zoom=8&code=mapA"
-            },
-            {
-                "id": 63,
-                "name": "Cleanrot Knight",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Cleanrot+Knight#abandoned-cave",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5434&lat=-175.164062&lng=141.89495&zoom=8&code=mapA"
-            },
-            {
-                "id": 64,
-                "name": "Commander O'Neil",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Commander+O'Neil",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=1560&lat=-181.29687&lng=143.75635&zoom=8&code=mapA"
-            },
-            {
-                "id": 65,
-                "name": "Crucible Knight / Misbegotten Warrior",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Crucible+Knight+and+Misbegotten+Warrior",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6528&lat=-195.78125&lng=157.812084&zoom=8&code=mapA"
-            },
-            {
-                "id": 66,
-                "name": "Death Rite Bird",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Death+Rite+Bird#caelid",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4512&lat=-187.56&lng=147.04&zoom=8&code=mapA"
-            },
-            {
-                "id": 67,
-                "name": "Decaying Ekzykes",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Decaying+Ekzykes",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/interactive+map?id=1157&lat=-188.479688&lng=140.089212&zoom=8"
-            },
-            {
-                "id": 68,
-                "name": "Erdtree Avatar",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Avatar#caelid",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2927&code=mapA"
-            },
-            {
-                "id": 69,
-                "name": "Erdtree Burial Watchdog",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Erdtree+Burial+Watchdog#minor-erdtree-catacombs",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=2942&lat=-164.80625&lng=129.943308&zoom=8&code=mapA"
-            },
-            {
-                "id": 70,
-                "name": "Fallingstar Beast",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Fallingstar+Beast#sellia-crystal-tunnel",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2957&lat=-171.634375&lng=145.286559&zoom=8&code=mapA"
-            },
-            {
-                "id": 71,
-                "name": "Frenzied Duelist",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Frenzied+Duelist",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4252&lat=-180.340625&lng=129.832385&zoom=8&code=mapA"
-            },
-            {
-                "id": 72,
-                "name": "Mad Pumpkin Heads",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Mad+Pumpkin+Head#caelem-ruins",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=3011&lat=-171.565625&lng=135.596258&zoom=8&code=mapA"
-            },
-            {
-                "id": 73,
-                "name": "Magma Wyrm",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Magma+Wyrm#gael-tunnel",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2911&lat=-174.54&lng=127.21&zoom=8&code=mapA"
-            },
-            {
-                "id": 74,
-                "name": "Night's Cavalry",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Night's+Cavalry#caelid",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/interactive+map?id=1168&lat=-186&lng=144&zoom=8"
-            },
-            {
-                "id": 75,
-                "name": "Nox Swordstress & Nox Priest",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Nox+Swordstress+&+Nox+Priest",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=1558&lat=-173.398437&lng=146.918723&zoom=8&code=mapA"
-            },
-            {
-                "id": 76,
-                "name": "Putrid Crystallian Trio",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Crystalians",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4476&lat=-174.64&lng=154.11&zoom=8&code=mapA"
-            },
-            {
-                "id": 77,
-                "name": "Starscourge Radahn",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Starscourge+Radahn",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2362&lat=-194.5625&lng=159.103951&zoom=8"
-            }
-        ],
         "id": 4,
-        "name": "CAELID"
-    },
-    {
-        "bosses": [
-            {
-                "id": 78,
-                "name": "Beastman of Farum Azula",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Beastman+of+Farum+Azula#dragonbarrow-cave",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=2965&lat=-165.420313&lng=157.018319&zoom=8&code=mapA"
-            },
-            {
-                "id": 79,
-                "name": "Bell Bearing Hunter",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Bell+Bearing+Hunter#isolated-merchants-shack",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5425&lat=-164.59375&lng=136.674478&zoom=8&code=mapA"
-            },
-            {
-                "id": 80,
-                "name": "Black Blade Kindred (Bestial Sanctum)",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Black+Blade+Kindred#bestial-sanctum",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1251&lat=-151.62&lng=156.549&zoom=8"
-            },
-            {
-                "id": 81,
-                "name": "Flying Dragon Greyll",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Flying+Dragon+Greyll",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=1348&lat=-156.093&lng=160.30&zoom=8&code=mapA"
-            },
-            {
-                "id": 82,
-                "name": "Godskin Apostle",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Godskin+Apostle#divine-tower-of-caelid",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=3152&lat=-163.776562&lng=145.7371&zoom=8&code=mapA"
-            },
-            {
-                "id": 83,
-                "name": "Night's Cavalry",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Night's+Cavalry#dragonbarrow",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6068&lat=-160.87&lng=163.51&zoom=8&code=mapA"
-            },
-            {
-                "id": 84,
-                "name": "Putrid Avatar",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Avatar#dragonbarrow",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6441&lat=-166.539062&lng=155.722083&zoom=8&code=mapA"
-            },
-            {
-                "id": 85,
-                "name": "Putrid Tree Spirit",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Tree+Spirit",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6255&lat=-166.66&lng=163.44&zoom=8&code=mapA"
-            }
-        ],
-        "id": 5,
-        "name": "DRAGONBARROW"
-    },
-    {
-        "bosses": [
-            {
-                "id": 86,
-                "name": "Ancestor Spirit",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Ancestor+Spirit",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1183&lat=-185.070312&lng=130.770026&zoom=8&code=mapB"
-            },
-            {
-                "id": 87,
-                "name": "Dragonkin Soldier",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Dragonkin+Soldier#siofra-river",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1308&code=mapB"
-            }
-        ],
-        "id": 6,
-        "name": "SIOFRA RIVER"
+        "name": "LIURNIA OF THE LAKES"
     },
     {
         "bosses": [
@@ -566,74 +392,8 @@
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1405&lat=-123.976562&lng=64.106346&zoom=8&code=mapB"
             }
         ],
-        "id": 7,
+        "id": 5,
         "name": "AINSEL RIVER"
-    },
-    {
-        "bosses": [
-            {
-                "id": 89,
-                "name": "Mimic Tear",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Mimic+Tear",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1565&lat=-188.132812&lng=128.731198&zoom=8&code=mapB"
-            },
-            {
-                "id": 90,
-                "name": "Regal Ancestor Spirit",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Regal+Ancestor+Spirit",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1580&lat=-180.078125&lng=128.488495&zoom=8&code=mapB"
-            },
-            {
-                "id": 91,
-                "name": "Valiant Gargoyles",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Valiant+Gargoyle#siofra-river",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2976&code=mapB"
-            }
-        ],
-        "id": 8,
-        "name": "NOKRON, ETERNAL CITY"
-    },
-    {
-        "bosses": [
-            {
-                "id": 92,
-                "name": "Crucible Knight Siluria",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Crucible+Knight+Siluria",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5257&code=mapB"
-            },
-            {
-                "id": 93,
-                "name": "Fia's Champions",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Fia's+champions",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5362&code=mapB"
-            },
-            {
-                "id": 94,
-                "name": "Lichdragon Fortissax",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Lichdragon+Fortissax",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6425&lat=-93&lng=118&zoom=8&code=mapB"
-            }
-        ],
-        "id": 9,
-        "name": "DEEPROOT DEPTHS"
-    },
-    {
-        "bosses": [
-            {
-                "id": 95,
-                "name": "Astel, Naturalborn of the Void",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Astel+Naturalborn+of+the+Void",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3006&lat=-165.67187&lng=47.64713&zoom=8&code=mapB"
-            },
-            {
-                "id": 96,
-                "name": "Dragonkin Soldier",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Dragonkin+Soldier#lake-of-rot",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2994&code=mapB"
-            }
-        ],
-        "id": 10,
-        "name": "LAKE OF ROT"
     },
     {
         "bosses": [
@@ -746,8 +506,188 @@
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5802&code=mapA"
             }
         ],
-        "id": 11,
+        "id": 6,
         "name": "ALTUS PLATEAU"
+    },
+    {
+        "bosses": [
+            {
+                "id": 62,
+                "name": "Cemetery Shade",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Cemetery+Shade#caelid-catacombs",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6442&lat=-191&lng=140&zoom=8&code=mapA"
+            },
+            {
+                "id": 63,
+                "name": "Cleanrot Knight",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Cleanrot+Knight#abandoned-cave",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5434&lat=-175.164062&lng=141.89495&zoom=8&code=mapA"
+            },
+            {
+                "id": 64,
+                "name": "Commander O'Neil",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Commander+O'Neil",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=1560&lat=-181.29687&lng=143.75635&zoom=8&code=mapA"
+            },
+            {
+                "id": 65,
+                "name": "Crucible Knight / Misbegotten Warrior",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Crucible+Knight+and+Misbegotten+Warrior",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6528&lat=-195.78125&lng=157.812084&zoom=8&code=mapA"
+            },
+            {
+                "id": 66,
+                "name": "Death Rite Bird",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Death+Rite+Bird#caelid",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4512&lat=-187.56&lng=147.04&zoom=8&code=mapA"
+            },
+            {
+                "id": 67,
+                "name": "Decaying Ekzykes",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Decaying+Ekzykes",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/interactive+map?id=1157&lat=-188.479688&lng=140.089212&zoom=8"
+            },
+            {
+                "id": 68,
+                "name": "Erdtree Avatar",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Avatar#caelid",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2927&code=mapA"
+            },
+            {
+                "id": 69,
+                "name": "Erdtree Burial Watchdog",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Erdtree+Burial+Watchdog#minor-erdtree-catacombs",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=2942&lat=-164.80625&lng=129.943308&zoom=8&code=mapA"
+            },
+            {
+                "id": 70,
+                "name": "Fallingstar Beast",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Fallingstar+Beast#sellia-crystal-tunnel",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2957&lat=-171.634375&lng=145.286559&zoom=8&code=mapA"
+            },
+            {
+                "id": 71,
+                "name": "Frenzied Duelist",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Frenzied+Duelist",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4252&lat=-180.340625&lng=129.832385&zoom=8&code=mapA"
+            },
+            {
+                "id": 72,
+                "name": "Mad Pumpkin Heads",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Mad+Pumpkin+Head#caelem-ruins",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=3011&lat=-171.565625&lng=135.596258&zoom=8&code=mapA"
+            },
+            {
+                "id": 73,
+                "name": "Magma Wyrm",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Magma+Wyrm#gael-tunnel",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2911&lat=-174.54&lng=127.21&zoom=8&code=mapA"
+            },
+            {
+                "id": 74,
+                "name": "Night's Cavalry",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Night's+Cavalry#caelid",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/interactive+map?id=1168&lat=-186&lng=144&zoom=8"
+            },
+            {
+                "id": 75,
+                "name": "Nox Swordstress & Nox Priest",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Nox+Swordstress+&+Nox+Priest",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=1558&lat=-173.398437&lng=146.918723&zoom=8&code=mapA"
+            },
+            {
+                "id": 76,
+                "name": "Putrid Crystallian Trio",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Crystalians",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4476&lat=-174.64&lng=154.11&zoom=8&code=mapA"
+            },
+            {
+                "id": 77,
+                "name": "Starscourge Radahn",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Starscourge+Radahn",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2362&lat=-194.5625&lng=159.103951&zoom=8"
+            },
+            {
+                "id": 85,
+                "name": "Putrid Tree Spirit",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Tree+Spirit",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6255&lat=-166.66&lng=163.44&zoom=8&code=mapA"
+            }
+        ],
+        "id": 7,
+        "name": "CAELID"
+    },
+    {
+        "bosses": [
+            {
+                "id": 127,
+                "name": "Bell Bearing Hunter",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Bell+Bearing+Hunter#hermit-merchants-shack",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5424&lat=-89.07&lng=107.313&zoom=8&code=mapA"
+            },
+            {
+                "id": 128,
+                "name": "Crucible Knight Ordovis / Crucible Knight",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Crucible+Knight+Ordovis",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2703&lat=-95.914062&lng=120.457908&zoom=8&code=mapA"
+            },
+            {
+                "id": 129,
+                "name": "Deathbird",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Deathbird#capital-outskirts",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6208&lat=-88.34375&lng=108.361276&zoom=8&code=mapA"
+            },
+            {
+                "id": 130,
+                "name": "Draconic Tree Sentinel",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Draconic+Tree+Sentinel#capital-outskirts",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1151&lat=-93.609375&lng=120.199825&zoom=8"
+            },
+            {
+                "id": 131,
+                "name": "Esgar, Priest of Blood",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Esgar,+Priest+of+Blood",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6695&lat=-102.5&lng=115.012066&zoom=8&code=mapA"
+            },
+            {
+                "id": 132,
+                "name": "Fell Twins",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Fell+Twins",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1453&lat=-102.171875&lng=127.039843&zoom=8"
+            },
+            {
+                "id": 133,
+                "name": "Godfrey, First Elden Lord (golden shade)",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Godfrey,+First+Elden+Lord+(Golden+Shade)",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3933&lat=-104.70&lng=114.98&zoom=8&code=mapA"
+            },
+            {
+                "id": 134,
+                "name": "Grave Warden Duelist",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Grave+Warden+Duelist#auriza-side-tomb",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6260&lat=-95.140625&lng=121.863431&zoom=8&code=mapA"
+            },
+            {
+                "id": 135,
+                "name": "Morgott, the Omen King",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Morgott+the+Omen+King",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3232&code=mapA"
+            },
+            {
+                "id": 136,
+                "name": "Mohg, The Omen",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Mohg,+the+Omen",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6263&lat=-101.40625&lng=116.520091&zoom=8&code=mapA"
+            },
+            {
+                "id": 137,
+                "name": "Onyx Lord",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Onyx+Lord#sealed-tunnel",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2858&lat=-105.75&lng=105.660584&zoom=8&code=mapA"
+            }
+        ],
+        "id": 8,
+        "name": "LEYNDELL"
     },
     {
         "bosses": [
@@ -824,80 +764,146 @@
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1233&code=mapA"
             }
         ],
-        "id": 12,
+        "id": 9,
         "name": "MT. GELMIR"
     },
     {
         "bosses": [
             {
-                "id": 127,
-                "name": "Bell Bearing Hunter",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Bell+Bearing+Hunter#hermit-merchants-shack",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5424&lat=-89.07&lng=107.313&zoom=8&code=mapA"
+                "id": 89,
+                "name": "Mimic Tear",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Mimic+Tear",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1565&lat=-188.132812&lng=128.731198&zoom=8&code=mapB"
             },
             {
-                "id": 128,
-                "name": "Crucible Knight Ordovis / Crucible Knight",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Crucible+Knight+Ordovis",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2703&lat=-95.914062&lng=120.457908&zoom=8&code=mapA"
+                "id": 90,
+                "name": "Regal Ancestor Spirit",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Regal+Ancestor+Spirit",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1580&lat=-180.078125&lng=128.488495&zoom=8&code=mapB"
             },
             {
-                "id": 129,
-                "name": "Deathbird",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Deathbird#capital-outskirts",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6208&lat=-88.34375&lng=108.361276&zoom=8&code=mapA"
+                "id": 91,
+                "name": "Valiant Gargoyles",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Valiant+Gargoyle#siofra-river",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2976&code=mapB"
+            }
+        ],
+        "id": 10,
+        "name": "NOKRON, ETERNAL CITY"
+    },
+    {
+        "bosses": [
+            {
+                "id": 92,
+                "name": "Crucible Knight Siluria",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Crucible+Knight+Siluria",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5257&code=mapB"
             },
             {
-                "id": 130,
-                "name": "Draconic Tree Sentinel",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Draconic+Tree+Sentinel#capital-outskirts",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1151&lat=-93.609375&lng=120.199825&zoom=8"
+                "id": 93,
+                "name": "Fia's Champions",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Fia's+champions",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5362&code=mapB"
             },
             {
-                "id": 131,
-                "name": "Esgar, Priest of Blood",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Esgar,+Priest+of+Blood",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6695&lat=-102.5&lng=115.012066&zoom=8&code=mapA"
+                "id": 94,
+                "name": "Lichdragon Fortissax",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Lichdragon+Fortissax",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6425&lat=-93&lng=118&zoom=8&code=mapB"
+            }
+        ],
+        "id": 11,
+        "name": "DEEPROOT DEPTHS"
+    },
+    {
+        "bosses": [
+            {
+                "id": 95,
+                "name": "Astel, Naturalborn of the Void",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Astel+Naturalborn+of+the+Void",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3006&lat=-165.67187&lng=47.64713&zoom=8&code=mapB"
             },
             {
-                "id": 132,
-                "name": "Fell Twins",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Fell+Twins",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1453&lat=-102.171875&lng=127.039843&zoom=8"
+                "id": 96,
+                "name": "Dragonkin Soldier",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Dragonkin+Soldier#lake-of-rot",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2994&code=mapB"
+            }
+        ],
+        "id": 12,
+        "name": "LAKE OF ROT"
+    },
+    {
+        "bosses": [
+            {
+                "id": 34,
+                "name": "Alecto, Black Knife Ringleader",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Alecto,+Black+Knife+Ringleader",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5934&code=mapA"
             },
             {
-                "id": 133,
-                "name": "Godfrey, First Elden Lord (golden shade)",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Godfrey,+First+Elden+Lord+(Golden+Shade)",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3933&lat=-104.70&lng=114.98&zoom=8&code=mapA"
-            },
-            {
-                "id": 134,
-                "name": "Grave Warden Duelist",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Grave+Warden+Duelist#auriza-side-tomb",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6260&lat=-95.140625&lng=121.863431&zoom=8&code=mapA"
-            },
-            {
-                "id": 135,
-                "name": "Morgott, the Omen King",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Morgott+the+Omen+King",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3232&code=mapA"
-            },
-            {
-                "id": 136,
-                "name": "Mohg, The Omen",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Mohg,+the+Omen",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6263&lat=-101.40625&lng=116.520091&zoom=8&code=mapA"
-            },
-            {
-                "id": 137,
-                "name": "Onyx Lord",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Onyx+Lord#sealed-tunnel",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2858&lat=-105.75&lng=105.660584&zoom=8&code=mapA"
+                "id": 48,
+                "name": "Glintstone Dragon Adula",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Glintstone+Dragon+Adula",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=1418&lat=-157.5625&lng=54.085641&zoom=8"
             }
         ],
         "id": 13,
-        "name": "LEYNDELL"
+        "name": "POST LIURNIA"
+    },
+    {
+        "bosses": [
+            {
+                "id": 78,
+                "name": "Beastman of Farum Azula",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Beastman+of+Farum+Azula#dragonbarrow-cave",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=2965&lat=-165.420313&lng=157.018319&zoom=8&code=mapA"
+            },
+            {
+                "id": 79,
+                "name": "Bell Bearing Hunter",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Bell+Bearing+Hunter#isolated-merchants-shack",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5425&lat=-164.59375&lng=136.674478&zoom=8&code=mapA"
+            },
+            {
+                "id": 80,
+                "name": "Black Blade Kindred (Bestial Sanctum)",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Black+Blade+Kindred#bestial-sanctum",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1251&lat=-151.62&lng=156.549&zoom=8"
+            },
+            {
+                "id": 81,
+                "name": "Flying Dragon Greyll",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Flying+Dragon+Greyll",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=1348&lat=-156.093&lng=160.30&zoom=8&code=mapA"
+            },
+            {
+                "id": 82,
+                "name": "Godskin Apostle",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Godskin+Apostle#divine-tower-of-caelid",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+map?id=3152&lat=-163.776562&lng=145.7371&zoom=8&code=mapA"
+            },
+            {
+                "id": 83,
+                "name": "Night's Cavalry",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Night's+Cavalry#dragonbarrow",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6068&lat=-160.87&lng=163.51&zoom=8&code=mapA"
+            },
+            {
+                "id": 84,
+                "name": "Putrid Avatar",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Avatar#dragonbarrow",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6441&lat=-166.539062&lng=155.722083&zoom=8&code=mapA"
+            },
+            {
+                "id": 61,
+                "name": "Battlemage Hugues",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Battlemage+Hugues",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6661&code=mapA"
+            }
+        ],
+        "id": 14,
+        "name": "DRAGONBARROW"
     },
     {
         "bosses": [
@@ -908,19 +914,13 @@
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1455&lat=-95&lng=142&zoom=8"
             },
             {
-                "id": 139,
-                "name": "Mimic Tear",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Mimic+Tear",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2968&lat=-84.796875&lng=142.571838&zoom=8&code=mapA"
-            },
-            {
                 "id": 140,
                 "name": "Night's Cavalry",
                 "wikiReference": "https://eldenring.wiki.fextralife.com/Night's+Cavalry#forbidden-lands",
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6256&lat=-99&lng=136&zoom=8&code=mapA"
             }
         ],
-        "id": 14,
+        "id": 15,
         "name": "FORBIDDEN LANDS"
     },
     {
@@ -980,8 +980,50 @@
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=14101&code=mapA"
             }
         ],
-        "id": 15,
+        "id": 16,
         "name": "MOUNTAINTOPS OF THE GIANTS"
+    },
+    {
+        "bosses": [
+            {
+                "id": 160,
+                "name": "Godskin Duo",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Godskin+Duo",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3967&lat=-123.31&lng=216.53&zoom=8&code=mapA"
+            },
+            {
+                "id": 161,
+                "name": "Beast Clergyman / Maliketh Black Blade",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Beast+Clergyman",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4660&lat=-125.085937&lng=221.027742&zoom=8&code=mapA"
+            },
+            {
+                "id": 162,
+                "name": "Dragonlord Placidusax",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Dragonlord+Placidusax",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5711&lat=-125.98&lng=216.68&zoom=8&code=mapA"
+            },
+            {
+                "id": 163,
+                "name": "Godfrey, First Elden Lord / Hoarah Loux",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Godfrey,+First+Elden+Lord",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6059&lat=-106&lng=118&zoom=8&code=mapC"
+            },
+            {
+                "id": 164,
+                "name": "Radagon of the Golden Order / Elden Beast",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Radagon+of+the+Golden+Order",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3239&lat=-106.95&lng=120.57&zoom=8&code=mapA"
+            },
+            {
+                "id": 165,
+                "name": "Sir Gideon Ofnir, the All-Knowing",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Sir+Gideon+Ofnir,+the+All-Knowing+(Boss)",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=7656&lat=-106.898437&lng=116.76207&zoom=8&code=mapC"
+            }
+        ],
+        "id": 17,
+        "name": "CRUMBLING FARUM AZULA + LEYNDELL, ASHEN CAPITAL"
     },
     {
         "bosses": [
@@ -1002,18 +1044,6 @@
                 "name": "Great Wrym Theodorix",
                 "wikiReference": "https://eldenring.wiki.fextralife.com/Great+Wyrm+Theodorix",
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4656&lat=-68.335937&lng=149.168542&zoom=8&code=mapA"
-            },
-            {
-                "id": 153,
-                "name": "Loretta, Knight of the Haligtree",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Loretta,+Knight+of+the+Haligtree",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4624&lat=-44.523437&lng=150.263866&zoom=8&code=mapA"
-            },
-            {
-                "id": 154,
-                "name": "Malenia, Blade of Miquella",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Malenia+Blade+of+Miquella",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6051&lat=-37.60625&lng=148.71069&zoom=8&code=mapA"
             },
             {
                 "id": 155,
@@ -1038,9 +1068,15 @@
                 "name": "Putrid Grave Warden Duelist",
                 "wikiReference": "https://eldenring.wiki.fextralife.com/Putrid+Grave+Warden+Duelist",
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3505&lat=-79.16&lng=149.34&zoom=8&code=mapA"
+            },
+            {
+                "id": 139,
+                "name": "Mimic Tear",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Mimic+Tear",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2968&lat=-84.796875&lng=142.571838&zoom=8&code=mapA"
             }
         ],
-        "id": 16,
+        "id": 18,
         "name": "CONSECRATED SNOWFIELD"
     },
     {
@@ -1052,55 +1088,25 @@
                 "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4677&lat=-182.053125&lng=146.246868&zoom=8&code=mapB"
             }
         ],
-        "id": 17,
+        "id": 19,
         "name": "MOHGWYN PALACE"
     },
     {
         "bosses": [
             {
-                "id": 160,
-                "name": "Godskin Duo",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Godskin+Duo",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3967&lat=-123.31&lng=216.53&zoom=8&code=mapA"
+                "id": 153,
+                "name": "Loretta, Knight of the Haligtree",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Loretta,+Knight+of+the+Haligtree",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4624&lat=-44.523437&lng=150.263866&zoom=8&code=mapA"
             },
             {
-                "id": 161,
-                "name": "Beast Clergyman / Maliketh Black Blade",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Beast+Clergyman",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4660&lat=-125.085937&lng=221.027742&zoom=8&code=mapA"
-            },
-            {
-                "id": 162,
-                "name": "Dragonlord Placidusax",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Dragonlord+Placidusax",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5711&lat=-125.98&lng=216.68&zoom=8&code=mapA"
+                "id": 154,
+                "name": "Malenia, Blade of Miquella",
+                "wikiReference": "https://eldenring.wiki.fextralife.com/Malenia+Blade+of+Miquella",
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6051&lat=-37.60625&lng=148.71069&zoom=8&code=mapA"
             }
         ],
-        "id": 18,
-        "name": "CRUMBLING FARUM AZULA"
-    },
-    {
-        "bosses": [
-            {
-                "id": 163,
-                "name": "Godfrey, First Elden Lord / Hoarah Loux",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Godfrey,+First+Elden+Lord",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6059&lat=-106&lng=118&zoom=8&code=mapC"
-            },
-            {
-                "id": 164,
-                "name": "Radagon of the Golden Order / Elden Beast",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Radagon+of+the+Golden+Order",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3239&lat=-106.95&lng=120.57&zoom=8&code=mapA"
-            },
-            {
-                "id": 165,
-                "name": "Sir Gideon Ofnir, the All-Knowing",
-                "wikiReference": "https://eldenring.wiki.fextralife.com/Sir+Gideon+Ofnir,+the+All-Knowing+(Boss)",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=7656&lat=-106.898437&lng=116.76207&zoom=8&code=mapC"
-            }
-        ],
-        "id": 19,
-        "name": "LEYNDELL, ASHEN CAPITAL"
+        "id": 20,
+        "name": "HALIGTREE"
     }
 ]
