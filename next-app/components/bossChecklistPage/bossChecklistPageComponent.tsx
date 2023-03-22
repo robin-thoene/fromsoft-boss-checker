@@ -152,7 +152,7 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
      */
     const BossRow = (boss: IBoss): ReactElement => (
         <div
-            className="flex h-12 w-full cursor-pointer items-center"
+            className="flex h-12 w-full cursor-pointer items-center hover:rounded-lg hover:bg-base-200"
             onClick={() => toggleFelledState(boss.id)}
             onContextMenu={(e) => {
                 e.preventDefault();
