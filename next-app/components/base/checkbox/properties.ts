@@ -10,6 +10,8 @@ interface ICheckBoxProps {
     label?: string;
     /** Whether the checkbox is disabled or not. */
     disabled?: boolean;
+    /** The aria label text. */
+    ariaLabel?: string;
 }
 
 export type { ICheckBoxProps };

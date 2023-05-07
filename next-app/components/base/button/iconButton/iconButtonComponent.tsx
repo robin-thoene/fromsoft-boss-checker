@@ -17,7 +17,8 @@ const IconButton: FunctionComponent<IIconButtonProps> = (props): ReactElement =>
                 props.additionalClassNames ? props.additionalClassNames : ''
             }`}
             onClick={(event) => props.onClick && props.onClick(event)}
-            disabled={props.disabled || props.isBusy}>
+            disabled={props.disabled || props.isBusy}
+        >
             {props.isBusy ? <BusySpinner /> : props.icon}
         </button>
     );

@@ -44,7 +44,7 @@ const Panel: FunctionComponent<IPanelProps> = (props): ReactElement => {
                                         props.size === 'Large' ? 'sm:max-w-2xl' : props.size === 'Medium' ? 'sm:max-w-lg' : 'sm:max-w-md'
                                     }`}
                                 >
-                                    <div className="absolute top-3 right-3">
+                                    <div className="absolute right-3 top-3">
                                         <IconButton icon={<XMarkIcon className="h-5 w-5" />} onClick={props.close} />
                                     </div>
                                     <div className="flex h-full flex-col">

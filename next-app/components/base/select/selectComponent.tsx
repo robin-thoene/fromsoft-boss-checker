@@ -28,7 +28,7 @@ const Select: FunctionComponent<ISelectProps> = (props): ReactElement => {
                         </span>
                     </Listbox.Button>
                     <Transition show={open} as={Fragment} leave="transition ease-in duration-100" leaveFrom="opacity-100" leaveTo="opacity-0">
-                        <Listbox.Options className="absolute z-10 mt-1 mb-0 mr-0 ml-0 max-h-56 w-full overflow-auto rounded-lg border border-base-200 bg-base-100 shadow-xl">
+                        <Listbox.Options className="absolute z-10 mb-0 ml-0 mr-0 mt-1 max-h-56 w-full overflow-auto rounded-lg border border-base-200 bg-base-100 shadow-xl">
                             {props.options.map((option) => (
                                 <Listbox.Option
                                     key={option.value}

@@ -157,7 +157,8 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
             onContextMenu={(e) => {
                 e.preventDefault();
                 toggleMarkedState(boss.id);
-            }}>
+            }}
+        >
             <div className="w-full">
                 <Stack horizontal horizontalAlign="SpaceBetween">
                     <div className={`relative flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
@@ -166,10 +167,19 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
                     </div>
                     <div className="flex w-40 items-center justify-between">
                         <div className="mr-9">
-                            <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
+                            <Checkbox
+                                ariaLabel={
+                                    (felledBossIds.includes(boss.id) ? t('uncheckBossAriaLabel', { bossName: boss.name }) : t('checkBossAriaLabel', { bossName: boss.name })) ??
+                                    undefined
+                                }
+                                isChecked={felledBossIds.includes(boss.id)}
+                                disabled={!isInitializedClientSide}
+                                onChange={() => toggleFelledState(boss.id)}
+                            />
                         </div>
                         {boss.wikiReference && boss.wikiReference !== '' && (
                             <IconButton
+                                ariaLabel={t('openWikiAriaLabel', { bossName: boss.name }) ?? undefined}
                                 icon={<DocumentTextIcon className="h-5 w-5" />}
                                 onClick={(e) => {
                                     e.stopPropagation();
@@ -179,6 +189,7 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
                         )}
                         {props.fromSoftwareGame === FromSoftwareGame.EldenRing && (boss as IEldenRingBoss).wikiMapReference && (
                             <IconButton
+                                ariaLabel={t('openMapAriaLabel', { bossName: boss.name }) ?? undefined}
                                 icon={<MapPinIcon className="h-5 w-5" />}
                                 onClick={(e) => {
                                     e.stopPropagation();
@@ -222,7 +233,8 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
                     setFelledBossIds([]);
                     setMarkedBossIds([]);
                     setIsClearDialogOpen(false);
-                }}>
+                }}
+            >
                 <p>{t('gameProgress_reset_confirmDialog_text')}</p>
             </Dialog>
             <div className="fixed bottom-10 right-10 z-50 flex h-24 w-24 items-center justify-center rounded-full border border-base-content bg-base-300">
