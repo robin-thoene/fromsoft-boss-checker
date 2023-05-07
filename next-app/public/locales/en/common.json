@@ -14,5 +14,9 @@
     "gameProgress_reset_confirmDialog_title": "Reset current progress",
     "gameProgress_reset_confirmDialog_text": "The complete progress will be thrown away!",
     "darkSoulsOneRingRouteLabel": "Dark Souls",
-    "eldenRingRouteLabel": "Elden Ring"
+    "eldenRingRouteLabel": "Elden Ring",
+    "openWikiAriaLabel": "Open wiki page for {{bossName}}",
+    "openMapAriaLabel": "Open map for {{bossName}}",
+    "uncheckBossAriaLabel": "Mark {{bossName}} as not defeated",
+    "checkBossAriaLabel": "Mark {{bossName}} as defeated"
 }

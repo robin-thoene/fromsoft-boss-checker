@@ -13,6 +13,7 @@ const Checkbox: FunctionComponent<ICheckBoxProps> = (props): ReactElement => {
     return (
         <div className="flex max-w-max items-center">
             <input
+                aria-label={props.ariaLabel}
                 type="checkbox"
                 checked={props.isChecked}
                 className="checkbox no-animation"

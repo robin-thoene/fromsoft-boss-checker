@@ -31,14 +31,14 @@ const SearchBar: FunctionComponent<ISearchBarProps> = (props): ReactElement => {
                         onChange={(e) => setSearchValue(e.target.value)}
                         onKeyDown={(e) => e.key === 'Enter' && props.onSearch(searchValue)}
                     />
-                    <button aria-label={t('submitSearchAriaLabel')} className="btn-secondary btn-square btn" onClick={() => props.onSearch(searchValue)}>
+                    <button aria-label={t('submitSearchAriaLabel') ?? undefined} className="btn-secondary btn-square btn" onClick={() => props.onSearch(searchValue)}>
                         <MagnifyingGlassIcon className="h-5 w-5 fill-white" />
                     </button>
                 </div>
                 {props.canBeCleared && searchValue !== '' && (
-                    <div className="absolute top-1/2 right-14 z-10 -translate-y-1/2">
+                    <div className="absolute right-14 top-1/2 z-10 -translate-y-1/2">
                         <button
-                            aria-label={t('clearSearchAriaLabel')}
+                            aria-label={t('clearSearchAriaLabel') ?? undefined}
                             className="btn-ghost btn-circle btn h-7 min-h-0 w-7"
                             onClick={() => {
                                 setSearchValue('');
