@@ -18,8 +18,8 @@ const DarkSouls3: NextPage = () => {
     return (
         <BossChecklistPage
             fromSoftwareGame={FromSoftwareGame.DarkSouls3}
-            localStorageFelledBossesKey="darkSoulsFelledBossIds"
-            localStorageMarkedBossesKey="darkSoulsMarkedBossIds"
+            localStorageFelledBossesKey="darkSouls3FelledBossIds"
+            localStorageMarkedBossesKey="darkSouls3MarkedBossIds"
             bosses={darkSouls3Bosses}
         />
     );
