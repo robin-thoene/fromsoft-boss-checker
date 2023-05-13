@@ -27,9 +27,9 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
             case FromSoftwareGame.DarkSouls:
                 return 'Dark Souls';
             case FromSoftwareGame.DarkSouls2:
-                return 'Dark Souls 2';
+                return 'Dark Souls II';
             case FromSoftwareGame.DarkSouls3:
-                return 'Dark Souls 3';
+                return 'Dark Souls III';
             case FromSoftwareGame.Bloodborne:
                 return 'Bloodborne';
             case FromSoftwareGame.Sekiro:

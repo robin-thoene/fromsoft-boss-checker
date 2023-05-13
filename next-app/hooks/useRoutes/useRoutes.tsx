@@ -14,7 +14,11 @@ const useRoutes = (): IRoute[] => {
     return [
         {
             path: '/dark-souls-1',
-            label: t('darkSoulsOneRingRouteLabel'),
+            label: t('darkSoulsOneRouteLabel'),
+        },
+        {
+            path: '/dark-souls-3',
+            label: t('darkSoulsThreeRouteLabel'),
         },
         {
             path: '/elden-ring',
