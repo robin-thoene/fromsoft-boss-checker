@@ -18,6 +18,7 @@
     "darkSoulsThreeRouteLabel": "Dark Souls III",
     "eldenRingRouteLabel": "Elden Ring",
     "bloodborneRouteLabel": "Bloodborne",
+    "sekiroRouteLabel": "Sekiro",
     "openWikiAriaLabel": "Open wiki page for {{bossName}}",
     "openMapAriaLabel": "Open map for {{bossName}}",
     "uncheckBossAriaLabel": "Mark {{bossName}} as not defeated",
