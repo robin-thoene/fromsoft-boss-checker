@@ -14,6 +14,7 @@
     "gameProgress_reset_confirmDialog_title": "Reset current progress",
     "gameProgress_reset_confirmDialog_text": "The complete progress will be thrown away!",
     "darkSoulsOneRouteLabel": "Dark Souls",
+    "darkSoulsTwoRouteLabel": "Dark Souls II",
     "darkSoulsThreeRouteLabel": "Dark Souls III",
     "eldenRingRouteLabel": "Elden Ring",
     "openWikiAriaLabel": "Open wiki page for {{bossName}}",
