@@ -17,6 +17,10 @@ const useRoutes = (): IRoute[] => {
             label: t('darkSoulsOneRouteLabel'),
         },
         {
+            path: '/dark-souls-2',
+            label: t('darkSoulsTwoRouteLabel'),
+        },
+        {
             path: '/dark-souls-3',
             label: t('darkSoulsThreeRouteLabel'),
         },
