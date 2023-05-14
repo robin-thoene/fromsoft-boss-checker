@@ -6,7 +6,7 @@ import BossChecklistPage from '../components/bossChecklistPage';
 import { FromSoftwareGame } from '../enumerations';
 import { getBosses } from '../helper/darkSouls3DataHelper';
 
-// Get the list of all Dark Souls bosses.
+// Get the list of all Dark Souls 3 bosses.
 const darkSouls3Bosses = getBosses();
 
 /**

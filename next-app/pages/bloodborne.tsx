@@ -4,23 +4,23 @@ import React from 'react';
 
 import BossChecklistPage from '../components/bossChecklistPage';
 import { FromSoftwareGame } from '../enumerations';
-import { getBosses } from '../helper/darkSouls2DataHelper';
+import { getBosses } from '../helper/bloodborneDataHelper';
 
-// Get the list of all Dark Souls 2 bosses.
-const darkSouls2Bosses = getBosses();
+// Get the list of all Bloodborne bosses.
+const bloodborneBosses = getBosses();
 
 /**
- * The page component to render at "/dark-souls-2".
+ * The page component to render at "/bloodborne".
  *
- * @returns {NextPage} The Dark Souls 2 page component.
+ * @returns {NextPage} The Bloodborne page component.
  */
-const DarkSouls2: NextPage = () => {
+const DarkSouls: NextPage = () => {
     return (
         <BossChecklistPage
-            fromSoftwareGame={FromSoftwareGame.DarkSouls2}
-            localStorageFelledBossesKey="darkSouls2FelledBossIds"
-            localStorageMarkedBossesKey="darkSouls2MarkedBossIds"
-            bosses={darkSouls2Bosses}
+            fromSoftwareGame={FromSoftwareGame.Bloodborne}
+            localStorageFelledBossesKey="bloodborneFelledBossIds"
+            localStorageMarkedBossesKey="bloodborneMarkedBossIds"
+            bosses={bloodborneBosses}
         />
     );
 };
@@ -37,4 +37,4 @@ export const getStaticProps: GetStaticProps = async ({ locale }: { [key: string]
     };
 };
 
-export default DarkSouls2;
+export default DarkSouls;

@@ -28,6 +28,10 @@ const useRoutes = (): IRoute[] => {
             path: '/elden-ring',
             label: t('eldenRingRouteLabel'),
         },
+        {
+            path: '/bloodborne',
+            label: t('bloodborneRouteLabel'),
+        },
     ];
 };
 

@@ -17,6 +17,7 @@
     "darkSoulsTwoRouteLabel": "Dark Souls II",
     "darkSoulsThreeRouteLabel": "Dark Souls III",
     "eldenRingRouteLabel": "Elden Ring",
+    "bloodborneRouteLabel": "Bloodborne",
     "openWikiAriaLabel": "Open wiki page for {{bossName}}",
     "openMapAriaLabel": "Open map for {{bossName}}",
     "uncheckBossAriaLabel": "Mark {{bossName}} as not defeated",
