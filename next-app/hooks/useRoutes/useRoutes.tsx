@@ -32,6 +32,10 @@ const useRoutes = (): IRoute[] => {
             path: '/bloodborne',
             label: t('bloodborneRouteLabel'),
         },
+        {
+            path: '/sekiro',
+            label: t('sekiroRouteLabel'),
+        },
     ];
 };
 
