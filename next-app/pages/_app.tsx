@@ -30,6 +30,7 @@ const CustomHead: FunctionComponent = (): ReactElement => {
         <Head>
             <title>fromsoft-boss-checker</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="google-site-verification" content="uWK-VE6nIdpaczu7yT42lov06BE-ninN8llNZOwLeck" />
         </Head>
     );
 };
