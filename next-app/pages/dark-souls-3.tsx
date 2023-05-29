@@ -1,10 +1,13 @@
 import { GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
 
 import BossChecklistPage from '../components/bossChecklistPage';
 import { FromSoftwareGame } from '../enumerations';
 import { getBosses } from '../helper/darkSouls3DataHelper';
+import useCanonicalGameUrl from '../hooks/useCanonicalGameUrl';
+import { INextPageProps } from '../types';
 
 // Get the list of all Dark Souls 3 bosses.
 const darkSouls3Bosses = getBosses();
@@ -12,16 +15,27 @@ const darkSouls3Bosses = getBosses();
 /**
  * The page component to render at "/dark-souls-3".
  *
+ * @param {INextPageProps} props The page props.
  * @returns {NextPage} The Dark Souls 3 page component.
  */
-const DarkSouls3: NextPage = () => {
+const DarkSouls3: NextPage<INextPageProps> = (props) => {
+    /** Get the canonical url for this page. */
+    const canonicalUrl = useCanonicalGameUrl(FromSoftwareGame.DarkSouls3, props.hostUrl);
+
     return (
-        <BossChecklistPage
-            fromSoftwareGame={FromSoftwareGame.DarkSouls3}
-            localStorageFelledBossesKey="darkSouls3FelledBossIds"
-            localStorageMarkedBossesKey="darkSouls3MarkedBossIds"
-            bosses={darkSouls3Bosses}
-        />
+        <>
+            {canonicalUrl && (
+                <Head>
+                    <link rel="canonical" href={canonicalUrl} key="canonical" />
+                </Head>
+            )}
+            <BossChecklistPage
+                fromSoftwareGame={FromSoftwareGame.DarkSouls3}
+                localStorageFelledBossesKey="darkSouls3FelledBossIds"
+                localStorageMarkedBossesKey="darkSouls3MarkedBossIds"
+                bosses={darkSouls3Bosses}
+            />
+        </>
     );
 };
 
@@ -30,8 +44,10 @@ const DarkSouls3: NextPage = () => {
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getStaticProps: GetStaticProps = async ({ locale }: { [key: string]: any }) => {
+    const hostUrl = process.env.VERCEL_URL;
     return {
         props: {
+            hostUrl: hostUrl ?? null,
             ...(await serverSideTranslations(locale, ['common'])),
         },
     };
