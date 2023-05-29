@@ -44,7 +44,10 @@ const Sekiro: NextPage<INextPageProps> = (props) => {
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getStaticProps: GetStaticProps = async ({ locale }: { [key: string]: any }) => {
-    const hostUrl = process.env.VERCEL_URL;
+    let hostUrl = process.env.VERCEL_URL;
+    if (hostUrl && !hostUrl.includes('://')) {
+        hostUrl = `https://${hostUrl}`;
+    }
     return {
         props: {
             hostUrl: hostUrl ?? null,
