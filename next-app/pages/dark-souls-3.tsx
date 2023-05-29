@@ -44,10 +44,8 @@ const DarkSouls3: NextPage<INextPageProps> = (props) => {
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getStaticProps: GetStaticProps = async ({ locale }: { [key: string]: any }) => {
-    let hostUrl = process.env.VERCEL_URL;
-    if (hostUrl && !hostUrl.includes('://')) {
-        hostUrl = `https://${hostUrl}`;
-    }
+    const hostUrl = process.env.HOST_URL;
+    
     return {
         props: {
             hostUrl: hostUrl ?? null,
