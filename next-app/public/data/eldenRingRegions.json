@@ -911,13 +911,13 @@
                 "id": 138,
                 "name": "Black Blade Kindred",
                 "wikiReference": "https://eldenring.wiki.fextralife.com/Black+Blade+Kindred#forbidden-lands",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1455&lat=-95&lng=142&zoom=8"
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1455&code=mapA"
             },
             {
                 "id": 140,
                 "name": "Night's Cavalry",
                 "wikiReference": "https://eldenring.wiki.fextralife.com/Night's+Cavalry#forbidden-lands",
-                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6256&lat=-99&lng=136&zoom=8&code=mapA"
+                "wikiMapReference": "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6256&code=mapA"
             }
         ],
         "id": 15,
