@@ -41,9 +41,8 @@ const checkEldenRingBossLocation = async (boss: IEldenRingBoss): Promise<string 
     const checkResponse = await fetch(boss.wikiMapReference, {
         method: 'HEAD',
     });
-    // TODO: Identify responses that indicate that the location is valid, but there is no marker on the interactive map.
     if (checkResponse.status !== 200) {
         return boss.wikiMapReference;
-    }
+    }    
     return null;
 };
