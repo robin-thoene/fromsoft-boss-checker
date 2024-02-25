@@ -3,17 +3,6 @@ module.exports = {
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     darkMode: 'media',
     safelist: [{ pattern: /gap-/ }, { pattern: /p-/ }, { pattern: /max-w-/ }, { pattern: /max-h-/ }, { pattern: /w-/ }, { pattern: /h-/ }],
-    theme: {
-        extend: {
-            colors: {
-                'border-gray': '#3e3f40',
-                'chart-blue': '#0088FE',
-                'chart-green': '#00C49F',
-                'chart-yellow': '#FFBB28',
-                'chart-orange': '#FF8042',
-            },
-        },
-    },
     variants: {
         extend: {},
     },
