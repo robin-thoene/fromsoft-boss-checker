@@ -13,7 +13,6 @@ import { IBossChecklistPageProps } from './properties';
 
 /**
  * Standardized page component for the boss checklist of a single FromSoftware game.
- *
  * @param {IBossChecklistPageProps} props The properties for the component.
  * @returns {ReactElement} The rendered component.
  */
@@ -104,7 +103,6 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
 
     /**
      * Callback to mark a boss as felled or not.
-     *
      * @param {number} bossId The id of the boss to mark as felled / not felled.
      */
     const toggleFelledState = (bossId: number) => {
@@ -125,7 +123,6 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
 
     /**
      * Callback to mark a boss.
-     *
      * @param {number} bossId The id of the boss to mark.
      */
     const toggleMarkedState = (bossId: number) => {
@@ -146,7 +143,6 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
 
     /**
      * Custom render component for a single boss.
-     *
      * @param {IBoss} boss The boss to render.
      * @returns {ReactElement} The rendered boss.
      */
@@ -157,8 +153,7 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
             onContextMenu={(e) => {
                 e.preventDefault();
                 toggleMarkedState(boss.id);
-            }}
-        >
+            }}>
             <div className="w-full">
                 <Stack horizontal horizontalAlign="SpaceBetween">
                     <div className={`relative flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
@@ -217,9 +212,7 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
                         ))}
                     </Stack>
                 ))}
-                {props.bosses?.map((boss) => (
-                    <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />
-                ))}
+                {props.bosses?.map((boss) => <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />)}
                 <div className="mt-16 flex w-full justify-center">
                     <PrimaryButton text={t('gameProgress_reset_button')} fullWidth onClick={() => setIsClearDialogOpen(true)} />
                 </div>
@@ -233,8 +226,7 @@ const BossChecklistPage: FunctionComponent<IBossChecklistPageProps> = (props): R
                     setFelledBossIds([]);
                     setMarkedBossIds([]);
                     setIsClearDialogOpen(false);
-                }}
-            >
+                }}>
                 <p>{t('gameProgress_reset_confirmDialog_text')}</p>
             </Dialog>
             <div className="fixed bottom-10 right-10 z-50 flex h-24 w-24 items-center justify-center rounded-full border border-base-content bg-base-300">

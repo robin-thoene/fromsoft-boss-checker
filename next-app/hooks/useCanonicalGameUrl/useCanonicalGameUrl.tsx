@@ -3,7 +3,6 @@ import useRoutes from '../useRoutes';
 
 /**
  * Helper function to build the canonical url based on the given fromsoftware game type and the host url.
- *
  * @param {FromSoftwareGame} fromSoftwareGame The fromsoftware game type.
  * @param {string | null | undefined} hostUrl The determined host url.
  * @returns {string | undefined} The canonical url.

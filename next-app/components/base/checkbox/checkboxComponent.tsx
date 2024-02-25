@@ -5,7 +5,6 @@ import { ICheckBoxProps } from './properties';
 
 /**
  * Basic checkbox.
- *
  * @param {ICheckBoxProps} props The component properties.
  * @returns {ReactElement} The checkbox component.
  */

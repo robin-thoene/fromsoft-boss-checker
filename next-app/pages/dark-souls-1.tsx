@@ -14,7 +14,6 @@ const darkSoulsBosses = getBosses();
 
 /**
  * The page component to render at "/dark-souls-1".
- *
  * @param {INextPageProps} props The page props.
  * @returns {NextPage} The Dark Souls page component.
  */
@@ -41,6 +40,7 @@ const DarkSouls: NextPage<INextPageProps> = (props) => {
 
 /**
  * Server side executed method to inject properties into the component.
+ * @returns {object} The props to give to the page.
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getStaticProps: GetStaticProps = async ({ locale }: { [key: string]: any }) => {

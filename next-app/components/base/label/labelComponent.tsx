@@ -4,7 +4,6 @@ import { ILabel } from './properties';
 
 /**
  * Basic label to display text.
- *
  * @param {ILabel} props The component properties.
  * @returns {ReactElement} The label component.
  */

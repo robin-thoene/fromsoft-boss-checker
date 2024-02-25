@@ -5,7 +5,6 @@ import { IPrimaryButtonProps } from './properties';
 
 /**
  * The primary button.
- *
  * @param {IPrimaryButtonProps} props The component properties.
  * @returns {ReactElement} The primary button component.
  */

@@ -3,7 +3,6 @@ import { IBoss } from '../types';
 
 /**
  * Retrieve all available bosses in Bloodborne.
- *
  * @returns {IBoss[]} The list of bosses in Bloodborne.
  */
 const getBosses = (): IBoss[] => {

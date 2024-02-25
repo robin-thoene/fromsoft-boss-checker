@@ -5,7 +5,6 @@ import { IStackProps } from './properties';
 /**
  * Arranges child nodes vertically or horizontally with standardized spaces.
  * Default arrangement is vertically.
- *
  * @param {IStackProps} props The component properties.
  * @returns {ReactElement} The stack component.
  */

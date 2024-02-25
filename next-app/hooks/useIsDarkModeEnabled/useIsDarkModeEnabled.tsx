@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 /**
  * Determines whether the dark mode is currently enabled or not.
- *
  * @returns {boolean} True if the dark mode is enabled, false if not.
  */
 const useIsDarkModeEnabled = (): boolean => {

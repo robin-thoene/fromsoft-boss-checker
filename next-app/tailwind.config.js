@@ -3,17 +3,6 @@ module.exports = {
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     darkMode: 'media',
     safelist: [{ pattern: /gap-/ }, { pattern: /p-/ }, { pattern: /max-w-/ }, { pattern: /max-h-/ }, { pattern: /w-/ }, { pattern: /h-/ }],
-    theme: {
-        extend: {
-            colors: {
-                'border-gray': '#3e3f40',
-                'chart-blue': '#0088FE',
-                'chart-green': '#00C49F',
-                'chart-yellow': '#FFBB28',
-                'chart-orange': '#FF8042',
-            },
-        },
-    },
     variants: {
         extend: {},
     },
@@ -28,7 +17,7 @@ module.exports = {
             {
                 light: {
                     // eslint-disable-next-line @typescript-eslint/no-var-requires
-                    ...require('daisyui/src/colors/themes')['[data-theme=light]'],
+                    ...require('daisyui/src/theming/themes')['[data-theme=light]'],
                     primary: '#314EF3',
                     'primary-focus': '#263DBC',
                     'primary-content': '#FBFCFC',
@@ -56,7 +45,7 @@ module.exports = {
                 },
                 dark: {
                     // eslint-disable-next-line @typescript-eslint/no-var-requires
-                    ...require('daisyui/src/colors/themes')['[data-theme=dark]'],
+                    ...require('daisyui/src/theming/themes')['[data-theme=dark]'],
                     primary: '#314EF3',
                     'primary-focus': '#263DBC',
                     'primary-content': '#FBFCFC',

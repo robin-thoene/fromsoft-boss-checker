@@ -4,7 +4,6 @@ import { IToggleProps } from './properties';
 
 /**
  * Toggles between active and inactive.
- *
  * @param {IToggleProps} props The component properties.
  * @returns {ReactElement} The toggle component.
  */

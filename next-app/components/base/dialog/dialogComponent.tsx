@@ -7,7 +7,6 @@ import { IDialogProps } from './properties';
 
 /**
  * Basic dialog that opens as overlay to present information to the user and optionally receive input from the user.
- *
  * @param {IDialogProps} props The component properties.
  * @returns {ReactElement} The dialog component.
  */

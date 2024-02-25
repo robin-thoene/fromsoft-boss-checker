@@ -4,7 +4,6 @@ import { IBusySpinnerProps } from './properties';
 
 /**
  * Animated spinner that indicates a running process without indicating progress.
- *
  * @param {IBusySpinnerProps} props The component properties.
  * @returns {ReactElement} The busy spinner component.
  */

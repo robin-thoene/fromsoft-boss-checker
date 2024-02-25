@@ -22,7 +22,6 @@ const queryClient = new QueryClient({
 
 /**
  * Part of the custom HTML Head
- *
  * @returns {ReactElement} Part of the application Head
  */
 const CustomHead: FunctionComponent = (): ReactElement => {
@@ -34,16 +33,16 @@ const CustomHead: FunctionComponent = (): ReactElement => {
         </Head>
     );
 };
+
 /**
  * The main entry point of the next js application.
- *
  * @param {AppProps} param0 The properties of the app component.
  * @returns {ReactElement} The application component.
  */
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }: AppProps): ReactElement => {
     return (
         <QueryClientProvider client={queryClient}>
-            <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
+            <ReactQueryDevtools initialIsOpen={false} position="right" />
             <StoreProvider store={Store}>
                 <CustomHead />
                 <BasicLayout>

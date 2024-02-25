@@ -3,7 +3,6 @@ import { IBoss } from '../types';
 
 /**
  * Retrieve all available bosses in Sekiro.
- *
  * @returns {IBoss[]} The list of bosses in Sekiro.
  */
 const getBosses = (): IBoss[] => {
