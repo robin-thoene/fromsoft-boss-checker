@@ -10,7 +10,6 @@ regions.forEach((r) => bosses.push(...(r.bosses as IEldenRingBoss[])));
 
 /**
  * The health endpoint.
- *
  * @param {NextApiRequest} req The incoming request object.
  * @param {NextApiResponse} res The outgoing response object.
  */
@@ -33,7 +32,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 /**
  * Checks if the location of the given Elden Ring boss is valid.
- *
  * @param {IEldenRingBoss} boss The Elden Ring boss to check.
  * @returns {string | null} The invalid location, or null if the location is valid.
  */

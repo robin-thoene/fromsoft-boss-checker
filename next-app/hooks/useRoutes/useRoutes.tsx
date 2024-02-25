@@ -5,7 +5,6 @@ import { IRoute } from './types';
 
 /**
  * Hook to retrieve all available application routes translated.
- *
  * @returns {IRoute[]} All available route models.
  */
 const useRoutes = (): IRoute[] => {

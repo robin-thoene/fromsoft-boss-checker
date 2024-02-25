@@ -8,7 +8,6 @@ import IconTextButton from '../button/iconTextButton';
 
 /**
  * Component to pick a language out of the pre-defined language options.
- *
  * @returns {ReactElement} The language selector component.
  */
 const LanguageSelector: FunctionComponent = (): ReactElement => {

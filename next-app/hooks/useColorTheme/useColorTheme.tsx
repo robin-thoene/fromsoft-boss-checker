@@ -3,7 +3,6 @@ import useIsDarkModeEnabled from '../useIsDarkModeEnabled';
 
 /**
  * Retrieve the color palette of the currently applied theme.
- *
  * @returns {object} The color theme.
  */
 const useColorTheme = (): { [key: string]: string } => {

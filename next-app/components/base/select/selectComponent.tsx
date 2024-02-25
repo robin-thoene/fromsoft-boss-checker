@@ -9,7 +9,6 @@ import { IOption } from './types';
 
 /**
  * Basic select to pick from multiple options.
- *
  * @param {ISelectProps} props The component properties.
  * @returns {ReactElement} The select component.
  */

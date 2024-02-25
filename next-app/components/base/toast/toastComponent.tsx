@@ -6,7 +6,6 @@ import { IToastProps } from './properties';
 
 /**
  * Display a message globally available.
- *
  * @param {IToastProps} props The component properties.
  * @returns {ReactElement} The toast component.
  */

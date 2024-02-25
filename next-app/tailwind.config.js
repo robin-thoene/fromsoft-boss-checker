@@ -28,7 +28,7 @@ module.exports = {
             {
                 light: {
                     // eslint-disable-next-line @typescript-eslint/no-var-requires
-                    ...require('daisyui/src/colors/themes')['[data-theme=light]'],
+                    ...require('daisyui/src/theming/themes')['[data-theme=light]'],
                     primary: '#314EF3',
                     'primary-focus': '#263DBC',
                     'primary-content': '#FBFCFC',
@@ -56,7 +56,7 @@ module.exports = {
                 },
                 dark: {
                     // eslint-disable-next-line @typescript-eslint/no-var-requires
-                    ...require('daisyui/src/colors/themes')['[data-theme=dark]'],
+                    ...require('daisyui/src/theming/themes')['[data-theme=dark]'],
                     primary: '#314EF3',
                     'primary-focus': '#263DBC',
                     'primary-content': '#FBFCFC',

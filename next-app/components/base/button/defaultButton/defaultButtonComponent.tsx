@@ -5,7 +5,6 @@ import { IDefaultButtonProps } from './properties';
 
 /**
  * The default button.
- *
  * @param {IDefaultButtonProps} props The component properties.
  * @returns {ReactElement} The default button component.
  */

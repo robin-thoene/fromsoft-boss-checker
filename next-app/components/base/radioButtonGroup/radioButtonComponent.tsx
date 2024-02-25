@@ -5,7 +5,6 @@ import { IRadioButtonProps } from './radioButtonProperties';
 
 /**
  * Basic single radio button.
- *
  * @param {IRadioButtonProps} props The component properties.
  * @returns {ReactElement} A single radio button component.
  */

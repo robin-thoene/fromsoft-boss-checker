@@ -7,7 +7,6 @@ import { IRadioButtonGroupProps } from './radioButtonGroupProperties';
 
 /**
  * Basic radio button group.
- *
  * @param {IRadioButtonGroupProps} props The component properties.
  * @returns {ReactElement} A radio button group component.
  */

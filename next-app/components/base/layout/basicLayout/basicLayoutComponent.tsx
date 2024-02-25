@@ -8,7 +8,6 @@ import { IBasicLayoutProps } from './properties';
 
 /**
  * Basic layout to wrap children.
- *
  * @param {IBasicLayoutProps} props The component properties.
  * @returns {ReactElement} The basic layout component.
  */

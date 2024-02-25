@@ -1,6 +1,5 @@
 /**
  * Retrieve the browser language code.
- *
  * @returns {string} The browser language code.
  */
 const getBrowserLanguageCode = (): string => {
@@ -12,7 +11,6 @@ const getBrowserLanguageCode = (): string => {
 
 /**
  * Retrieve the short language key of the browser.
- *
  * @returns {string} The short language key.
  */
 const getBrowserLanguageCodeShort = (): string => {
@@ -21,7 +19,6 @@ const getBrowserLanguageCodeShort = (): string => {
 
 /**
  * Determines whether the current browser is an Internet Explorer.
- *
  * @returns {boolean} Whether the current browser is IE or not.
  */
 const isIE = (): boolean => {

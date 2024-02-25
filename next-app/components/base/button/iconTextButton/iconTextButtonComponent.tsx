@@ -5,7 +5,6 @@ import { IIconTextButtonProps } from './properties';
 
 /**
  * The icon plus text button.
- *
  * @param {IIconTextButtonProps} props The component properties.
  * @returns {ReactElement} The icon and text button component.
  */

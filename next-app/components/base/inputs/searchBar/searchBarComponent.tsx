@@ -7,7 +7,6 @@ import { ISearchBarProps } from './properties';
 
 /**
  * Input field to insert a search value and trigger a search action.
- *
  * @param {ISearchBarProps} props The component properties.
  * @returns {ReactElement} The search bar component.
  */
