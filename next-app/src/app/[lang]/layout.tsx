@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 /**
- * The root layout that wraps all route component.
+ * The root layout that wraps all route component with multi language support.
  * @param {Readonly<{ children: ReactNode, params: IPageParams }>} props - The component props of the layout.
  * @returns {Promise<ReactElement>} The rendered layout and it's children.
  */

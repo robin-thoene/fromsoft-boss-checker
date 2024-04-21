@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { BossChecklistPage } from '@/components/pages';
+import { BossChecklist } from '@/components/organisms';
 import { FromSoftwareGame } from '@/enumerations';
 import { getBosses } from '@/helper/sekiroDataHelper';
 import { IPageParams } from '@/types';
@@ -26,7 +26,7 @@ export default async function Page({ params }: { params: IPageParams }): Promise
     // TODO: Figure out how to set the canonical URL in the head.
     return (
         <>
-            <BossChecklistPage
+            <BossChecklist
                 dic={dict}
                 fromSoftwareGame={FromSoftwareGame.Sekiro}
                 localStorageFelledBossesKey={localStorageFelledBossesKey}

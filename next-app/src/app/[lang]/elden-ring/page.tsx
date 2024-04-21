@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { BossChecklistPage } from '@/components/pages';
+import { BossChecklist } from '@/components/organisms';
 import { FromSoftwareGame } from '@/enumerations';
 import { getRegions } from '@/helper/eldenRingDataHelper';
 import { IPageParams } from '@/types';
@@ -26,7 +26,7 @@ export default async function Page({ params }: { params: IPageParams }): Promise
     // TODO: Figure out how to set the canonical URL in the head.
     return (
         <>
-            <BossChecklistPage
+            <BossChecklist
                 dic={dict}
                 fromSoftwareGame={FromSoftwareGame.EldenRing}
                 localStorageFelledBossesKey={localStorageFelledBossesKey}

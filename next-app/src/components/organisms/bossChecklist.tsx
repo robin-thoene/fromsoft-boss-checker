@@ -11,7 +11,7 @@ import { IBoss, IEldenRingBoss, IRegion } from '@/types';
 /**
  * Properties for the boss checklist page component.
  */
-interface IBossChecklistPageProps {
+interface IBossChecklistProps {
     /** The dictionary to use for translating texts. */
     dic: { [key: string]: string };
     /** The FromSoftware game to display. */
@@ -28,10 +28,10 @@ interface IBossChecklistPageProps {
 
 /**
  * Standardized page component for the boss checklist of a single FromSoftware game.
- * @param {IBossChecklistPageProps} props The properties for the component.
+ * @param {IBossChecklistProps} props The properties for the component.
  * @returns {ReactElement} The rendered component.
  */
-export default function BossChecklistPage(props: IBossChecklistPageProps): ReactElement {
+export default function BossChecklist(props: IBossChecklistProps): ReactElement {
     /** The page title. */
     const title = useMemo(() => {
         switch (props.fromSoftwareGame) {
