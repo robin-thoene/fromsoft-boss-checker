@@ -1,11 +1,10 @@
 import { ReactElement } from 'react';
 
 import { BossChecklist } from '@/components/organisms';
+import { getDictionary } from '@/dictionaries';
 import { FromSoftwareGame } from '@/enumerations';
 import { getBosses } from '@/helper/bloodborneDataHelper';
 import { IPageParams } from '@/types';
-
-import { getDictionary } from '../dictionaries';
 
 // The key in t{ params }: { params: { slug: string } }he local storage to store the users progress.
 const localStorageFelledBossesKey = 'bloodborneFelledBossIds';

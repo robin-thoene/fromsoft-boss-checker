@@ -4,9 +4,8 @@ import type { Metadata } from 'next';
 import { ReactElement, ReactNode } from 'react';
 
 import { SideNav } from '@/components/molecules';
+import { getDictionary } from '@/dictionaries';
 import { IPageParams } from '@/types';
-
-import { getDictionary } from './dictionaries';
 
 const metaTitle = 'fromsoft-boss-checker';
 const metaDesc = 'Checklist for bosses of popular FromSoftware games.';

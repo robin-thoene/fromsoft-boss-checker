@@ -1,11 +1,10 @@
 import { ReactElement } from 'react';
 
 import { BossChecklist } from '@/components/organisms';
+import { getDictionary } from '@/dictionaries';
 import { FromSoftwareGame } from '@/enumerations';
 import { getBosses } from '@/helper/darkSouls2DataHelper';
 import { IPageParams } from '@/types';
-
-import { getDictionary } from '../dictionaries';
 
 // The key in the local storage to store the users progress.
 const localStorageFelledBossesKey = 'darkSouls2FelledBossIds';
