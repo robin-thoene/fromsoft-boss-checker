@@ -1,8 +1,7 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "plugin:jsdoc/recommended",
-    "plugin:prettier/recommended"
+    "plugin:jsdoc/recommended"
   ],
   "plugins": [
     "jsdoc",
