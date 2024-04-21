@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ReactElement, useMemo } from 'react';
 
-import { IRoute } from '@/types';
+import { IDictionary, IRoute } from '@/types';
 
 interface ISideNavProps {
-    dic: { [key: string]: string };
+    dic: IDictionary;
     currentLang: string;
 }
 
@@ -48,7 +48,6 @@ export default function SideNav(props: ISideNavProps): ReactElement {
         [props.currentLang, props.dic],
     );
 
-    console.log(currentPathname);
     return (
         <nav className="flex flex-col py-10 border-r">
             {routes.map((r) => (

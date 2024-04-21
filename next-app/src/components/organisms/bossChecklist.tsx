@@ -6,14 +6,14 @@ import { ReactElement, useEffect, useMemo, useState } from 'react';
 import { Button, Checkbox } from '@/components/atoms';
 import { Dialog } from '@/components/molecules';
 import { FromSoftwareGame } from '@/enumerations/fromSoftwareGame';
-import { IBoss, IEldenRingBoss, IRegion } from '@/types';
+import { IBoss, IDictionary, IEldenRingBoss, IRegion } from '@/types';
 
 /**
  * Properties for the boss checklist page component.
  */
 interface IBossChecklistProps {
     /** The dictionary to use for translating texts. */
-    dic: { [key: string]: string };
+    dic: IDictionary;
     /** The FromSoftware game to display. */
     fromSoftwareGame: FromSoftwareGame;
     /** The regions including the boss lists to display. */

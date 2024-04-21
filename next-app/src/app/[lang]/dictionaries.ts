@@ -1,6 +1,8 @@
 import 'server-only';
 
-const dictionaries: { [lngIdentifier: string]: () => Promise<{ [key: string]: string }> } = {
+import { IDictionary } from '@/types';
+
+const dictionaries: { [lngIdentifier: string]: () => Promise<IDictionary> } = {
     en: () => import('@/dictionaries/en.json').then((module) => module.default),
 };
 

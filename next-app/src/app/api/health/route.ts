@@ -20,7 +20,6 @@ export async function GET(): Promise<NextResponse> {
     const locationCheckResults = await Promise.all(locationCheckPromises);
     // Filter to retrieve only the invalid locations.
     const invalidBossLocations = locationCheckResults.filter((r) => r !== null);
-    console.log(invalidBossLocations);
     if (invalidBossLocations.length > 0) {
         // If there are invalid locations, return a 500 error with the list of invalid locations.
         return NextResponse.json(invalidBossLocations, { status: 200 });

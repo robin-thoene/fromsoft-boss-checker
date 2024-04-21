@@ -1,13 +1,14 @@
 import { ReactElement, ReactNode } from 'react';
 
 import { Button } from '@/components/atoms';
+import { IDictionary } from '@/types';
 
 /**
  * The properties of the dialog component.
  */
 interface IDialogProps {
     /** The dictionary to use for translating texts. */
-    dic: { [key: string]: string };
+    dic: IDictionary;
     /** Whether the dialog is open or not. */
     isOpen: boolean;
     /** Callback to close the dialog. */
