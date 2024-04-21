@@ -159,24 +159,14 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
      * @returns {ReactElement} The rendered boss.
      */
     const BossRow = (boss: IBoss): ReactElement => (
-        <div
-            className="flex h-12 w-full cursor-pointer items-center hover:rounded-lg hover:bg-base-200"
-            onClick={() => toggleFelledState(boss.id)}
-            onContextMenu={(e) => {
-                e.preventDefault();
-                toggleMarkedState(boss.id);
-            }}
-        >
+        <div className="flex w-full items-center">
             <div className="w-full">
                 <div className="flex flex-row gap-4 justify-between">
-                    <div className={`relative flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
-                        {markedBossIds.includes(boss.id) && <FlagIcon className="absolute left-0 top-1/2 h-4 w-4 -translate-y-1/2 text-red-600" />}
+                    <div className={`flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
+                        <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
                         <div className="pl-7">{boss.name}</div>
                     </div>
-                    <div className="flex w-40 items-center justify-between">
-                        <div className="mr-9">
-                            <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
-                        </div>
+                    <div className="flex gap-4 items-center justify-between">
                         {boss.wikiReference && boss.wikiReference !== '' && (
                             <Button
                                 icon={<DocumentTextIcon className="h-5 w-5" />}
@@ -195,6 +185,13 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
                                 }}
                             />
                         )}
+                        <Button
+                            icon={<FlagIcon className={`h-5 w-5 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                toggleMarkedState(boss.id);
+                            }}
+                        />
                     </div>
                 </div>
             </div>
@@ -206,19 +203,22 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
             <div className="w-full flex justify-center">
                 <h1>{title}</h1>
             </div>
-            <div className="flex flex-col gap-4">
-                {props.regions?.map((region) => (
-                    <div className="flex flex-col gap-4" key={`region-${region.id}-${region.name}`}>
-                        <h2 className="border-b border-base-content">{region.name}</h2>
-                        {region.bosses.map((boss) => (
-                            <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />
-                        ))}
-                    </div>
-                ))}
-                {props.bosses?.map((boss) => <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />)}
-                <div className="mt-16 flex w-full justify-center">
-                    <Button text={props.dic['gameProgress_reset_button']} fullWidth onClick={() => setIsClearDialogOpen(true)} />
+            {props.regions ? (
+                <div className="flex flex-col gap-10">
+                    {props.regions?.map((region) => (
+                        <div className="flex flex-col gap-4" key={`region-${region.id}-${region.name}`}>
+                            <h2 className="border-b border-base-content">{region.name}</h2>
+                            {region.bosses.map((boss) => (
+                                <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />
+                            ))}
+                        </div>
+                    ))}
                 </div>
+            ) : (
+                <div className="flex flex-col gap-4">{props.bosses?.map((boss) => <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />)}</div>
+            )}
+            <div className="flex w-full mt-16">
+                <Button outlined text={props.dic['gameProgress_reset_button']} fullWidth onClick={() => setIsClearDialogOpen(true)} />
             </div>
             <Dialog
                 dic={props.dic}
@@ -234,7 +234,7 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
             >
                 <p>{props.dic['gameProgress_reset_confirmDialog_text']}</p>
             </Dialog>
-            <div className="fixed bottom-10 right-10 z-50 flex h-24 w-24 items-center justify-center rounded-full border border-base-content bg-base-300">
+            <div className="fixed bottom-10 right-10 z-40 flex h-24 w-24 items-center justify-center rounded-full border bg-white dark:bg-black">
                 {felledBossIds.length} / {bossCounter}
             </div>
         </div>

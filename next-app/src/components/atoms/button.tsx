@@ -26,9 +26,12 @@ interface IButtonProps {
  * @returns {ReactElement} The button element.
  */
 export default function Button(props: IButtonProps): ReactElement {
-    // TODO: Style and handle style affecting properties.
     return (
-        <button className={`${props.fullWidth ? 'w-full' : 'w-max'}`} onClick={props.onClick} disabled={props.disabled}>
+        <button
+            className={`${props.fullWidth ? 'w-full' : 'w-max'} p-3 ${props.outlined ? 'outline outline-1' : ''} ${props.isDangerous ? 'text-red-500 outline-red-500' : ''} rounded-lg`}
+            onClick={props.onClick}
+            disabled={props.disabled}
+        >
             {props.icon}
             {props.text}
         </button>
