@@ -6,6 +6,8 @@ import { Button } from '@/components/atoms';
  * The properties of the dialog component.
  */
 interface IDialogProps {
+    /** The dictionary to use for translating texts. */
+    dic: { [key: string]: string };
     /** Whether the dialog is open or not. */
     isOpen: boolean;
     /** Callback to close the dialog. */
@@ -39,8 +41,10 @@ export default function Dialog(props: IDialogProps) {
                 <h3 className="text-lg font-bold">{props.title}</h3>
                 <div className="py-4">{props.children}</div>
                 <div className="">
-                    <Button text={props.cancelText ? props.cancelText : t('close')} onClick={props.onClose} />
-                    {props.onConfirm && <Button isDangerous={props.isDangerous} outlined text={props.confirmText ? props.confirmText : t('confirm')} onClick={props.onConfirm} />}
+                    <Button text={props.cancelText ? props.cancelText : props.dic['close']} onClick={props.onClose} />
+                    {props.onConfirm && (
+                        <Button isDangerous={props.isDangerous} outlined text={props.confirmText ? props.confirmText : props.dic['confirm']} onClick={props.onConfirm} />
+                    )}
                 </div>
             </div>
         </div>

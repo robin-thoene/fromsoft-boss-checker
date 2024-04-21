@@ -12,6 +12,8 @@ import { IBoss, IEldenRingBoss, IRegion } from '@/types';
  * Properties for the boss checklist page component.
  */
 interface IBossChecklistPageProps {
+    /** The dictionary to use for translating texts. */
+    dic: { [key: string]: string };
     /** The FromSoftware game to display. */
     fromSoftwareGame: FromSoftwareGame;
     /** The regions including the boss lists to display. */
@@ -173,19 +175,10 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
                     </div>
                     <div className="flex w-40 items-center justify-between">
                         <div className="mr-9">
-                            <Checkbox
-                                ariaLabel={
-                                    (felledBossIds.includes(boss.id) ? t('uncheckBossAriaLabel', { bossName: boss.name }) : t('checkBossAriaLabel', { bossName: boss.name })) ??
-                                    undefined
-                                }
-                                isChecked={felledBossIds.includes(boss.id)}
-                                disabled={!isInitializedClientSide}
-                                onChange={() => toggleFelledState(boss.id)}
-                            />
+                            <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
                         </div>
                         {boss.wikiReference && boss.wikiReference !== '' && (
                             <Button
-                                ariaLabel={t('openWikiAriaLabel', { bossName: boss.name }) ?? undefined}
                                 icon={<DocumentTextIcon className="h-5 w-5" />}
                                 onClick={(e) => {
                                     e.stopPropagation();
@@ -195,7 +188,6 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
                         )}
                         {props.fromSoftwareGame === FromSoftwareGame.EldenRing && (boss as IEldenRingBoss).wikiMapReference && (
                             <Button
-                                ariaLabel={t('openMapAriaLabel', { bossName: boss.name }) ?? undefined}
                                 icon={<MapPinIcon className="h-5 w-5" />}
                                 onClick={(e) => {
                                     e.stopPropagation();
@@ -225,11 +217,12 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
                 ))}
                 {props.bosses?.map((boss) => <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />)}
                 <div className="mt-16 flex w-full justify-center">
-                    <Button text={t('gameProgress_reset_button')} fullWidth onClick={() => setIsClearDialogOpen(true)} />
+                    <Button text={props.dic['gameProgress_reset_button']} fullWidth onClick={() => setIsClearDialogOpen(true)} />
                 </div>
             </div>
             <Dialog
-                title={t('gameProgress_reset_confirmDialog_title')}
+                dic={props.dic}
+                title={props.dic['gameProgress_reset_confirmDialog_title']}
                 isDangerous
                 isOpen={isClearDialogOpen}
                 onClose={() => setIsClearDialogOpen(false)}
@@ -239,7 +232,7 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
                     setIsClearDialogOpen(false);
                 }}
             >
-                <p>{t('gameProgress_reset_confirmDialog_text')}</p>
+                <p>{props.dic['gameProgress_reset_confirmDialog_text']}</p>
             </Dialog>
             <div className="fixed bottom-10 right-10 z-50 flex h-24 w-24 items-center justify-center rounded-full border border-base-content bg-base-300">
                 {felledBossIds.length} / {bossCounter}
