@@ -10,8 +10,6 @@ interface ICheckboxProps {
     onChange: (newValue: boolean) => void;
     /** Whether the checkbox is disabled or not. */
     disabled?: boolean;
-    /** The aria label text. */
-    ariaLabel?: string;
 }
 
 /**
@@ -21,14 +19,5 @@ interface ICheckboxProps {
  */
 export default function Checkbox(props: ICheckboxProps): ReactElement {
     // TODO: style
-    return (
-        <input
-            aria-label={props.ariaLabel}
-            type="checkbox"
-            checked={props.isChecked}
-            onClick={(e) => e.stopPropagation()}
-            onChange={(e) => props.onChange(e.target.checked)}
-            disabled={props.disabled}
-        />
-    );
+    return <input type="checkbox" checked={props.isChecked} onClick={(e) => e.stopPropagation()} onChange={(e) => props.onChange(e.target.checked)} disabled={props.disabled} />;
 }

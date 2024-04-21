@@ -8,8 +8,6 @@ interface IButtonProps {
     onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     /** Whether the button is disabled or not. */
     disabled?: boolean;
-    /** The aria label text. */
-    ariaLabel?: string;
     /** The text displayed inside the button */
     text?: string;
     /** The react element to display the button icon. */
@@ -30,7 +28,7 @@ interface IButtonProps {
 export default function Button(props: IButtonProps): ReactElement {
     // TODO: Style and handle style affecting properties.
     return (
-        <button aria-label={props.ariaLabel} className={`${props.fullWidth ? 'w-full' : 'w-max'}`} onClick={props.onClick} disabled={props.disabled}>
+        <button className={`${props.fullWidth ? 'w-full' : 'w-max'}`} onClick={props.onClick} disabled={props.disabled}>
             {props.icon}
             {props.text}
         </button>
