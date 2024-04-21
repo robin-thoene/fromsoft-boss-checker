@@ -234,7 +234,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             >
                 <p>{props.dic['gameProgress_reset_confirmDialog_text']}</p>
             </Dialog>
-            <div className="fixed bottom-10 right-10 z-40 flex h-24 w-24 items-center justify-center rounded-full border bg-white dark:bg-black">
+            <div className="fixed bottom-10 right-10 z-40 flex h-24 w-24 items-center justify-center rounded-full border border-black dark:border-white bg-white dark:bg-black">
                 {felledBossIds.length} / {bossCounter}
             </div>
         </div>

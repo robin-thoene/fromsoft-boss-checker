@@ -4,7 +4,7 @@ const nextConfig = {
         return [
             {
                 source: '/',
-                destination: '/dark-souls-1',
+                destination: '/en/dark-souls-1',
                 permanent: true,
             },
         ];

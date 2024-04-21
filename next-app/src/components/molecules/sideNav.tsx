@@ -52,7 +52,7 @@ export default function SideNav(props: ISideNavProps): ReactElement {
         <nav className="flex flex-col py-10 border-r">
             {routes.map((r) => (
                 <Link className="px-5 py-2 relative" key={`route-${r.path}`} href={r.path}>
-                    {r.path === currentPathname && <span className="absolute left-1 top-0 h-full border-l" />}
+                    {r.path === currentPathname && <span className="absolute left-1 top-0 h-full border-l-2 border-black dark:border-white" />}
                     {r.label}
                 </Link>
             ))}
