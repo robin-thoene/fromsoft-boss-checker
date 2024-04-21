@@ -1,6 +1,5 @@
+import bossesJson from '@/data/sekiroBosses.json';
 import { IBoss } from '@/types';
-
-import bossesJson from '../../public/data/sekiroBosses.json';
 
 /**
  * Retrieve all available bosses in Sekiro.

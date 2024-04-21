@@ -1,6 +1,5 @@
+import bossesJson from '@/data/darkSouls3Bosses.json';
 import { IBoss } from '@/types';
-
-import bossesJson from '../../public/data/darkSouls3Bosses.json';
 
 /**
  * Retrieve all available bosses in Dark Souls 3.

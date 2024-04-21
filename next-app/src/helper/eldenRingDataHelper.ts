@@ -1,6 +1,5 @@
+import regionsJson from '@/data/eldenRingRegions.json';
 import { IRegion } from '@/types';
-
-import regionsJson from '../../public/data/eldenRingRegions.json';
 
 /**
  * Retrieve all available regions in Elden Ring, with the list of region bosses included.

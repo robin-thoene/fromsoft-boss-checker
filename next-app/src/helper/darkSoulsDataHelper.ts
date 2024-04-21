@@ -1,6 +1,5 @@
+import bossesJson from '@/data/darkSoulsBosses.json';
 import { IBoss } from '@/types';
-
-import bossesJson from '../../public/data/darkSoulsBosses.json';
 
 /**
  * Retrieve all available bosses in Dark Souls.
