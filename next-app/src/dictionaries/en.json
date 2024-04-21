@@ -3,5 +3,12 @@
   "confirm": "Confirm",
   "gameProgress_reset_button": "reset",
   "gameProgress_reset_confirmDialog_title": "Reset current progress",
-  "gameProgress_reset_confirmDialog_text": "The complete progress will be thrown away!"
+  "gameProgress_reset_confirmDialog_text": "The complete progress will be thrown away!",
+  "darkSoulsOne_label": "Dark Souls I",
+  "darkSoulsTwo_label": "Dark Souls II",
+  "darkSoulsThree_label": "Dark Souls III",
+  "eldenRing_label": "Elden Ring",
+  "bloodborne_label": "Bloodborne",
+  "sekiro_label": "Sekiro",
+  "demonSouls_label": "Demon Souls"
 }

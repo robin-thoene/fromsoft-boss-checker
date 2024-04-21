@@ -36,23 +36,23 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
     const title = useMemo(() => {
         switch (props.fromSoftwareGame) {
             case FromSoftwareGame.DarkSouls:
-                return 'Dark Souls';
+                return props.dic['darkSoulsOne_label'];
             case FromSoftwareGame.DarkSouls2:
-                return 'Dark Souls II';
+                return props.dic['darkSoulsTwo_label'];
             case FromSoftwareGame.DarkSouls3:
-                return 'Dark Souls III';
+                return props.dic['darkSoulsThree_label'];
             case FromSoftwareGame.Bloodborne:
-                return 'Bloodborne';
+                return props.dic['bloodborne_label'];
             case FromSoftwareGame.Sekiro:
-                return 'Sekiro';
+                return props.dic['sekiro_label'];
             case FromSoftwareGame.EldenRing:
-                return 'Elden Ring';
+                return props.dic['eldenRing_label'];
             case FromSoftwareGame.DemonSouls:
-                return 'Demon Souls';
+                return props.dic['demonSouls_label'];
             default:
                 return '';
         }
-    }, [props.fromSoftwareGame]);
+    }, [props.dic, props.fromSoftwareGame]);
 
     /** The counter of all bosses. */
     const bossCounter = useMemo(() => {
@@ -200,7 +200,7 @@ export default function BossChecklistPage(props: IBossChecklistPageProps): React
 
     return (
         <div className="flex flex-1 flex-col overflow-auto p-10">
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center mb-10">
                 <h1>{title}</h1>
             </div>
             {props.regions ? (
