@@ -22,7 +22,6 @@ export default async function Page({ params }: { params: IPageParams }): Promise
     // Get the list of all Dark Souls bosses.
     const darkSoulsBosses = getBosses();
 
-    // TODO: Figure out how to set the canonical URL in the head.
     return (
         <>
             <BossChecklist

@@ -22,7 +22,6 @@ export default async function Page({ params }: { params: IPageParams }): Promise
     // Get all Elden Ring regions with the boss lists.
     const eldenRingRegions = getRegions();
 
-    // TODO: Figure out how to set the canonical URL in the head.
     return (
         <>
             <BossChecklist

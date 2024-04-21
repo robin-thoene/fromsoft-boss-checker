@@ -22,7 +22,6 @@ export default async function Page({ params }: { params: IPageParams }): Promise
     // Get the list of all Sekiro bosses.
     const sekiroBosses = getBosses();
 
-    // TODO: Figure out how to set the canonical URL in the head.
     return (
         <>
             <BossChecklist
