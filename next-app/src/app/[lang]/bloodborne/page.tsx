@@ -6,7 +6,7 @@ import { FromSoftwareGame } from '@/enumerations';
 import { getBosses } from '@/helper/bloodborneDataHelper';
 import { IPageParams } from '@/types';
 
-// The key in t{ params }: { params: { slug: string } }he local storage to store the users progress.
+// The key in the local storage to store the users progress.
 const localStorageFelledBossesKey = 'bloodborneFelledBossIds';
 // The key in the local storage to store the marked bosses.
 const localStorageMarkedBossesKey = 'bloodborneMarkedBossIds';
