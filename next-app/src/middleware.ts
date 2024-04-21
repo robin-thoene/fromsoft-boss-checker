@@ -23,7 +23,7 @@ export function middleware(request: NextRequest): any {
 export const config = {
     matcher: [
         // Skip all internal paths (_next)
-        '/((?!_next).*)',
+        '/((?!api|_next).*)',
         // Optional: only run on root (/) URL
         // '/'
     ],

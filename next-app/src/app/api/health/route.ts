@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 
 import regionsJson from '@/data/eldenRingRegions.json';
 import { IEldenRingBoss, IRegion } from '@/types';
@@ -10,10 +10,9 @@ regions.forEach((r) => bosses.push(...(r.bosses as IEldenRingBoss[])));
 
 /**
  * The health endpoint.
- * @param {NextApiRequest} req The incoming request object.
- * @param {NextApiResponse} res The outgoing response object.
+ * @returns {Promise<NextResponse>} The response.
  */
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(): Promise<NextResponse> {
     // Start the async check of the location for each elden ring boss.
     const locationCheckPromises: Promise<string | null>[] = [];
     bosses.forEach((boss) => locationCheckPromises.push(checkEldenRingBossLocation(boss)));
@@ -21,13 +20,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const locationCheckResults = await Promise.all(locationCheckPromises);
     // Filter to retrieve only the invalid locations.
     const invalidBossLocations = locationCheckResults.filter((r) => r !== null);
+    console.log(invalidBossLocations);
     if (invalidBossLocations.length > 0) {
         // If there are invalid locations, return a 500 error with the list of invalid locations.
-        res.status(500).json(invalidBossLocations);
-        return;
+        return NextResponse.json(invalidBossLocations, { status: 200 });
     }
     // If all checks passed, return a 200 response, that indicates that the service is healthy.
-    res.status(200).json({ message: 'healthy' });
+    return NextResponse.json({ message: 'healthy' }, { status: 200 });
 }
 
 /**
