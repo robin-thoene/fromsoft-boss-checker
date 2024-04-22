@@ -36,6 +36,10 @@ export default function SideNav(props: ISideNavProps): ReactElement {
                 label: props.dic['darkSoulsThree_label'],
             },
             {
+                path: `/${props.currentLang}/demon-souls`,
+                label: props.dic['demonSouls_label'],
+            },
+            {
                 path: `/${props.currentLang}/elden-ring`,
                 label: props.dic['eldenRing_label'],
             },

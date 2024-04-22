@@ -33,9 +33,9 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
 
     return (
         <html lang={params.lang}>
-            <body className="dark:bg-black dark:text-white flex flex-row overflow-hidden">
+            <body className="dark:bg-black dark:text-white flex flex-row overflow-hidden h-screen">
                 <SideNav currentLang={params.lang} dic={dict} />
-                <main className="flex flex-1 max-h-screen overflow-auto">{children}</main>
+                <main className="flex flex-1 max-h-screen overflow-auto h-full">{children}</main>
             </body>
         </html>
     );
