@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Phalanx",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Phalanx"
+  },
+  {
+    "id": 2,
+    "name": "Tower Knight",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Tower+Knight"
+  },
+  {
+    "id": 3,
+    "name": "Penetrator",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Penetrator"
+  },
+  {
+    "id": 4,
+    "name": "False King Allant",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Old+King+Allant"
+  },
+  {
+    "id": 5,
+    "name": "Armor Spider",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Armor+Spider"
+  },
+  {
+    "id": 6,
+    "name": "Flamelurker",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Flamelurker"
+  },
+  {
+    "id": 7,
+    "name": "Dragon God",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Dragon+God"
+  },
+  {
+    "id": 8,
+    "name": "Fool's Idol",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Fool's+Idol"
+  },
+  {
+    "id": 9,
+    "name": "Maneater",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Maneater"
+  },
+  {
+    "id": 10,
+    "name": "Old Monk",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Old+Monk"
+  },
+  {
+    "id": 11,
+    "name": "Adjudicator",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Adjudicator"
+  },
+  {
+    "id": 12,
+    "name": "Old Hero",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Old+Hero"
+  },
+  {
+    "id": 13,
+    "name": "Storm King",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Storm+King"
+  },
+  {
+    "id": 14,
+    "name": "Leechmonger",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Leechmonger"
+  },
+  {
+    "id": 15,
+    "name": "Dirty Colossus",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Dirty+Colossus"
+  },
+  {
+    "id": 16,
+    "name": "Maiden Astraea",
+    "wikiReference": "https://demonssouls.wiki.fextralife.com/Maiden+Astraea"
+  },
+  {
+    "id": 17,
+    "name": "True King Allant"
+  }
+]
