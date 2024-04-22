@@ -1,6 +1,6 @@
 'use client';
 
-import { DocumentTextIcon, FlagIcon, MapPinIcon } from '@heroicons/react/24/solid';
+import { DocumentTextIcon, FlagIcon, MapPinIcon, EllipsisVerticalIcon } from '@heroicons/react/24/solid';
 import { ReactElement, useEffect, useMemo, useState } from 'react';
 
 import { Button, Checkbox } from '@/components/atoms';
@@ -153,50 +153,83 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
         setMarkedBossIds([...tmpMarkedBossIds]);
     };
 
+    const ContextActions = (boss: IBoss) => (
+        <>
+            {boss.wikiReference && boss.wikiReference !== '' && (
+                <Button
+                    icon={<DocumentTextIcon className="h-5 w-5" />}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(boss.wikiReference, '_blank');
+                    }}
+                />
+            )}
+            {props.fromSoftwareGame === FromSoftwareGame.EldenRing && (boss as IEldenRingBoss).wikiMapReference && (
+                <Button
+                    icon={<MapPinIcon className="h-5 w-5" />}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        window.open((boss as IEldenRingBoss).wikiMapReference, '_blank');
+                    }}
+                />
+            )}
+            <Button
+                icon={<FlagIcon className={`h-5 w-5 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
+                onClick={(e) => {
+                    e.preventDefault();
+                    toggleMarkedState(boss.id);
+                }}
+            />
+        </>
+    );
+
     /**
      * Custom render component for a single boss.
      * @param {IBoss} boss The boss to render.
      * @returns {ReactElement} The rendered boss.
      */
-    const BossRow = (boss: IBoss): ReactElement => (
-        <div className="flex w-full items-center">
-            <div className="w-full">
-                <div className="flex flex-row gap-4 justify-between">
-                    <div className={`flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
-                        <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
-                        <div className="pl-7">{boss.name}</div>
-                    </div>
-                    <div className="flex gap-4 items-center justify-between">
-                        {boss.wikiReference && boss.wikiReference !== '' && (
+    const BossRow = (boss: IBoss): ReactElement => {
+        const [openContextMenu, setOpenContextMenu] = useState(false);
+        useEffect(() => {
+            /**
+             * Function to handle light dismiss for the context menu on mobile devices.
+             */
+            function lightDismiss() {
+                setOpenContextMenu(false);
+            }
+            if (openContextMenu) {
+                document.addEventListener('click', lightDismiss);
+            }
+            return () => document.removeEventListener('click', lightDismiss);
+        }, [openContextMenu]);
+
+        return (
+            <div className="flex w-full items-center">
+                <div className="w-full">
+                    <div className="flex flex-row gap-4 justify-between">
+                        <div className={`flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
+                            <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
+                            <div className="pl-7">{boss.name}</div>
+                        </div>
+                        <div className="hidden xs:flex gap-4 items-center justify-between">
+                            <ContextActions {...boss} />
+                        </div>
+                        <div className="flex xs:hidden relative">
                             <Button
-                                icon={<DocumentTextIcon className="h-5 w-5" />}
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    window.open(boss.wikiReference, '_blank');
-                                }}
+                                icon={<EllipsisVerticalIcon className={`h-4 w-4 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
+                                onClick={() => setOpenContextMenu(true)}
                             />
-                        )}
-                        {props.fromSoftwareGame === FromSoftwareGame.EldenRing && (boss as IEldenRingBoss).wikiMapReference && (
-                            <Button
-                                icon={<MapPinIcon className="h-5 w-5" />}
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    window.open((boss as IEldenRingBoss).wikiMapReference, '_blank');
-                                }}
-                            />
-                        )}
-                        <Button
-                            icon={<FlagIcon className={`h-5 w-5 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                toggleMarkedState(boss.id);
-                            }}
-                        />
+                            {openContextMenu && (
+                                <div className="absolute flex flex-row right-full top-1/2 -translate-y-1/2 rounded-lg p-1 border border-black dark:border-white bg-white dark:bg-black">
+                                    <ContextActions {...boss} />
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    };
 
     return (
         <div className="flex flex-1 flex-col overflow-auto p-10">
