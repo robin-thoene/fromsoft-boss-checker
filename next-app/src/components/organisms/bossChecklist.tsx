@@ -1,6 +1,6 @@
 'use client';
 
-import { DocumentTextIcon, FlagIcon, MapPinIcon, EllipsisVerticalIcon } from '@heroicons/react/24/solid';
+import { DocumentTextIcon, EllipsisVerticalIcon, FlagIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import { ReactElement, useEffect, useMemo, useState } from 'react';
 
 import { Button, Checkbox } from '@/components/atoms';
