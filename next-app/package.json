@@ -4,7 +4,7 @@
   "private": false,
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3069",
     "build": "pnpm lint && next build",
     "start": "next start",
     "lint": "tsc && next lint --dir . --max-warnings=0",
