@@ -28,7 +28,7 @@ interface IButtonProps {
 export default function Button(props: IButtonProps): ReactElement {
     return (
         <button
-            className={`${props.fullWidth ? 'w-full' : 'w-max'} p-3 ${props.outlined ? 'outline outline-1' : ''} ${props.isDangerous ? 'text-red-500 outline-red-500' : ''} rounded-lg`}
+            className={`${props.fullWidth ? 'w-full' : 'w-max'} p-3 ${props.outlined ? 'outline outline-1' : ''} ${props.isDangerous ? 'text-red-500 outline-red-500' : ''} rounded-lg h-max`}
             onClick={props.onClick}
             disabled={props.disabled}
         >
