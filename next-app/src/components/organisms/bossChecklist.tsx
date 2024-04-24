@@ -1,7 +1,8 @@
 'use client';
 
-import { DocumentTextIcon, EllipsisVerticalIcon, FlagIcon, MapPinIcon } from '@heroicons/react/24/solid';
-import { ReactElement, useEffect, useMemo, useState } from 'react';
+import { DocumentTextIcon, EllipsisVerticalIcon, FlagIcon, LinkIcon, MapPinIcon } from '@heroicons/react/24/solid';
+import { useRouter } from 'next/navigation';
+import { ReactElement, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { Button, Checkbox } from '@/components/atoms';
 import { Dialog } from '@/components/molecules';
@@ -32,6 +33,7 @@ interface IBossChecklistProps {
  * @returns {ReactElement} The rendered component.
  */
 export default function BossChecklist(props: IBossChecklistProps): ReactElement {
+    const router = useRouter();
     /** The page title. */
     const title = useMemo(() => {
         switch (props.fromSoftwareGame) {
@@ -231,6 +233,21 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
         );
     };
 
+    /**
+     * Navigates to the region directly and copies the link to the users clipboard.
+     * @param {string} regionName - The name of the region to navigate to.
+     * @returns Nothing.
+     */
+    const linkToRegion = useCallback(
+        (regionName: string) => {
+            let newRelUrl = `${window.location.pathname}${window.location.search}#${regionName}`;
+            router.push(newRelUrl);
+            navigator.clipboard.writeText(`${window.location.host}${newRelUrl}`);
+            alert(props.dic['regionLinkCopied']);
+        },
+        [props.dic, router],
+    );
+
     return (
         <div className="flex flex-1 flex-col overflow-auto p-10">
             <div className="w-full flex justify-center mb-10">
@@ -239,8 +256,10 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             {props.regions ? (
                 <div className="flex flex-col gap-10">
                     {props.regions?.map((region) => (
-                        <div className="flex flex-col gap-4" key={`region-${region.id}-${region.name}`}>
-                            <h2 className="border-b border-base-content">{region.name}</h2>
+                        <div id={region.name} className="flex flex-col gap-4" key={`region-${region.id}-${region.name}`}>
+                            <h2 className="border-b border-base-content">
+                                <Button text={region.name} icon={<LinkIcon className="h-4 w-4" />} onClick={() => linkToRegion(region.name)} />
+                            </h2>
                             {region.bosses.map((boss) => (
                                 <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />
                             ))}
