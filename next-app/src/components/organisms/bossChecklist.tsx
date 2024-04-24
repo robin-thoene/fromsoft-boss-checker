@@ -243,6 +243,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             let newRelUrl = `${window.location.pathname}${window.location.search}#${regionName}`;
             router.push(newRelUrl);
             navigator.clipboard.writeText(`${window.location.host}${newRelUrl}`);
+            // TODO: replace the alert with self dismissing toast.
             alert(props.dic['regionLinkCopied']);
         },
         [props.dic, router],
