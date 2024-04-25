@@ -120,41 +120,47 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
      * Callback to mark a boss as felled or not.
      * @param {number} bossId The id of the boss to mark as felled / not felled.
      */
-    const toggleFelledState = (bossId: number) => {
-        const tmpFelledBossIds = [...felledBossIds];
-        const alreadyExists = felledBossIds.includes(bossId);
-        if (!alreadyExists) {
-            // If the boss is checked, add it to the list.
-            tmpFelledBossIds.push(bossId);
-        } else {
-            // If the boss is unchecked, remove it from the list.
-            const index = tmpFelledBossIds.indexOf(bossId);
-            if (index > -1) {
-                tmpFelledBossIds.splice(index, 1);
+    const toggleFelledState = useCallback(
+        (bossId: number) => {
+            const tmpFelledBossIds = [...felledBossIds];
+            const alreadyExists = felledBossIds.includes(bossId);
+            if (!alreadyExists) {
+                // If the boss is checked, add it to the list.
+                tmpFelledBossIds.push(bossId);
+            } else {
+                // If the boss is unchecked, remove it from the list.
+                const index = tmpFelledBossIds.indexOf(bossId);
+                if (index > -1) {
+                    tmpFelledBossIds.splice(index, 1);
+                }
             }
-        }
-        setFelledBossIds([...tmpFelledBossIds]);
-    };
+            setFelledBossIds([...tmpFelledBossIds]);
+        },
+        [felledBossIds],
+    );
 
     /**
      * Callback to mark a boss.
      * @param {number} bossId The id of the boss to mark.
      */
-    const toggleMarkedState = (bossId: number) => {
-        const tmpMarkedBossIds = [...markedBossIds];
-        const alreadyExists = markedBossIds.includes(bossId);
-        if (!alreadyExists) {
-            // If the boss is checked, add it to the list.
-            tmpMarkedBossIds.push(bossId);
-        } else {
-            // If the boss is unchecked, remove it from the list.
-            const index = tmpMarkedBossIds.indexOf(bossId);
-            if (index > -1) {
-                tmpMarkedBossIds.splice(index, 1);
+    const toggleMarkedState = useCallback(
+        (bossId: number) => {
+            const tmpMarkedBossIds = [...markedBossIds];
+            const alreadyExists = markedBossIds.includes(bossId);
+            if (!alreadyExists) {
+                // If the boss is checked, add it to the list.
+                tmpMarkedBossIds.push(bossId);
+            } else {
+                // If the boss is unchecked, remove it from the list.
+                const index = tmpMarkedBossIds.indexOf(bossId);
+                if (index > -1) {
+                    tmpMarkedBossIds.splice(index, 1);
+                }
             }
-        }
-        setMarkedBossIds([...tmpMarkedBossIds]);
-    };
+            setMarkedBossIds([...tmpMarkedBossIds]);
+        },
+        [markedBossIds],
+    );
 
     const ContextActions = (boss: IBoss) => (
         <>
