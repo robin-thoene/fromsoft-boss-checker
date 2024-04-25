@@ -261,7 +261,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
     );
 
     return (
-        <div className="flex flex-1 flex-col overflow-auto p-10">
+        <div className="flex flex-1 flex-col overflow-auto p-10 max-w-full overflow-x-hidden">
             <div className="w-full flex justify-center mb-10">
                 <h1>{title}</h1>
             </div>
@@ -269,7 +269,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
                 <div className="flex flex-col gap-10">
                     {props.regions?.map((region) => (
                         <div id={region.name} className="flex flex-col gap-4" key={`region-${region.id}-${region.name}`}>
-                            <h2 className="border-b border-base-content">
+                            <h2 className="border-b">
                                 <Button text={region.name} icon={<LinkIcon className="h-4 w-4" />} onClick={() => linkToRegion(region.name)} />
                             </h2>
                             {region.bosses.map((boss) => (
