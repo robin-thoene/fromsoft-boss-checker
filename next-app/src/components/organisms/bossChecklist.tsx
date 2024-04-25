@@ -171,6 +171,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
                     icon={<MapPinIcon className="h-5 w-5" />}
                     onClick={(e) => {
                         e.stopPropagation();
+                        e.preventDefault();
                         window.open((boss as IEldenRingBoss).wikiMapReference, '_blank');
                     }}
                 />
@@ -178,6 +179,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             <Button
                 icon={<FlagIcon className={`h-5 w-5 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
                 onClick={(e) => {
+                    e.stopPropagation();
                     e.preventDefault();
                     toggleMarkedState(boss.id);
                 }}
@@ -205,28 +207,37 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             return () => document.removeEventListener('click', lightDismiss);
         }, [openContextMenu]);
 
+        const rowContent = useMemo(
+            () => (
+                <>
+                    <div className={`flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
+                        <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
+                        <div className="pl-7">{boss.name}</div>
+                    </div>
+                    <div className="hidden xs:flex gap-4 items-center justify-between">
+                        <ContextActions {...boss} />
+                    </div>
+                    <div className="flex xs:hidden relative">
+                        <Button
+                            icon={<EllipsisVerticalIcon className={`h-4 w-4 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
+                            onClick={() => setOpenContextMenu(true)}
+                        />
+                        {openContextMenu && (
+                            <div className="absolute flex flex-row right-full top-1/2 -translate-y-1/2 rounded-lg p-1 border border-black dark:border-white bg-white dark:bg-black">
+                                <ContextActions {...boss} />
+                            </div>
+                        )}
+                    </div>
+                </>
+            ),
+            [boss, openContextMenu],
+        );
         return (
             <div className="flex w-full items-center">
                 <div className="w-full">
-                    <div className="flex flex-row gap-4 justify-between">
-                        <div className={`flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
-                            <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
-                            <div className="pl-7">{boss.name}</div>
-                        </div>
-                        <div className="hidden xs:flex gap-4 items-center justify-between">
-                            <ContextActions {...boss} />
-                        </div>
-                        <div className="flex xs:hidden relative">
-                            <Button
-                                icon={<EllipsisVerticalIcon className={`h-4 w-4 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
-                                onClick={() => setOpenContextMenu(true)}
-                            />
-                            {openContextMenu && (
-                                <div className="absolute flex flex-row right-full top-1/2 -translate-y-1/2 rounded-lg p-1 border border-black dark:border-white bg-white dark:bg-black">
-                                    <ContextActions {...boss} />
-                                </div>
-                            )}
-                        </div>
+                    <div className="flex xs:hidden flex-row w-full gap-4 justify-between">{rowContent}</div>
+                    <div className="cursor-pointer hidden xs:flex flex-row w-full gap-4 justify-between" onClick={() => toggleFelledState(boss.id)}>
+                        {rowContent}
                     </div>
                 </div>
             </div>

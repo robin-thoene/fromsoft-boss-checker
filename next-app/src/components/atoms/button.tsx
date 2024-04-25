@@ -33,7 +33,7 @@ export default function Button(props: IButtonProps): ReactElement {
             disabled={props.disabled}
         >
             {props.icon}
-            <div className="px-3">{props.text}</div>
+            {props.text && <div className="px-3">{props.text}</div>}
         </button>
     );
 }
