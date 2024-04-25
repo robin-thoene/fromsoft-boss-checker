@@ -1,7 +1,9 @@
 'use client';
 
-import { DocumentTextIcon, EllipsisVerticalIcon, FlagIcon, MapPinIcon } from '@heroicons/react/24/solid';
-import { ReactElement, useEffect, useMemo, useState } from 'react';
+import { DocumentTextIcon, EllipsisVerticalIcon, FlagIcon, LinkIcon, MapPinIcon } from '@heroicons/react/24/solid';
+import { useRouter } from 'next/navigation';
+import { ReactElement, useCallback, useEffect, useMemo, useState } from 'react';
+import { toast } from 'react-toastify';
 
 import { Button, Checkbox } from '@/components/atoms';
 import { Dialog } from '@/components/molecules';
@@ -32,6 +34,7 @@ interface IBossChecklistProps {
  * @returns {ReactElement} The rendered component.
  */
 export default function BossChecklist(props: IBossChecklistProps): ReactElement {
+    const router = useRouter();
     /** The page title. */
     const title = useMemo(() => {
         switch (props.fromSoftwareGame) {
@@ -117,41 +120,47 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
      * Callback to mark a boss as felled or not.
      * @param {number} bossId The id of the boss to mark as felled / not felled.
      */
-    const toggleFelledState = (bossId: number) => {
-        const tmpFelledBossIds = [...felledBossIds];
-        const alreadyExists = felledBossIds.includes(bossId);
-        if (!alreadyExists) {
-            // If the boss is checked, add it to the list.
-            tmpFelledBossIds.push(bossId);
-        } else {
-            // If the boss is unchecked, remove it from the list.
-            const index = tmpFelledBossIds.indexOf(bossId);
-            if (index > -1) {
-                tmpFelledBossIds.splice(index, 1);
+    const toggleFelledState = useCallback(
+        (bossId: number) => {
+            const tmpFelledBossIds = [...felledBossIds];
+            const alreadyExists = felledBossIds.includes(bossId);
+            if (!alreadyExists) {
+                // If the boss is checked, add it to the list.
+                tmpFelledBossIds.push(bossId);
+            } else {
+                // If the boss is unchecked, remove it from the list.
+                const index = tmpFelledBossIds.indexOf(bossId);
+                if (index > -1) {
+                    tmpFelledBossIds.splice(index, 1);
+                }
             }
-        }
-        setFelledBossIds([...tmpFelledBossIds]);
-    };
+            setFelledBossIds([...tmpFelledBossIds]);
+        },
+        [felledBossIds],
+    );
 
     /**
      * Callback to mark a boss.
      * @param {number} bossId The id of the boss to mark.
      */
-    const toggleMarkedState = (bossId: number) => {
-        const tmpMarkedBossIds = [...markedBossIds];
-        const alreadyExists = markedBossIds.includes(bossId);
-        if (!alreadyExists) {
-            // If the boss is checked, add it to the list.
-            tmpMarkedBossIds.push(bossId);
-        } else {
-            // If the boss is unchecked, remove it from the list.
-            const index = tmpMarkedBossIds.indexOf(bossId);
-            if (index > -1) {
-                tmpMarkedBossIds.splice(index, 1);
+    const toggleMarkedState = useCallback(
+        (bossId: number) => {
+            const tmpMarkedBossIds = [...markedBossIds];
+            const alreadyExists = markedBossIds.includes(bossId);
+            if (!alreadyExists) {
+                // If the boss is checked, add it to the list.
+                tmpMarkedBossIds.push(bossId);
+            } else {
+                // If the boss is unchecked, remove it from the list.
+                const index = tmpMarkedBossIds.indexOf(bossId);
+                if (index > -1) {
+                    tmpMarkedBossIds.splice(index, 1);
+                }
             }
-        }
-        setMarkedBossIds([...tmpMarkedBossIds]);
-    };
+            setMarkedBossIds([...tmpMarkedBossIds]);
+        },
+        [markedBossIds],
+    );
 
     const ContextActions = (boss: IBoss) => (
         <>
@@ -169,6 +178,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
                     icon={<MapPinIcon className="h-5 w-5" />}
                     onClick={(e) => {
                         e.stopPropagation();
+                        e.preventDefault();
                         window.open((boss as IEldenRingBoss).wikiMapReference, '_blank');
                     }}
                 />
@@ -176,6 +186,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             <Button
                 icon={<FlagIcon className={`h-5 w-5 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
                 onClick={(e) => {
+                    e.stopPropagation();
                     e.preventDefault();
                     toggleMarkedState(boss.id);
                 }}
@@ -203,44 +214,76 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             return () => document.removeEventListener('click', lightDismiss);
         }, [openContextMenu]);
 
+        const rowContent = useMemo(
+            () => (
+                <>
+                    <div className={`flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
+                        <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
+                        <div className="pl-7">{boss.name}</div>
+                    </div>
+                    <div className="hidden xs:flex gap-4 items-center justify-between">
+                        <ContextActions {...boss} />
+                    </div>
+                    <div className="flex xs:hidden relative">
+                        <Button
+                            icon={<EllipsisVerticalIcon className={`h-4 w-4 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
+                            onClick={() => setOpenContextMenu(true)}
+                        />
+                        {openContextMenu && (
+                            <div className="absolute flex flex-row right-full top-1/2 -translate-y-1/2 rounded-lg p-1 border border-black dark:border-white bg-white dark:bg-black">
+                                <ContextActions {...boss} />
+                            </div>
+                        )}
+                    </div>
+                </>
+            ),
+            [boss, openContextMenu],
+        );
         return (
             <div className="flex w-full items-center">
                 <div className="w-full">
-                    <div className="flex flex-row gap-4 justify-between">
-                        <div className={`flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
-                            <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
-                            <div className="pl-7">{boss.name}</div>
-                        </div>
-                        <div className="hidden xs:flex gap-4 items-center justify-between">
-                            <ContextActions {...boss} />
-                        </div>
-                        <div className="flex xs:hidden relative">
-                            <Button
-                                icon={<EllipsisVerticalIcon className={`h-4 w-4 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
-                                onClick={() => setOpenContextMenu(true)}
-                            />
-                            {openContextMenu && (
-                                <div className="absolute flex flex-row right-full top-1/2 -translate-y-1/2 rounded-lg p-1 border border-black dark:border-white bg-white dark:bg-black">
-                                    <ContextActions {...boss} />
-                                </div>
-                            )}
-                        </div>
+                    <div className="flex sm:hidden flex-row w-full gap-4 justify-between">{rowContent}</div>
+                    <div className="cursor-pointer hidden sm:flex flex-row w-full gap-4 justify-between" onClick={() => toggleFelledState(boss.id)}>
+                        {rowContent}
                     </div>
                 </div>
             </div>
         );
     };
 
+    /**
+     * Navigates to the region directly and copies the link to the users clipboard.
+     * @param {string} regionName - The name of the region to navigate to.
+     * @returns Nothing.
+     */
+    const linkToRegion = useCallback(
+        (regionName: string) => {
+            let newRelUrl = `${window.location.pathname}${window.location.search}#${regionName}`;
+            router.push(newRelUrl);
+            navigator.clipboard.writeText(`${window.location.host}${newRelUrl}`);
+            toast(props.dic['regionLinkCopied']);
+        },
+        [props.dic, router],
+    );
+
     return (
-        <div className="flex flex-1 flex-col overflow-auto p-10">
+        <div className="flex flex-1 flex-col overflow-auto p-10 max-w-full overflow-x-hidden">
             <div className="w-full flex justify-center mb-10">
                 <h1>{title}</h1>
             </div>
             {props.regions ? (
                 <div className="flex flex-col gap-10">
                     {props.regions?.map((region) => (
-                        <div className="flex flex-col gap-4" key={`region-${region.id}-${region.name}`}>
-                            <h2 className="border-b border-base-content">{region.name}</h2>
+                        <div id={region.name} className="flex flex-col gap-4" key={`region-${region.id}-${region.name}`}>
+                            <h2 className="border-b">
+                                <div className="hidden sm:flex">
+                                    <Button text={region.name} icon={<LinkIcon className="h-4 w-4" />} onClick={() => linkToRegion(region.name)} />
+                                </div>
+                                <div className="flex sm:hidden items-center">
+                                    <Button icon={<LinkIcon className="h-4 w-4" />} onClick={() => linkToRegion(region.name)} />
+                                    <div>{region.name}</div>
+                                </div>
+                            </h2>
                             {region.bosses.map((boss) => (
                                 <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />
                             ))}

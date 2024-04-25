@@ -28,12 +28,12 @@ interface IButtonProps {
 export default function Button(props: IButtonProps): ReactElement {
     return (
         <button
-            className={`${props.fullWidth ? 'w-full' : 'w-max'} p-3 ${props.outlined ? 'outline outline-1' : ''} ${props.isDangerous ? 'text-red-500 outline-red-500' : ''} rounded-lg h-max`}
+            className={`flex flex-row items-center ${props.fullWidth ? 'w-full' : 'w-max'} p-3 ${props.outlined ? 'outline outline-1' : ''} ${props.isDangerous ? 'text-red-500 outline-red-500' : ''} rounded-lg h-max max-w-full`}
             onClick={props.onClick}
             disabled={props.disabled}
         >
-            {props.icon}
-            {props.text}
+            {props.icon && <div>{props.icon}</div>}
+            {props.text && <div className="px-3 text-left">{props.text}</div>}
         </button>
     );
 }

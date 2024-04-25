@@ -1,7 +1,9 @@
 import '../globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 import type { Metadata } from 'next';
 import { ReactElement, ReactNode } from 'react';
+import { Slide, ToastContainer } from 'react-toastify';
 
 import { SideNav } from '@/components/molecules';
 import { getDictionary } from '@/dictionaries';
@@ -36,6 +38,15 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
             <body className="dark:bg-black dark:text-white flex flex-row overflow-hidden h-screen">
                 <SideNav currentLang={params.lang} dic={dict} />
                 <main className="flex flex-1 max-h-screen overflow-auto h-full">{children}</main>
+                <ToastContainer
+                    closeButton={false}
+                    toastClassName="!bg-white dark:!bg-black border border-black dark:border-white text-red-200 !text-black dark:!text-white"
+                    bodyClassName="text-black dark:text-white"
+                    closeOnClick
+                    autoClose={3000}
+                    transition={Slide}
+                    hideProgressBar
+                />
             </body>
         </html>
     );
