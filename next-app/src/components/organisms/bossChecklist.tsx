@@ -3,6 +3,7 @@
 import { DocumentTextIcon, EllipsisVerticalIcon, FlagIcon, LinkIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
 import { ReactElement, useCallback, useEffect, useMemo, useState } from 'react';
+import { toast } from 'react-toastify';
 
 import { Button, Checkbox } from '@/components/atoms';
 import { Dialog } from '@/components/molecules';
@@ -235,8 +236,8 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
         return (
             <div className="flex w-full items-center">
                 <div className="w-full">
-                    <div className="flex xs:hidden flex-row w-full gap-4 justify-between">{rowContent}</div>
-                    <div className="cursor-pointer hidden xs:flex flex-row w-full gap-4 justify-between" onClick={() => toggleFelledState(boss.id)}>
+                    <div className="flex sm:hidden flex-row w-full gap-4 justify-between">{rowContent}</div>
+                    <div className="cursor-pointer hidden sm:flex flex-row w-full gap-4 justify-between" onClick={() => toggleFelledState(boss.id)}>
                         {rowContent}
                     </div>
                 </div>
@@ -254,8 +255,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             let newRelUrl = `${window.location.pathname}${window.location.search}#${regionName}`;
             router.push(newRelUrl);
             navigator.clipboard.writeText(`${window.location.host}${newRelUrl}`);
-            // TODO: replace the alert with self dismissing toast.
-            alert(props.dic['regionLinkCopied']);
+            toast(props.dic['regionLinkCopied']);
         },
         [props.dic, router],
     );
