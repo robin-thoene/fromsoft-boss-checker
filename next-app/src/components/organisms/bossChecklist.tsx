@@ -1,14 +1,14 @@
 'use client';
 
-import { DocumentTextIcon, EllipsisVerticalIcon, FlagIcon, LinkIcon, MapPinIcon } from '@heroicons/react/24/solid';
+import { LinkIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
 import { ReactElement, useCallback, useEffect, useMemo, useState } from 'react';
 import { toast } from 'react-toastify';
 
-import { Button, Checkbox } from '@/components/atoms';
-import { Dialog } from '@/components/molecules';
+import { Button } from '@/components/atoms';
+import { BossRow, Dialog, GameProgressIndicator } from '@/components/molecules';
 import { FromSoftwareGame } from '@/enumerations/fromSoftwareGame';
-import { IBoss, IDictionary, IEldenRingBoss, IRegion } from '@/types';
+import { IBoss, IDictionary, IRegion } from '@/types';
 
 /**
  * Properties for the boss checklist page component.
@@ -117,141 +117,6 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
     }, [isInitializedClientSide, markedBossIds, props.localStorageMarkedBossesKey]);
 
     /**
-     * Callback to mark a boss as felled or not.
-     * @param {number} bossId The id of the boss to mark as felled / not felled.
-     */
-    const toggleFelledState = useCallback(
-        (bossId: number) => {
-            const tmpFelledBossIds = [...felledBossIds];
-            const alreadyExists = felledBossIds.includes(bossId);
-            if (!alreadyExists) {
-                // If the boss is checked, add it to the list.
-                tmpFelledBossIds.push(bossId);
-            } else {
-                // If the boss is unchecked, remove it from the list.
-                const index = tmpFelledBossIds.indexOf(bossId);
-                if (index > -1) {
-                    tmpFelledBossIds.splice(index, 1);
-                }
-            }
-            setFelledBossIds([...tmpFelledBossIds]);
-        },
-        [felledBossIds],
-    );
-
-    /**
-     * Callback to mark a boss.
-     * @param {number} bossId The id of the boss to mark.
-     */
-    const toggleMarkedState = useCallback(
-        (bossId: number) => {
-            const tmpMarkedBossIds = [...markedBossIds];
-            const alreadyExists = markedBossIds.includes(bossId);
-            if (!alreadyExists) {
-                // If the boss is checked, add it to the list.
-                tmpMarkedBossIds.push(bossId);
-            } else {
-                // If the boss is unchecked, remove it from the list.
-                const index = tmpMarkedBossIds.indexOf(bossId);
-                if (index > -1) {
-                    tmpMarkedBossIds.splice(index, 1);
-                }
-            }
-            setMarkedBossIds([...tmpMarkedBossIds]);
-        },
-        [markedBossIds],
-    );
-
-    const ContextActions = (boss: IBoss) => (
-        <>
-            {boss.wikiReference && boss.wikiReference !== '' && (
-                <Button
-                    icon={<DocumentTextIcon className="h-5 w-5" />}
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        window.open(boss.wikiReference, '_blank');
-                    }}
-                />
-            )}
-            {props.fromSoftwareGame === FromSoftwareGame.EldenRing && (boss as IEldenRingBoss).wikiMapReference && (
-                <Button
-                    icon={<MapPinIcon className="h-5 w-5" />}
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        e.preventDefault();
-                        window.open((boss as IEldenRingBoss).wikiMapReference, '_blank');
-                    }}
-                />
-            )}
-            <Button
-                icon={<FlagIcon className={`h-5 w-5 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
-                onClick={(e) => {
-                    e.stopPropagation();
-                    e.preventDefault();
-                    toggleMarkedState(boss.id);
-                }}
-            />
-        </>
-    );
-
-    /**
-     * Custom render component for a single boss.
-     * @param {IBoss} boss The boss to render.
-     * @returns {ReactElement} The rendered boss.
-     */
-    const BossRow = (boss: IBoss): ReactElement => {
-        const [openContextMenu, setOpenContextMenu] = useState(false);
-        useEffect(() => {
-            /**
-             * Function to handle light dismiss for the context menu on mobile devices.
-             */
-            function lightDismiss() {
-                setOpenContextMenu(false);
-            }
-            if (openContextMenu) {
-                document.addEventListener('click', lightDismiss);
-            }
-            return () => document.removeEventListener('click', lightDismiss);
-        }, [openContextMenu]);
-
-        const rowContent = useMemo(
-            () => (
-                <>
-                    <div className={`flex items-center ${felledBossIds.includes(boss.id) ? 'line-through' : ''}`}>
-                        <Checkbox isChecked={felledBossIds.includes(boss.id)} disabled={!isInitializedClientSide} onChange={() => toggleFelledState(boss.id)} />
-                        <div className="pl-7">{boss.name}</div>
-                    </div>
-                    <div className="hidden xs:flex gap-4 items-center justify-between">
-                        <ContextActions {...boss} />
-                    </div>
-                    <div className="flex xs:hidden relative">
-                        <Button
-                            icon={<EllipsisVerticalIcon className={`h-4 w-4 ${markedBossIds.includes(boss.id) ? 'text-red-600' : ''}`} />}
-                            onClick={() => setOpenContextMenu(true)}
-                        />
-                        {openContextMenu && (
-                            <div className="absolute flex flex-row right-full top-1/2 -translate-y-1/2 rounded-lg p-1 border border-black dark:border-white bg-white dark:bg-black">
-                                <ContextActions {...boss} />
-                            </div>
-                        )}
-                    </div>
-                </>
-            ),
-            [boss, openContextMenu],
-        );
-        return (
-            <div className="flex w-full items-center">
-                <div className="w-full">
-                    <div className="flex sm:hidden flex-row w-full gap-4 justify-between">{rowContent}</div>
-                    <div className="cursor-pointer hidden sm:flex flex-row w-full gap-4 justify-between" onClick={() => toggleFelledState(boss.id)}>
-                        {rowContent}
-                    </div>
-                </div>
-            </div>
-        );
-    };
-
-    /**
      * Navigates to the region directly and copies the link to the users clipboard.
      * @param {string} regionName - The name of the region to navigate to.
      * @returns Nothing.
@@ -285,13 +150,35 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
                                 </div>
                             </h2>
                             {region.bosses.map((boss) => (
-                                <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />
+                                <BossRow
+                                    key={`boss-${boss.id}-${boss.name}`}
+                                    boss={boss}
+                                    fromSoftwareGame={props.fromSoftwareGame}
+                                    markedBossIds={markedBossIds}
+                                    updateMarkedBossIds={setMarkedBossIds}
+                                    felledBossIds={felledBossIds}
+                                    updateFelledBossIds={setFelledBossIds}
+                                    isInitialized={isInitializedClientSide}
+                                />
                             ))}
                         </div>
                     ))}
                 </div>
             ) : (
-                <div className="flex flex-col gap-4">{props.bosses?.map((boss) => <BossRow key={`boss-${boss.id}-${boss.name}`} {...boss} />)}</div>
+                <div className="flex flex-col gap-4">
+                    {props.bosses?.map((boss) => (
+                        <BossRow
+                            key={`boss-${boss.id}-${boss.name}`}
+                            boss={boss}
+                            fromSoftwareGame={props.fromSoftwareGame}
+                            markedBossIds={markedBossIds}
+                            updateMarkedBossIds={setMarkedBossIds}
+                            felledBossIds={felledBossIds}
+                            updateFelledBossIds={setFelledBossIds}
+                            isInitialized={isInitializedClientSide}
+                        />
+                    ))}
+                </div>
             )}
             <div className="flex w-full mt-16">
                 <Button outlined text={props.dic['gameProgress_reset_button']} fullWidth onClick={() => setIsClearDialogOpen(true)} />
@@ -310,9 +197,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             >
                 <p>{props.dic['gameProgress_reset_confirmDialog_text']}</p>
             </Dialog>
-            <div className="fixed bottom-10 right-10 z-40 flex h-24 w-24 items-center justify-center rounded-full border border-black dark:border-white bg-white dark:bg-black">
-                {felledBossIds.length} / {bossCounter}
-            </div>
+            <GameProgressIndicator totalAmount={bossCounter} felledCount={felledBossIds.length} />
         </div>
     );
 }
