@@ -1,6 +1,6 @@
 'use client';
 
-import { LinkIcon } from '@heroicons/react/24/solid';
+import { ChevronDownIcon, ChevronUpIcon, LinkIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
 import { ReactElement, useCallback, useEffect, useMemo, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -76,6 +76,22 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
     const [isClearDialogOpen, setIsClearDialogOpen] = useState<boolean>(false);
     /** The list of the bosses the user has marked. */
     const [markedBossIds, setMarkedBossIds] = useState<number[]>([]);
+    /** State of the region id's that are marked as collapsed */
+    const [collapsedRegions, setCollapsedRegions] = useState<number[]>([]);
+
+    const toggleRegionCollapseState = useCallback(
+        (regionId: number) => {
+            const newState = [...collapsedRegions];
+            const idx = newState.findIndex((id) => id === regionId);
+            if (idx !== -1) {
+                newState.splice(idx, 1);
+            } else {
+                newState.push(regionId);
+            }
+            setCollapsedRegions(newState);
+        },
+        [collapsedRegions],
+    );
 
     /** Initialize the page on client side. */
     useEffect(() => {
@@ -131,6 +147,16 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
         [props.dic, router],
     );
 
+    const RegionCollapseButton = useCallback(
+        ({ regionId }: { regionId: number }) => (
+            <Button
+                icon={collapsedRegions.includes(regionId) ? <ChevronUpIcon className="h-4 w-4" /> : <ChevronDownIcon className="h-4 w-4" />}
+                onClick={() => toggleRegionCollapseState(regionId)}
+            />
+        ),
+        [collapsedRegions, toggleRegionCollapseState],
+    );
+
     return (
         <div className="flex flex-1 flex-col overflow-auto p-10 max-w-full overflow-x-hidden">
             <div className="w-full flex justify-center mb-10">
@@ -139,28 +165,36 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             {props.regions ? (
                 <div className="flex flex-col gap-10">
                     {props.regions?.map((region) => (
-                        <div id={region.name} className="flex flex-col gap-4" key={`region-${region.id}-${region.name}`}>
+                        <div id={region.name} className={`flex flex-col gap-4`} key={`region-${region.id}-${region.name}`}>
                             <h2 className="border-b">
-                                <div className="hidden sm:flex">
-                                    <Button text={region.name} icon={<LinkIcon className="h-4 w-4" />} onClick={() => linkToRegion(region.name)} />
+                                <div className="hidden sm:flex items-center">
+                                    <div className="w-full">
+                                        <Button text={region.name} icon={<LinkIcon className="h-4 w-4" />} onClick={() => linkToRegion(region.name)} />
+                                    </div>
+                                    <RegionCollapseButton regionId={region.id} />
                                 </div>
                                 <div className="flex sm:hidden items-center">
-                                    <Button icon={<LinkIcon className="h-4 w-4" />} onClick={() => linkToRegion(region.name)} />
-                                    <div>{region.name}</div>
+                                    <div className="w-full flex flex-row items-center">
+                                        <Button icon={<LinkIcon className="h-4 w-4" />} onClick={() => linkToRegion(region.name)} />
+                                        <div>{region.name}</div>
+                                    </div>
+                                    <RegionCollapseButton regionId={region.id} />
                                 </div>
                             </h2>
-                            {region.bosses.map((boss) => (
-                                <BossRow
-                                    key={`boss-${boss.id}-${boss.name}`}
-                                    boss={boss}
-                                    fromSoftwareGame={props.fromSoftwareGame}
-                                    markedBossIds={markedBossIds}
-                                    updateMarkedBossIds={setMarkedBossIds}
-                                    felledBossIds={felledBossIds}
-                                    updateFelledBossIds={setFelledBossIds}
-                                    isInitialized={isInitializedClientSide}
-                                />
-                            ))}
+                            <div className={`flex flex-col overflow-hidden ${collapsedRegions.includes(region.id) ? 'h-0' : 'h-full'}`}>
+                                {region.bosses.map((boss) => (
+                                    <BossRow
+                                        key={`boss-${boss.id}-${boss.name}`}
+                                        boss={boss}
+                                        fromSoftwareGame={props.fromSoftwareGame}
+                                        markedBossIds={markedBossIds}
+                                        updateMarkedBossIds={setMarkedBossIds}
+                                        felledBossIds={felledBossIds}
+                                        updateFelledBossIds={setFelledBossIds}
+                                        isInitialized={isInitializedClientSide}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     ))}
                 </div>
