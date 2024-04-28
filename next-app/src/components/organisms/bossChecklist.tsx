@@ -211,7 +211,17 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
                                         markedBossIds={markedBossIds}
                                         updateMarkedBossIds={setMarkedBossIds}
                                         felledBossIds={felledBossIds}
-                                        updateFelledBossIds={setFelledBossIds}
+                                        updateFelledBossIds={(bossIds) => {
+                                            if (region.bosses.every((b) => bossIds.includes(b.id))) {
+                                                // All bosses of this region are now marked as checked, add the region id to the state of checked regions.
+                                                if (!collapsedRegions.includes(region.id)) {
+                                                    const newCollapsedRegions = [...collapsedRegions];
+                                                    newCollapsedRegions.push(region.id);
+                                                    setCollapsedRegions(newCollapsedRegions);
+                                                }
+                                            }
+                                            setFelledBossIds(bossIds);
+                                        }}
                                         isInitialized={isInitializedClientSide}
                                     />
                                 ))}
