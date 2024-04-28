@@ -10,6 +10,8 @@ import { IPageParams } from '@/types';
 const localStorageFelledBossesKey = 'eldenRingFelledBossIds';
 // The key in the local storage to store the marked bosses.
 const localStorageMarkedBossesKey = 'markedBossIds';
+// The key in the local storage to store the collapsed regions.
+const localStorageCollapsedRegionsKey = 'eldenRingCollapsedRegions';
 
 /**
  * "/elden-ring" route component.
@@ -30,6 +32,7 @@ export default async function Page({ params }: { params: IPageParams }): Promise
                 localStorageFelledBossesKey={localStorageFelledBossesKey}
                 localStorageMarkedBossesKey={localStorageMarkedBossesKey}
                 regions={eldenRingRegions}
+                localStorageCollapsedRegionsKey={localStorageCollapsedRegionsKey}
             />
         </>
     );
