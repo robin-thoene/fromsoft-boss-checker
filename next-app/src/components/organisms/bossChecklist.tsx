@@ -26,6 +26,8 @@ interface IBossChecklistProps {
     localStorageFelledBossesKey: string;
     /** The key to use for retrieving / saving the ID's of the bosses marked by the user. */
     localStorageMarkedBossesKey: string;
+    /** The key to use for retrieving / saving the ID's of the regions marked as collapsed by the user. */
+    localStorageCollapsedRegionsKey?: string;
 }
 
 /**
@@ -112,7 +114,17 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
             setMarkedBossIds(storedMarkedBossIds);
         }
         setIsInitializedClientSide(true);
-    }, [props.bosses, props.localStorageFelledBossesKey, props.localStorageMarkedBossesKey, props.regions]);
+        // Load the as collapsed marked regions from the local storage.
+        if (props.localStorageCollapsedRegionsKey && props.regions) {
+            const storedMarkedRegionIdsString = localStorage.getItem(props.localStorageCollapsedRegionsKey);
+            if (storedMarkedRegionIdsString) {
+                const storedRegionIds = JSON.parse(storedMarkedRegionIdsString);
+                setCollapsedRegions(storedRegionIds);
+            }
+        }
+        // Set the state to indicate that the client side initialization is done.
+        setIsInitializedClientSide(true);
+    }, [props.bosses, props.localStorageCollapsedRegionsKey, props.localStorageFelledBossesKey, props.localStorageMarkedBossesKey, props.regions]);
 
     /** Store felled bosses changes in the local storage. */
     useEffect(() => {
@@ -131,6 +143,15 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
         const markedBossIdsString = JSON.stringify(markedBossIds);
         localStorage.setItem(props.localStorageMarkedBossesKey, markedBossIdsString);
     }, [isInitializedClientSide, markedBossIds, props.localStorageMarkedBossesKey]);
+
+    /** Store marked collapsed region changes in the local storage. */
+    useEffect(() => {
+        if (!isInitializedClientSide || !props.regions || !props.localStorageCollapsedRegionsKey) {
+            return;
+        }
+        const collapsedRegionsString = JSON.stringify(collapsedRegions);
+        localStorage.setItem(props.localStorageCollapsedRegionsKey, collapsedRegionsString);
+    }, [collapsedRegions, isInitializedClientSide, markedBossIds, props.localStorageCollapsedRegionsKey, props.localStorageMarkedBossesKey, props.regions]);
 
     /**
      * Navigates to the region directly and copies the link to the users clipboard.
