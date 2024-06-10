@@ -202,7 +202,7 @@ export default function BossChecklist(props: IBossChecklistProps): ReactElement 
                                     <RegionCollapseButton regionId={region.id} />
                                 </div>
                             </h2>
-                            <div className={`flex flex-col overflow-hidden ${collapsedRegions.includes(region.id) ? 'h-0' : 'h-full'}`}>
+                            <div className={`flex flex-col overflow-hidden py-3 ${collapsedRegions.includes(region.id) ? 'h-0' : 'h-full'}`}>
                                 {region.bosses.map((boss) => (
                                     <BossRow
                                         key={`boss-${boss.id}-${boss.name}`}
