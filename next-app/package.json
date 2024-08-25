@@ -11,25 +11,25 @@
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.3",
-    "next": "14.2.3",
+    "@heroicons/react": "^2.1.5",
+    "next": "14.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-toastify": "^10.0.5"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12",
-    "@types/react": "^18.3.3",
+    "@types/node": "^22.5.0",
+    "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "14.2.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.6",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^48.2.6",
-    "eslint-plugin-simple-import-sort": "^12.1.0",
-    "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.14",
-    "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5"
+    "eslint-plugin-jsdoc": "^50.2.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "postcss": "^8.4.41",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.10",
+    "typescript": "5.1.6"
   }
 }
