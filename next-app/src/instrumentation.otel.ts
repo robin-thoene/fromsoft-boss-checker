@@ -6,7 +6,7 @@ import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-node';
 import { ATTR_SERVICE_NAME } from '@opentelemetry/semantic-conventions';
 
 const otelEndpoint = process.env.OTEL_ENDPOINT;
-const environment = process.env.NODE_ENV;
+const environment = process.env.ENVIRONMENT;
 
 if (otelEndpoint) {
     const sdk = new NodeSDK({
