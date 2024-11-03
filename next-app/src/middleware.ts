@@ -10,6 +10,9 @@ let locales = ['en'];
 export function middleware(request: NextRequest): any {
     // Check if there is any supported locale in the pathname
     const { pathname } = request.nextUrl;
+    if (pathname.startsWith('/api')) {
+        return;
+    }
     const pathnameHasLocale = locales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`);
     if (pathnameHasLocale) {
         return;
@@ -21,10 +24,5 @@ export function middleware(request: NextRequest): any {
 }
 
 export const config = {
-    matcher: [
-        // Skip all internal paths (_next)
-        '/((?!favicon.ico|robots.txt|api|_next).*)',
-        // Optional: only run on root (/) URL
-        // '/'
-    ],
+    matcher: ['/((?!favicon.ico|robots.txt|_next).*)'],
 };
