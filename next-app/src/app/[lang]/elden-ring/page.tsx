@@ -15,13 +15,12 @@ const localStorageCollapsedRegionsKey = 'eldenRingCollapsedRegions';
 
 /**
  * "/elden-ring" route component.
- * @param {IPageParams} params - The page parameters.
+ * @param {Promise<IPageParams>} params - The page parameters.
  * @returns {Promise<ReactElement>} The component to render on the route.
  */
-export default async function Page({ params }: { params: IPageParams }): Promise<ReactElement> {
-    // Get the translations dictionary for the requested language.
-    const dict = await getDictionary(params.lang);
-    // Get all Elden Ring regions with the boss lists.
+export default async function Page({ params }: { params: Promise<IPageParams> }): Promise<ReactElement> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
     const eldenRingRegions = getRegions();
 
     return (
