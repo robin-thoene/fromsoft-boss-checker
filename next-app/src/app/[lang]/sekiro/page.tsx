@@ -13,13 +13,12 @@ const localStorageMarkedBossesKey = 'sekiroMarkedBossIds';
 
 /**
  * "/sekiro" route component.
- * @param {IPageParams} params - The page parameters.
+ * @param {Promise<IPageParams>} params - The page parameters.
  * @returns {Promise<ReactElement>} The component to render on the route.
  */
-export default async function Page({ params }: { params: IPageParams }): Promise<ReactElement> {
-    // Get the translations dictionary for the requested language.
-    const dict = await getDictionary(params.lang);
-    // Get the list of all Sekiro bosses.
+export default async function Page({ params }: { params: Promise<IPageParams> }): Promise<ReactElement> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
     const sekiroBosses = getBosses();
 
     return (

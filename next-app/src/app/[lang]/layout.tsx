@@ -26,22 +26,21 @@ export const metadata: Metadata = {
 
 /**
  * The root layout that wraps all route component with multi language support.
- * @param {Readonly<{ children: ReactNode, params: IPageParams }>} props - The component props of the layout.
+ * @param {Readonly<{ children: ReactNode, params: Promise<IPageParams> }>} props - The component props of the layout.
  * @returns {Promise<ReactElement>} The rendered layout and it's children.
  */
-export default async function RootLayout({ children, params }: Readonly<{ children: ReactNode; params: IPageParams }>): Promise<ReactElement> {
-    // Get the translations dictionary for the requested language.
-    const dict = await getDictionary(params.lang);
+export default async function RootLayout({ children, params }: Readonly<{ children: ReactNode; params: Promise<IPageParams> }>): Promise<ReactElement> {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
 
     return (
-        <html lang={params.lang}>
+        <html lang={lang}>
             <body className="dark:bg-black dark:text-white flex flex-row overflow-hidden h-screen">
-                <SideNav currentLang={params.lang} dic={dict} />
+                <SideNav currentLang={lang} dic={dict} />
                 <main className="flex flex-1 max-h-screen overflow-auto h-full">{children}</main>
                 <ToastContainer
                     closeButton={false}
                     toastClassName="!bg-white dark:!bg-black border border-black dark:border-white text-red-200 !text-black dark:!text-white"
-                    bodyClassName="text-black dark:text-white"
                     closeOnClick
                     autoClose={3000}
                     transition={Slide}
