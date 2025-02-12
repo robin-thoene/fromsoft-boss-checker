@@ -311,6 +311,7 @@ export function BossChecklist(props: IBossChecklistProps) {
         onConfirm={() => {
           setFelledBossIds([]);
           setMarkedBossIds([]);
+          setCollapsedRegions([]);
           setIsClearDialogOpen(false);
         }}
       >
