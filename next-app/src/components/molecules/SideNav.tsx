@@ -2,6 +2,8 @@
 
 import { Button } from "@/components/atoms";
 import { IDictionary, IRoute } from "@/types";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -70,7 +72,7 @@ export function SideNav(props: ISideNavProps) {
       <nav
         className={`border-r fixed ${show ? "left-0 h-screen bg-white dark:bg-black" : "-left-full"} sm:relative sm:left-auto`}
       >
-        <div className="flex flex-col py-16 h-full relative">
+        <div className="flex flex-col pt-16 pb-2 h-full relative">
           <div className="absolute top-1 right-2 sm:hidden">
             <Button
               icon={<XMarkIcon className="h-4 w-4" />}
@@ -89,6 +91,16 @@ export function SideNav(props: ISideNavProps) {
               {r.label}
             </Link>
           ))}
+          <div className="mt-auto">
+            <a
+              className="flex items-center justify-center gap-4 p-3"
+              href="https://github.com/robin-thoene/fromsoft-boss-checker"
+              target="_blank"
+            >
+              {props.dic["topMenu_sourceCodeLink_text"]}{" "}
+              <FontAwesomeIcon className="h-4 w-4" icon={faGithub} />
+            </a>
+          </div>
         </div>
       </nav>
       {!show && (

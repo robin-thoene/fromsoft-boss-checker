@@ -1,5 +1,5 @@
 import "../globals.css";
-import { SideNav, TopMenu } from "@/components/molecules";
+import { SideNav } from "@/components/molecules";
 import { getDictionary } from "@/dictionaries";
 import { IPageParams } from "@/types";
 import type { Metadata } from "next";
@@ -40,7 +40,6 @@ export default async function RootLayout({
       <body className="dark:bg-black dark:text-white flex flex-row overflow-hidden h-screen">
         <SideNav currentLang={lang} dic={dict} />
         <main className="flex flex-1 max-h-screen h-full flex-col">
-          <TopMenu dic={dict} />
           <div className="flex flex-1 overflow-auto h-full">{children}</div>
         </main>
         <ToastContainer
