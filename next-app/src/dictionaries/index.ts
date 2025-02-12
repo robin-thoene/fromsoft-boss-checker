@@ -1,3 +1,3 @@
-import { getDictionary } from './dictionaries';
+import { getDictionary } from "./dictionaries";
 
 export { getDictionary };

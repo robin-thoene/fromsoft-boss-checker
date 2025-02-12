@@ -1,112 +1,112 @@
 [
-    {
-        "id": 1,
-        "name": "Amygdala",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Amygdala"
-    },
-    {
-        "id": 2,
-        "name": "Blood-Starved Beast",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Blood-Starved+Beast"
-    },
-    {
-        "id": 3,
-        "name": "Celestial Emissary",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Celestial+Emissary"
-    },
-    {
-        "id": 4,
-        "name": "Cleric Beast",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Cleric+Beast"
-    },
-    {
-        "id": 5,
-        "name": "Darkbeast Paarl",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Darkbeast+Paarl"
-    },
-    {
-        "id": 6,
-        "name": "Ebrietas, Daughter of the Cosmos",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Ebrietas%2C+Daughter+of+the+Cosmos"
-    },
-    {
-        "id": 7,
-        "name": "Father Gascoigne",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Father+Gascoigne"
-    },
-    {
-        "id": 8,
-        "name": "Gehrman, the First Hunter",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Gerhman%2C+The+First+Hunter"
-    },
-    {
-        "id": 9,
-        "name": "Martyr Logarius",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Martyr+Logarius"
-    },
-    {
-        "id": 10,
-        "name": "Mergo's Wet Nurse",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Mergo%27s+Wet+Nurse"
-    },
-    {
-        "id": 11,
-        "name": "Micolash, Host of the Nightmare",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Micolash%2C+Host+of+the+Nightmare"
-    },
-    {
-        "id": 12,
-        "name": "Moon Presence",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Moon+Presence"
-    },
-    {
-        "id": 13,
-        "name": "The One Reborn",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/One+Reborn"
-    },
-    {
-        "id": 14,
-        "name": "Rom, the Vacuous Spider",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Rom%2C+the+Vacuous+Spider"
-    },
-    {
-        "id": 15,
-        "name": "Shadow of Yharnam",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Shadow+of+Yharnam"
-    },
-    {
-        "id": 16,
-        "name": "Vicar Amelia",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Vicar+Amelia"
-    },
-    {
-        "id": 17,
-        "name": "Witch of Hemwick",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Witch+of+Hemwick"
-    },
-    {
-        "id": 18,
-        "name": "Ludwig, The Accursed / Ludwig, The Holy Blade",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Ludwig"
-    },
-    {
-        "id": 19,
-        "name": "Orphan of Kos",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Orphan+of+Kos"
-    },
-    {
-        "id": 20,
-        "name": "Lady Maria",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Lady+Maria+of+the+Astral+Clocktower"
-    },
-    {
-        "id": 21,
-        "name": "Living Failures",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Living+Failures"
-    },
-    {
-        "id": 22,
-        "name": "Laurence, The First Vicar",
-        "wikiReference": "https://bloodborne.wiki.fextralife.com/Laurence%2C+the+First+Vicar"
-    }
+  {
+    "id": 1,
+    "name": "Amygdala",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Amygdala"
+  },
+  {
+    "id": 2,
+    "name": "Blood-Starved Beast",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Blood-Starved+Beast"
+  },
+  {
+    "id": 3,
+    "name": "Celestial Emissary",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Celestial+Emissary"
+  },
+  {
+    "id": 4,
+    "name": "Cleric Beast",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Cleric+Beast"
+  },
+  {
+    "id": 5,
+    "name": "Darkbeast Paarl",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Darkbeast+Paarl"
+  },
+  {
+    "id": 6,
+    "name": "Ebrietas, Daughter of the Cosmos",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Ebrietas%2C+Daughter+of+the+Cosmos"
+  },
+  {
+    "id": 7,
+    "name": "Father Gascoigne",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Father+Gascoigne"
+  },
+  {
+    "id": 8,
+    "name": "Gehrman, the First Hunter",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Gerhman%2C+The+First+Hunter"
+  },
+  {
+    "id": 9,
+    "name": "Martyr Logarius",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Martyr+Logarius"
+  },
+  {
+    "id": 10,
+    "name": "Mergo's Wet Nurse",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Mergo%27s+Wet+Nurse"
+  },
+  {
+    "id": 11,
+    "name": "Micolash, Host of the Nightmare",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Micolash%2C+Host+of+the+Nightmare"
+  },
+  {
+    "id": 12,
+    "name": "Moon Presence",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Moon+Presence"
+  },
+  {
+    "id": 13,
+    "name": "The One Reborn",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/One+Reborn"
+  },
+  {
+    "id": 14,
+    "name": "Rom, the Vacuous Spider",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Rom%2C+the+Vacuous+Spider"
+  },
+  {
+    "id": 15,
+    "name": "Shadow of Yharnam",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Shadow+of+Yharnam"
+  },
+  {
+    "id": 16,
+    "name": "Vicar Amelia",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Vicar+Amelia"
+  },
+  {
+    "id": 17,
+    "name": "Witch of Hemwick",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Witch+of+Hemwick"
+  },
+  {
+    "id": 18,
+    "name": "Ludwig, The Accursed / Ludwig, The Holy Blade",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Ludwig"
+  },
+  {
+    "id": 19,
+    "name": "Orphan of Kos",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Orphan+of+Kos"
+  },
+  {
+    "id": 20,
+    "name": "Lady Maria",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Lady+Maria+of+the+Astral+Clocktower"
+  },
+  {
+    "id": 21,
+    "name": "Living Failures",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Living+Failures"
+  },
+  {
+    "id": 22,
+    "name": "Laurence, The First Vicar",
+    "wikiReference": "https://bloodborne.wiki.fextralife.com/Laurence%2C+the+First+Vicar"
+  }
 ]

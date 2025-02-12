@@ -1,127 +1,127 @@
 [
-    {
-        "id": 1,
-        "name": "Iudex Gundyr",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Iudex+Gundyr"
-    },
-    {
-        "id": 2,
-        "name": "Vordt of the Boreal Valley",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Vordt+of+the+Boreal+Valley"
-    },
-    {
-        "id": 3,
-        "name": "Curse-Rotted Greatwood",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Curse-Rotted+Greatwood"
-    },
-    {
-        "id": 4,
-        "name": "Crystal Sage",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Crystal+Sage"
-    },
-    {
-        "id": 5,
-        "name": "Abyss Watchers",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Abyss+Watchers"
-    },
-    {
-        "id": 6,
-        "name": "Deacons of the Deep",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Deacons+of+the+Deep"
-    },
-    {
-        "id": 7,
-        "name": "High Lord Wolnir",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/High+Lord+Wolnir"
-    },
-    {
-        "id": 8,
-        "name": "Old Demon King",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Old+Demon+King"
-    },
-    {
-        "id": 9,
-        "name": "Pontiff Sulyvahn",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Pontiff+Sulyvahn"
-    },
-    {
-        "id": 10,
-        "name": "Yhorm the Giant",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Yhorm+the+Giant"
-    },
-    {
-        "id": 11,
-        "name": "Aldrich, Devourer of Gods",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Aldrich,+Devourer+of+Gods"
-    },
-    {
-        "id": 12,
-        "name": "Dancer of the Boreal Valley",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Dancer+of+the+Boreal+Valley"
-    },
-    {
-        "id": 13,
-        "name": "Dragonslayer Armour",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Dragonslayer+Armour"
-    },
-    {
-        "id": 14,
-        "name": "Oceiros, the Consumed King",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Oceiros,+the+Consumed+King"
-    },
-    {
-        "id": 15,
-        "name": "Champion Gundyr",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Champion+Gundyr"
-    },
-    {
-        "id": 16,
-        "name": "Lothric, Younger Prince",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Lothric,+Younger+Prince"
-    },
-    {
-        "id": 17,
-        "name": "Ancient Wyvern",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Ancient+Wyvern"
-    },
-    {
-        "id": 18,
-        "name": "The Nameless King",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Nameless+King"
-    },
-    {
-        "id": 19,
-        "name": "Soul of Cinder",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Soul+of+Cinder"
-    },
-    {
-        "id": 20,
-        "name": "Sister Friede",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Sister+Friede"
-    },
-    {
-        "id": 21,
-        "name": "Champion's Gravetender & Gravetender Greatwolf",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Champion's+Gravetender+&+Gravetender+Greatwolf"
-    },
-    {
-        "id": 22,
-        "name": "Demon in Pain & Demon from Below / Demon Prince",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Demon+in+Pain+&+Demon+From+Below"
-    },
-    {
-        "id": 23,
-        "name": "Halflight, Spear of the Church",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Halflight,+Spear+of+the+Church"
-    },
-    {
-        "id": 24,
-        "name": "Darkeater Midir",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Darkeater+Midir"
-    },
-    {
-        "id": 25,
-        "name": "Slave Knight Gael",
-        "wikiReference": "https://darksouls3.wiki.fextralife.com/Slave+Knight+Gael+(Boss)"
-    }
+  {
+    "id": 1,
+    "name": "Iudex Gundyr",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Iudex+Gundyr"
+  },
+  {
+    "id": 2,
+    "name": "Vordt of the Boreal Valley",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Vordt+of+the+Boreal+Valley"
+  },
+  {
+    "id": 3,
+    "name": "Curse-Rotted Greatwood",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Curse-Rotted+Greatwood"
+  },
+  {
+    "id": 4,
+    "name": "Crystal Sage",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Crystal+Sage"
+  },
+  {
+    "id": 5,
+    "name": "Abyss Watchers",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Abyss+Watchers"
+  },
+  {
+    "id": 6,
+    "name": "Deacons of the Deep",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Deacons+of+the+Deep"
+  },
+  {
+    "id": 7,
+    "name": "High Lord Wolnir",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/High+Lord+Wolnir"
+  },
+  {
+    "id": 8,
+    "name": "Old Demon King",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Old+Demon+King"
+  },
+  {
+    "id": 9,
+    "name": "Pontiff Sulyvahn",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Pontiff+Sulyvahn"
+  },
+  {
+    "id": 10,
+    "name": "Yhorm the Giant",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Yhorm+the+Giant"
+  },
+  {
+    "id": 11,
+    "name": "Aldrich, Devourer of Gods",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Aldrich,+Devourer+of+Gods"
+  },
+  {
+    "id": 12,
+    "name": "Dancer of the Boreal Valley",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Dancer+of+the+Boreal+Valley"
+  },
+  {
+    "id": 13,
+    "name": "Dragonslayer Armour",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Dragonslayer+Armour"
+  },
+  {
+    "id": 14,
+    "name": "Oceiros, the Consumed King",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Oceiros,+the+Consumed+King"
+  },
+  {
+    "id": 15,
+    "name": "Champion Gundyr",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Champion+Gundyr"
+  },
+  {
+    "id": 16,
+    "name": "Lothric, Younger Prince",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Lothric,+Younger+Prince"
+  },
+  {
+    "id": 17,
+    "name": "Ancient Wyvern",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Ancient+Wyvern"
+  },
+  {
+    "id": 18,
+    "name": "The Nameless King",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Nameless+King"
+  },
+  {
+    "id": 19,
+    "name": "Soul of Cinder",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Soul+of+Cinder"
+  },
+  {
+    "id": 20,
+    "name": "Sister Friede",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Sister+Friede"
+  },
+  {
+    "id": 21,
+    "name": "Champion's Gravetender & Gravetender Greatwolf",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Champion's+Gravetender+&+Gravetender+Greatwolf"
+  },
+  {
+    "id": 22,
+    "name": "Demon in Pain & Demon from Below / Demon Prince",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Demon+in+Pain+&+Demon+From+Below"
+  },
+  {
+    "id": 23,
+    "name": "Halflight, Spear of the Church",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Halflight,+Spear+of+the+Church"
+  },
+  {
+    "id": 24,
+    "name": "Darkeater Midir",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Darkeater+Midir"
+  },
+  {
+    "id": 25,
+    "name": "Slave Knight Gael",
+    "wikiReference": "https://darksouls3.wiki.fextralife.com/Slave+Knight+Gael+(Boss)"
+  }
 ]

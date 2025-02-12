@@ -1,4 +1,4 @@
-import Button from './button';
-import Checkbox from './checkbox';
+import { Button } from "./Button";
+import { Checkbox } from "./Checkbox";
 
 export { Button, Checkbox };

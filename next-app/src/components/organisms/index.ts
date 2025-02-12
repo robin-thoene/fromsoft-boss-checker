@@ -1,3 +1,3 @@
-import BossChecklist from './bossChecklist';
+import { BossChecklist } from "./BossChecklist";
 
 export { BossChecklist };
