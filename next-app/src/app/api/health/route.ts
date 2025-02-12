@@ -1,12 +1,10 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 /**
  * The health endpoint.
- * @returns {Promise<NextResponse>} The response.
  */
-export async function GET(): Promise<NextResponse> {
-    // If all checks passed, return a 200 response, that indicates that the service is healthy.
-    return NextResponse.json({ message: 'healthy' }, { status: 200 });
+export async function GET() {
+  return NextResponse.json({ message: "healthy" }, { status: 200 });
 }

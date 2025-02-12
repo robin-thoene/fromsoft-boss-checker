@@ -1,5 +1,5 @@
 interface IPageParams {
-    lang: string;
+  lang: string;
 }
 
 export type { IPageParams };

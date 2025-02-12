@@ -1,3 +1,3 @@
-import { FromSoftwareGame } from './fromSoftwareGame';
+import { FromSoftwareGame } from "./fromSoftwareGame";
 
 export { FromSoftwareGame };
