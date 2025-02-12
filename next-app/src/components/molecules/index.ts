@@ -1,7 +1,15 @@
-import BossRow from './bossRow';
-import ContextActions from './bossRowContextActions';
-import Dialog from './dialog';
-import GameProgressIndicator from './gameProgressIndicator';
-import SideNav from './sideNav';
+import { BossRow } from "./BossRow";
+import { ContextActions } from "./BossRowContextActions";
+import { Dialog } from "./Dialog";
+import { GameProgressIndicator } from "./GameProgressIndicator";
+import { SideNav } from "./SideNav";
+import { TopMenu } from "./TopMenu";
 
-export { BossRow, ContextActions, Dialog, GameProgressIndicator, SideNav };
+export {
+  BossRow,
+  ContextActions,
+  Dialog,
+  GameProgressIndicator,
+  SideNav,
+  TopMenu,
+};
