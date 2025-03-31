@@ -37,6 +37,32 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
+      <head>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/static/img/favicon/favicon-16x16.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/static/img/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/static/img/favicon/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="256x256"
+          href="/static/img/favicon/favicon-256x256.png"
+        />
+      </head>
       <body className="dark:bg-black dark:text-white flex flex-row overflow-hidden h-screen">
         <SideNav currentLang={lang} dic={dict} />
         <main className="flex flex-1 max-h-screen h-full flex-col">
