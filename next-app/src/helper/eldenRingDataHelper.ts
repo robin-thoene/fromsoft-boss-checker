@@ -7,6 +7,7 @@ import { IRegion } from "@/types";
  */
 const getRegions = (): IRegion[] => {
   const regions: IRegion[] = regionsJson as IRegion[];
+  regions.forEach((r) => r.bosses.sort((a, b) => (a.name > b.name ? 1 : -1)));
   return regions;
 };
 

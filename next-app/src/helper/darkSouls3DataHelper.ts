@@ -7,7 +7,7 @@ import { IBoss } from "@/types";
  */
 const getBosses = (): IBoss[] => {
   const bosses: IBoss[] = bossesJson as IBoss[];
-  return bosses;
+  return bosses.sort((a, b) => (a.name > b.name ? 1 : -1));
 };
 
 export { getBosses };

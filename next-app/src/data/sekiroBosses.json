@@ -26,7 +26,7 @@
   },
   {
     "id": 6,
-    "name": "Corrupted Monk",
+    "name": "Corrupted Monk (Illusion)",
     "wikiReference": "https://sekiroshadowsdietwice.wiki.fextralife.com/Corrupted+Monk"
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "id": 9,
-    "name": "(True) Corrupted Monk",
+    "name": "Corrupted Monk (True)",
     "wikiReference": "https://sekiroshadowsdietwice.wiki.fextralife.com/Corrupted+Monk"
   },
   {
@@ -64,7 +64,6 @@
     "name": "Isshin, The Sword Saint",
     "wikiReference": "https://sekiroshadowsdietwice.wiki.fextralife.com/Isshin,+the+Sword+Saint"
   },
-
   {
     "id": 14,
     "name": "Leader Shigenori Yamauchi",
