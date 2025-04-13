@@ -23,6 +23,10 @@ export function SideNav(props: ISideNavProps) {
   const routes = useMemo(
     (): IRoute[] => [
       {
+        path: `/${props.currentLang}/demon-souls`,
+        label: props.dic["demonSouls_label"],
+      },
+      {
         path: `/${props.currentLang}/dark-souls-1`,
         label: props.dic["darkSoulsOne_label"],
       },
@@ -35,20 +39,16 @@ export function SideNav(props: ISideNavProps) {
         label: props.dic["darkSoulsThree_label"],
       },
       {
-        path: `/${props.currentLang}/demon-souls`,
-        label: props.dic["demonSouls_label"],
-      },
-      {
-        path: `/${props.currentLang}/elden-ring`,
-        label: props.dic["eldenRing_label"],
-      },
-      {
         path: `/${props.currentLang}/bloodborne`,
         label: props.dic["bloodborne_label"],
       },
       {
         path: `/${props.currentLang}/sekiro`,
         label: props.dic["sekiro_label"],
+      },
+      {
+        path: `/${props.currentLang}/elden-ring`,
+        label: props.dic["eldenRing_label"],
       },
     ],
     [props.currentLang, props.dic],
