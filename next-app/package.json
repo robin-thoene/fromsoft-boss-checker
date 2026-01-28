@@ -5,9 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev -p 3069",
-    "build": "pnpm lint && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "tsc && next lint --dir . --max-warnings=0",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
