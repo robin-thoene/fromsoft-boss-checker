@@ -5,9 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev -p 3069",
-    "build": "pnpm lint && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "tsc && next lint --dir . --max-warnings=0",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
@@ -25,7 +24,7 @@
     "@opentelemetry/sdk-trace-node": "^2.0.1",
     "@opentelemetry/semantic-conventions": "^1.34.0",
     "@tailwindcss/postcss": "^4.1.10",
-    "next": "15.4.10",
+    "next": "16.1.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-toastify": "^11.0.5"
