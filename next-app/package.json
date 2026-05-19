@@ -39,7 +39,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsdoc": "^50.8.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "postcss": "^8.5.5",
+    "postcss": "^8.5.10",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "tailwindcss": "^4.1.10",
